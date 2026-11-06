@@ -1,0 +1,36 @@
+{
+  "title": "Signed Liouville energies and the limits of maximal correlation bounds",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "Version 2 research revision of the Liouville-correlation preprint. The manuscript proves deterministic obstructions for maximal correlation energies, develops signed Fejer energy criteria for RH and Dirichlet GRH, and derives reciprocal-dilate approximation results, including a fixed bounded-variation taper obstruction and quantitative coefficient-cost bounds. The Riemann Hypothesis and Dirichlet GRH remain unproved. The 7/8 specialization is explicitly attributed to the external OpenAI quasi-Riemann manuscript. Novelty and journal suitability remain subject to specialist review.",
+  "creators": [
+    {
+      "name": "Bhattacharjee, Deep",
+      "orcid": "0000-0003-0466-750X",
+      "affiliation": "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India. Formerly, University of Calcutta, Senate House, 87/1 College Street, Kolkata 700073, West Bengal, India."
+    },
+    {
+      "name": "Bhattacharya, Ushashi",
+      "orcid": "0009-0002-2254-3914",
+      "affiliation": "Formerly, National Taiwan University, Taipei 106319, Taiwan."
+    }
+  ],
+  "license": "cc-by-4.0",
+  "publication_date": "2026-11-06",
+  "version": "2.0.0",
+  "keywords": [
+    "Riemann hypothesis",
+    "Liouville function",
+    "Nyman-Beurling criterion",
+    "Möbius approximation",
+    "Dirichlet GRH",
+    "Fejer energy"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.20944/preprints202606.1350.v1",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    }
+  ]
+}

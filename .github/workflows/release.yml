@@ -1,0 +1,48 @@
+name: Build and publish the RH research revision
+
+on:
+  push:
+    branches: [main]
+    paths: [release.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check finite identities
+        run: python checks/verify.py | tee checks/verification-results.txt
+      - name: Compile the manuscript
+        uses: xu-cheng/latex-action@e2f99d4b3685b0da93f97e1b86ad8fab81105098
+        with:
+          working_directory: paper
+          root_file: main.tex
+      - name: Prepare publication assets
+        run: python scripts/make_release.py --pdf paper/main.pdf
+      - name: Record compiled publication files
+        run: |
+          git config user.name "Deep Bhattacharjee"
+          git config user.email "itsdeep@live.com"
+          git add output/pdf/signed-liouville-energies-v2.pdf output/signed-liouville-energiestex.zip checks/verification-results.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Build the v2.0.0 research manuscript and TeX package"
+            git push origin HEAD:main
+          fi
+      - name: Publish the research release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=$(python -c 'import json; print(json.load(open("release.json"))["tag"])')
+          gh release create "$tag" dist/* \
+            --target "$(git rev-parse HEAD)" \
+            --title "Signed Liouville energies v2.0.0 research revision" \
+            --notes-file RELEASE-NOTES.md

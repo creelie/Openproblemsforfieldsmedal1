@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Cite this v2 research draft with its two authors and date."
+type: article
+title: "Signed Liouville energies and the limits of maximal correlation bounds"
+authors:
+  - family-names: Bhattacharjee
+    given-names: Deep
+    orcid: "https://orcid.org/0000-0003-0466-750X"
+  - family-names: Bhattacharya
+    given-names: Ushashi
+    orcid: "https://orcid.org/0009-0002-2254-3914"
+version: "2.0.0"
+repository-code: "https://github.com/creelie/Openproblemsforfieldsmedal1"
+date-released: 2026-11-06

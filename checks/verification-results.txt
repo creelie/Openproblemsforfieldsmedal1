@@ -1,0 +1,10 @@
+PASS window identities and bounds: 4606 cases
+PASS Rudin-Shapiro complementary blocks: 11 cases
+PASS independent-sign moments: 4680 cases
+PASS complete multiplicativity model: 1500 cases
+PASS ordinary-dilate Gram and minimizer: 152 cases
+PASS balanced reciprocal-dilate identities: 480 cases
+PASS linear Riesz rescaling: 241 cases
+PASS adaptive coefficient inversion and bounds: 120 cases
+PASS complex Dirichlet-character windows: 24 cases
+PASS separated Gram-window overlap: 9 cases

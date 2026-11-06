@@ -1,0 +1,564 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,mathtools,amssymb,microtype,booktabs,xcolor}
+\raggedbottom
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{tikz}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathcal E}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\ee}{\mathrm e}
+\newcommand{\R}{\operatorname{Re}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\RH}{\mathrm{RH}}
+\numberwithin{equation}{section}
+\title[Signed Liouville energies]{Signed Liouville energies and the limits of maximal correlation bounds}
+\author{Deep Bhattacharjee}
+\address{Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India}
+\curraddr{Formerly, University of Calcutta, Senate House, 87/1 College Street, Kolkata 700073, West Bengal, India}
+\email{d.bhattacharjee@erl-forschung.de}
+\email{itsdeep@live.com}
+\email{egspl@proton.me}
+\thanks{Deep Bhattacharjee is the corresponding author. ORCID \href{https://orcid.org/0000-0003-0466-750X}{0000-0003-0466-750X}. Ushashi Bhattacharya's ORCID is \href{https://orcid.org/0009-0002-2254-3914}{0009-0002-2254-3914}.}
+\author{Ushashi Bhattacharya}
+\address{Formerly, National Taiwan University, Taipei 106319, Taiwan}
+\email{rai.bhattacharya.in@gmail.com}
+\date{6 November 2026. Version 2 research draft.}
+\subjclass[2020]{Primary 11M26. Secondary 11N37, 11N35, 11F72.}
+\keywords{Liouville function, Riemann hypothesis, autocorrelation, Fej\'er kernel, spectral large sieve}
+\begin{document}
+\begin{abstract}
+The maximal absolute Liouville-correlation estimate proposed in version~1 would imply the generalized Riemann hypothesis for Dirichlet \(L\)-functions. A Gram matrix argument rules out its endpoint without an \(X^\varepsilon\) loss for every sign sequence. A positive Fej\'er energy retains the signs across shifts, and its growth exponent is exactly twice the supremum of the real parts of the nontrivial zeta zeros. We derive criteria that bypass Chowla using exponential smoothing and balanced reciprocal dilates. A Mellin pole prevents any fixed regular taper of the M\"obius coefficients from giving critical-norm convergence. We compute the growth exponent for the linear taper and the shifted-norm limit for a logarithmic taper. The unrestricted approximation problem and the Riemann hypothesis remain open.
+\end{abstract}
+\maketitle
+\tableofcontents
+
+\section{The question and the revision}
+
+Let \(\lambda(n)=(-1)^{\Omega(n)}\) and \(L(x)=\sum_{n\le x}\lambda(n)\), where \(\Omega\) counts prime factors with multiplicity. Version~1 \cite{v1} investigated the sum \(L(x)\) through the correlations \(\sum_{n\le y}\lambda(n)\lambda(n+h)\). It took absolute values across shifts and maximized over \(y\) separately for each shift. That operation makes a spectral estimate convenient to state. It also changes the scale one can reasonably expect the resulting energy to have.
+
+We keep the maximal large sieve argument, with a common support for the fixed-endpoint input and an explicit logarithmic factor. The original bound would control every additive twist uniformly and imply the Dirichlet generalized Riemann hypothesis. The bound with \(\varepsilon=0\) fails for every sign sequence. Even square-root cancellation of every additive twist and decay at every fixed lag do not give the proposed maximal estimate for a general sign sequence.
+
+Our second approach averages squared sums over sliding intervals of length \(N\) in the truncated sequence on \([1,N]\). The average has a positive Fourier representation, but its expansion in shifts is signed. We determine its growth exponent in terms of the rightmost zeta zeros. The calculation gives a criterion for a zero-free half-plane and an obstruction at any zero outside it. The remaining analytic problem is to bound the energy at exponent \(1+\varepsilon\) for Liouville. The argument does not establish that bound.
+
+\section{Finite identities and the maximal hypothesis}\label{sec:collar}
+
+Write \(\ee(t)=e^{2\pi i t}\). Throughout, a sequence \(a=(a_n)\) is real with \(|a_n|\le1\), unless specified otherwise. Put
+\[
+ A_N(\alpha)=\sum_{n=1}^N a_n\ee(n\alpha),\qquad
+ C_{a,h}(Y)=\sum_{n=1}^{Y}a_na_{n+h}.
+\]
+Here \(N,h,Y\) are integers, \(h\ge1\), and \(C_{a,h}(0)=0\). At \(1\le h<N\) let \(C^*_{a,h}(N)=\max_{0\le Y\le N-h}|C_{a,h}(Y)|\), and set it to zero at \(h\ge N\). Define
+\[
+ \E_a(N,H)=\sum_{H<h\le2H} C^*_{a,h}(N)^2,\qquad H=1,2,4,\ldots .
+\]
+The dyadic ranges cover \(h\ge2\) once each. The shift \(h=1\) is always handled separately.
+
+\begin{lemma}[Square and twist identities]\label{lem:square}
+For every real \(\alpha\),
+\begin{equation}\label{eq:square}
+ |A_N(\alpha)|^2=\sum_{n\le N}a_n^2+
+ 2\operatorname{Re}\sum_{h=1}^{N-1}\ee(h\alpha) C_{a,h}(N-h).
+\end{equation}
+On any finite set of shifts \(J\), the \(\ell^2\) norm of \(C^*_{a,h}(N)\) equals
+\[
+ \max_{(Y_h)}\ \sup_{\sum_{h\in J}|\beta_h|^2\le1}
+ \left|\sum_{h\in J}\beta_h C_{a,h}(Y_h)\right|,
+\]
+with \(0\le Y_h\le N-h\) for \(h<N\) and the out-of-range coordinates set to zero.
+\end{lemma}
+\begin{proof}
+Group the terms in \(A_N(\alpha)\overline{A_N(\alpha)}\) by the signed difference of their indices. For fixed endpoints, Cauchy--Schwarz gives the asserted dual norm, with equality at \(\beta_h=\overline{C_{a,h}(Y_h)}/\|C\|_2\) when \(C\ne0\). Each maximum over \(Y_h\) is attained in a finite set, and the choices are independent.
+\end{proof}
+
+For the dyadic argument in version~1, a bound only on \(H\le N^{1-\eta}\), together with the stated absolute tail estimate, suffices for the same conclusion about \(A_N\). Include the whole block with \(H\le N^{1-\eta}<2H\) in the first part and apply the tail estimate only to the shifts not already covered. Neither term requires separate treatment of a partial block beyond this convention.
+
+\begin{theorem}[Consequence of the full maximal collar]\label{thm:grh}
+Suppose that for every \(\varepsilon>0\),
+\begin{equation}\label{eq:collar}
+ \E_\lambda(N,H)\ll_\varepsilon N^{2+\varepsilon}/H
+ \qquad(1\le H<N,\ H\text{ dyadic}).
+\end{equation}
+Then \(\sup_{\alpha\in\mathbb R}|A_N(\alpha)|\ll_\varepsilon N^{1/2+\varepsilon}\) for \(a=\lambda\). In particular, the generalized Riemann hypothesis holds for all primitive Dirichlet \(L\)-functions.
+\end{theorem}
+\begin{proof}
+Each dyadic block contributes at most
+\(\sqrt H\,\E_\lambda(N,H)^{1/2}\ll_\varepsilon N^{1+\varepsilon/2}\)
+to the sum of the absolute values in \eqref{eq:square}. There are \(O(\log(2N))\) blocks. The diagonal and the contribution of \(h=1\) are \(O(N)\). Absorb the logarithm by choosing a smaller positive exponent in \eqref{eq:collar}.
+
+For a Dirichlet character \(\chi\bmod q\), use its finite Fourier expansion \(\chi(n)=\sum_{r\bmod q}\widehat\chi(r)\ee(rn/q)\). The normalization \(\widehat\chi(r)=q^{-1}\sum_{b\bmod q}\chi(b)\ee(-rb/q)\) gives \(\sum_r|\widehat\chi(r)|^2\le1\). Thus \(\sum_{n\le N}\lambda(n)\chi(n)\ll_\varepsilon\sqrt q\,N^{1/2+\varepsilon}\). Partial summation gives a holomorphic function
+\[
+ F_\chi(s)=s\int_1^\infty\left(\sum_{n\le x}\lambda(n)\chi(n)\right)x^{-s-1}\dd x
+ \quad(\R s>1/2).
+\]
+For \(\R s>1\), complete multiplicativity gives
+\(L(s,\chi)F_\chi(s)=L(2s,\chi^2)\) by the Euler products. The identity holds meromorphically in \(\R s>1/2\). The right side has a convergent, nonvanishing Euler product there. A zero of \(L(s,\chi)\) in that half-plane would contradict the identity. The functional equation for primitive characters excludes nontrivial zeros to the left of the line by applying the same argument to \(\bar\chi\).
+\end{proof}
+
+\begin{proposition}[Exact coefficient-uniform maximum]\label{prop:uniform}
+For all \(N,H\),
+\[
+ \sup_{|a_n|\le1}\E_a(N,H)=
+ \sum_{H<h\le\min(2H,N-1)}(N-h)^2.
+\]
+Both \(a_n=1\) and \(a_n=(-1)^n\) attain the maximum.
+\end{proposition}
+\begin{proof}
+Use \(|C_{a,h}(Y)|\le Y\le N-h\). For the two stated choices \(a_na_{n+h}\) is constant in \(n\) and has modulus one. At \(2H\le N/2\) the maximum is between \(HN^2/4\) and \(HN^2\). In particular, \(H\asymp N^{1/4}\) realizes the power gap found in version~1.
+\end{proof}
+
+\section{The maximal large sieve on a common support}\label{sec:sieve}
+
+The maximal argument only needs a Bessel bound for all coefficient vectors on a single index set. We state it in that form. In the spectral application one uses the usual coefficient weights and the fixed-endpoint bound for the chosen spectrum, with the cutoff tied to the support of the coefficients. We make no shift-uniform assertion about short intervals placed at arbitrarily large indices.
+
+\begin{theorem}[Maximal Bessel bound]\label{thm:bessel}
+Let \((\Omega,\mu)\) be a positive measure space. Suppose \(\rho_1,\ldots,\rho_M\) satisfy
+\[
+ \int_{\Omega}\left|\sum_{n=1}^M b_n\rho_n\right|^2\dd\mu
+ \le B\sum_{n=1}^M|b_n|^2
+ \quad\text{for every }b\in\mathbb C^M.
+\]
+With \(K=\lceil\log_2 M\rceil\),
+\[
+ \int_{\Omega}\max_{0\le Y\le M}\left|\sum_{n\le Y}b_n\rho_n\right|^2\dd\mu
+ \le (K+1)^2 B\sum_{n=1}^M|b_n|^2.
+\]
+\end{theorem}
+\begin{proof}
+Extend by zero to length \(2^K\). For each \(Y\), its prefix is the disjoint union of at most one aligned interval of each dyadic length. Cauchy--Schwarz bounds the square of its sum by \(K+1\) times the sum of the squared block sums. Enlarge to all aligned dyadic intervals and integrate. At each level the intervals partition the support, and the Bessel bound applies to each masked vector. The sum of the squared coefficient norms on that level is \(\sum_n|b_n|^2\). There are \(K+1\) levels.
+\end{proof}
+
+For example, take \(M=2N\) and coefficients supported on \(N<n\le2N\) in a spectral large sieve with fixed bound \(B\ll_\varepsilon (T^2+2N)(2TN)^\varepsilon\). The maximal bound has the same power exponents, since \((1+\log_2(2N))^2\) is absorbed by a smaller choice of \(\varepsilon\) in the fixed estimate. This is the Rademacher--Menshov argument applied to a spectral inequality of the Deshouillers--Iwaniec type \cite{di,rm}. It does not identify the coefficient vector needed for the signed Liouville problem.
+
+\begin{proposition}[An additive Fourier benchmark]\label{prop:davenport}
+For any \(a\) as above,
+\[
+ \E_a(N,H)\le (1+\lceil\log_2 N\rceil)^2
+ \|A_N\|_{L^\infty(\mathbb R/\mathbb Z)}^2\sum_{n\le N}|a_n|^2.
+\]
+In particular Davenport's bound yields \(\E_\lambda(N,H)\ll_A N^3/(\log(2N))^A\) for every \(A>0\), uniformly in \(H\).
+\end{proposition}
+\begin{proof}
+Extend \(a\one_{[1,N]}\) by zero to \(\mathbb Z\). For a dyadic block \(I\subset[1,2^{\lceil\log_2 N\rceil}]\), set \(a_I=a\one_I\). The Fourier transform of the full correlation \(\sum_n a_I(n)a(n+h)\) in \(h\) is \(A_N\overline{\widehat{a_I}}\), up to the Fourier sign convention. Parseval bounds its squared norm by \(\|A_N\|_\infty^2\sum_{n\in I}|a_n|^2\). Use the same dyadic decomposition as in Theorem~\ref{thm:bessel}, and sum over all integer \(h\) to majorize the chosen shifts. For the Liouville estimate apply Davenport's uniform additive bound in the form quoted in \cite{mrt}, with an increased logarithmic exponent.
+\end{proof}
+
+\section{Obstructions from signs and from prime data}\label{sec:obstructions}
+
+We give two deterministic models with different properties and a probabilistic comparison. The first deterministic model retains the arithmetic data at any finite set of primes. The second retains the strength of the additive Fourier estimate that would follow from \eqref{eq:collar}.
+
+\begin{theorem}[Finite prime data]\label{thm:prime}
+For any finite set \(P\) of primes and signs \(\epsilon_p\) on \(P\), there exists a completely multiplicative sign function \(f\) with \(f(p)=\epsilon_p\) for \(p\in P\) and
+\[
+ \left|\sum_{n\le N} f(n)\right|\ll_P (1+\log N)^{|P\cup\{3\}|}.
+\]
+There is a positive integer \(D\) depending only on \(P\) such that
+\(\E_f(N,H)\ge HN^2/(32D)\) whenever \(2D\le H\le N/4\).
+\end{theorem}
+\begin{proof}
+Let \(S=P\cup\{3\}\) and let \(\chi_3\) be the nonprincipal character modulo \(3\). Specify the given values on \(P\), use \(f(3)=1\) if \(3\notin P\), and set \(f(p)=\chi_3(p)\) for \(p\notin S\). Extend completely multiplicatively. Write \(n=am\) with \(a\) supported on \(S\) and \((m,\prod_{p\in S}p)=1\). Then \(f(m)=\chi_3(m)\). The sum of \(\chi_3(m)\one_{(m,\prod_{p\in S}p)=1}\) over a complete residue system modulo \(\prod_{p\in S}p\) vanishes. The admissible residues with \(m\equiv1\) and \(m\equiv2\pmod 3\) have the same cardinality by the Chinese remainder theorem. Each inner sum over \(m\le N/a\) is therefore bounded by that period. There are at most \(\prod_{p\in S}(1+\lfloor\log N/\log p\rfloor)\) choices for \(a\).
+
+Choose \(K\) with \(\sum_{p\in S}p^{-K}\le1/4\) and put \(D=\prod_{p\in S}p^K\). If \(D\mid h\) and \(p^K\nmid n\) for all \(p\in S\), then \(v_p(n+h)=v_p(n)\) for all \(p\in S\). The factor \(a\) is unchanged and \(h/a\) is divisible by \(3\). The two unit factors agree modulo \(3\), so \(f(n+h)=f(n)\). Among \(n\le Y\) the exceptional set has size at most \(Y/4\). Thus \(C_{f,h}(Y)\ge Y/2\) for \(D\mid h\). There are at least \(H/(2D)\) multiples of \(D\) in \((H,2H]\) under the stated conditions, and \(Y=N-h\ge N/2\) for those shifts. Squaring and summing gives the bound.
+\end{proof}
+
+\begin{theorem}[Additive cancellation and fixed shifts]\label{thm:rs}
+There is a sign sequence \(r\) such that, with absolute constants,
+\[
+ \sup_\alpha\left|\sum_{n\le N}r_n\ee(n\alpha)\right|\ll\sqrt N,\qquad
+ |C_{r,h}(Y)|\ll\sqrt{hY}\quad(h,Y\ge1).
+\]
+Nevertheless \(\E_r(3H,H)\ge H^2\) for every dyadic \(H\).
+\end{theorem}
+\begin{proof}
+Use the Rudin--Shapiro polynomials \(P_0=Q_0=1\) and
+\[
+ P_{m+1}=P_m+z^{2^m}Q_m,\qquad Q_{m+1}=P_m-z^{2^m}Q_m.
+\]
+The prefixes of the \(P_m\) are consistent, and \(r_n=[z^{n-1}]P_m\) once \(n\le2^m\). The complementary identity
+\(|P_m(z)|^2+|Q_m(z)|^2=2^{m+1}\) on \(|z|=1\)
+follows by induction. Every aligned dyadic block of length \(2^j\) in the infinite sequence is the coefficient vector of \(\pm P_j\) or \(\pm Q_j\). This follows by taking recursive halves in a large enough \(P_m\). In the aligned dyadic partition of a prefix of length \(N\), each block contributes at most \(2^{(j+1)/2}\), and the sum over its lengths is \(O(\sqrt N)\).
+
+If \(h>Y\), the fixed-shift estimate follows from the trivial bound \(Y\). Otherwise take \(B=2^k\) with \(\sqrt{hY}\le B<2\sqrt{hY}\). Partition the starting indices into full aligned blocks of length \(2B\) and a final remainder. Each full block consists of \(P_k\) and \(Q_k\), up to signs. The two sums for which both indices stay in the same half cancel by the \(h\)-th Fourier coefficient of the complementary identity. At most \(h\) starting indices cross the midpoint and at most \(h\) cross the endpoint of each block. The remainder contributes at most \(2B\). This bounds the sum by \(2h\lfloor Y/(2B)\rfloor+2B\ll\sqrt{hY}\).
+
+Finally \(P_{m+2}\) has four successive blocks \(P_m,Q_m,P_m,-Q_m\). At \(H=2^m\), the first and third blocks give \(C_{r,2H}(H)=H\), an admissible endpoint for \(N=3H\). This one term already gives the lower bound.
+\end{proof}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1.45cm,y=1cm]
+\foreach \i/\t in {0/{P_m},1/{Q_m},2/{P_m},3/{-Q_m}} {
+ \draw[fill=blue!6] (\i,0) rectangle ({\i+1},.55);
+ \node at ({\i+.5},.275) {$\t$};
+}
+\draw[->,thick,blue!50!black] (.5,.6) to[bend left=35] node[above] {\(\text{shift }2H\)} (2.5,.6);
+\draw[thick] (0,-.12)--(3,-.12);
+\node[below] at (1.5,-.12) {\(N=3H\)};
+\end{tikzpicture}
+\caption{The first and third Rudin--Shapiro blocks agree entry by entry. Taking the endpoint \(Y=H\) sees this agreement before the fourth block can contribute.}
+\label{fig:rs}
+\end{figure}
+
+\begin{proposition}[Independent signs]\label{prop:random}
+For independent fair signs \(\epsilon_n\), almost surely \(\E_\epsilon(3H,H)\ge H^2/2\) for every sufficiently large dyadic \(H\).
+\end{proposition}
+\begin{proof}
+Put \(T_H=\sum_{H<h\le2H}|C_{\epsilon,h}(H)|^2\). On expanding, the diagonal gives \(H^2\). The other terms are \(2\epsilon_n\epsilon_m\epsilon_{n+h}\epsilon_{m+h}\) with \(1\le n<m\le H\). Each set of four indices determines the term uniquely: the two indices in \([1,H]\) give \(n,m\), and the smaller remaining index gives \(n+h\). The products for distinct sets of indices are orthogonal in probability. Thus \(\mathbf E T_H=H^2\) and \(\operatorname{Var}(T_H)=4H\binom H2\le2H^3\). Chebyshev bounds the probability of \(T_H<H^2/2\) by \(8/H\). This is summable on the dyadic scales. Apply Borel--Cantelli and use \(\E_\epsilon(3H,H)\ge T_H\).
+\end{proof}
+
+\begin{proposition}[Random completely multiplicative signs]\label{prop:rmult}
+Give the primes independent fair signs and extend them completely multiplicatively to \(f\). Then almost surely
+\[
+ \E_f(3H,H)\gg H^2/\log H
+\]
+for infinitely many dyadic \(H\).
+\end{proposition}
+\begin{proof}
+Condition on all prime signs up to \(2H\). A composite integer at most \(3H\) has all prime factors at most \(3H/2\). Thus the only fresh signs in the vector \(C_{f,h}(H)\), \(H<h\le2H\), are those of primes \(p\in(2H,3H]\) in the second factor. Write the vector as \(u+\sum_p A_p\epsilon_p\), where \(u\) is fixed under the conditioning and \(A_p(h)=f(p-h)\) if \(1\le p-h\le H\), and zero otherwise. Let \(T=\sum_p\|A_p\|_2^2\). Each prime in \((2H,5H/2]\) contributes at least \(H/2\) nonzero coordinates for dyadic \(H\ge2\), so the prime number theorem gives \(T\gg H^2/\log H\).
+
+For \(Z=\|u+\sum_p A_p\epsilon_p\|_2^2\), the conditional mean is \(m=\|u\|_2^2+T\). Orthogonality of the independent linear and quadratic sign monomials gives
+\[
+ \operatorname{Var}(Z)=4\sum_p|\langle u,A_p\rangle|^2+
+ 4\sum_{p<q}|\langle A_p,A_q\rangle|^2
+ \le4\|u\|_2^2T+2T^2\le2m^2 .
+\]
+Since \(\mathbf E[Z\one_{Z\ge m/2}]\ge m/2\), Cauchy--Schwarz and \(\mathbf E[Z^2]\le3m^2\) give conditional probability at least \(1/12\) of \(Z\ge m/2\ge T/2\). All earlier dyadic events depend only on primes at most \(3H/2\), hence are measurable under the conditioning at scale \(H\). By iterative conditioning, the probability of no successes in any block of \(r\) consecutive large dyadic scales is at most \((11/12)^r\). Let \(r\to\infty\) and take the countable union over starting scales. The conclusion follows because \(\E_f(3H,H)\ge Z\).
+\end{proof}
+
+The complementary identities used in Theorem~\ref{thm:rs} belong to the classical Rudin--Shapiro construction. Peak aperiodic correlations of the full polynomials have a separate literature \cite{rs}. The prefix maximum in \(\E_a\) is essential to the block example.
+\begin{theorem}[A deterministic logarithmic obstruction]\label{thm:gram-log}
+For every sign sequence \(a\) and every \(B\ge0\), the number of dyadic \(H\) with
+\[
+ \E_a(3H,H)/H\le B
+\]
+is \(O(B+1)\), with an absolute constant. Consequently \(\E_a(3H,H)/H\to+\infty\) along all dyadic \(H\). In each range \(J/2\le j\le J\) of dyadic exponents, a positive proportion of the \(H=2^j\) satisfy \(\E_a(3H,H)\gg H\log H\), uniformly for sufficiently large \(J\).
+\end{theorem}
+\begin{proof}
+Restrict first to one residue class of \(j\) modulo \(3\), so distinct scales increase by a factor of at least \(8\). Set \(M=\lceil64(B+1)\rceil\). Suppose there are \(K=2M\) scales \(H_i\ge M\), numbered in increasing order, with the stated bound. Put \(I_i=(3H_i/2,7H_i/4]\cap\mathbb Z\). Since \(H_i\) is divisible by \(4\), \(|I_i|=H_i/4\). For \(n\in I_i\) let \(v_n=(a_{n+1},\ldots,a_{n+M})^\mathsf{T}\) and form
+\[
+ B_i=|I_i|^{-1}\sum_{n\in I_i}v_nv_n^\mathsf{T}.
+\]
+These \(M\times M\) matrices are positive semidefinite with trace \(M\), so \(\operatorname{tr}(B_i^2)\le M^2\). For \(i<j\), \(n\in I_i\) and \(m\in I_j\), the gap \(h=m-n\) lies in \((H_j,2H_j]\), using \(H_i\le H_j/8\). Also \(m+M\le3H_j\). Thus
+\[
+ |v_n^\mathsf{T}v_m|=|C_{a,h}(n+M)-C_{a,h}(n)|
+             \le2 C^*_{a,h}(3H_j).
+\]
+At a fixed \(h\) there are at most \(|I_i|\) pairs \((n,m)\). On expanding the cross trace this gives
+\(\operatorname{tr}(B_iB_j)\le4\E_a(3H_j,H_j)/|I_j|\le16B\).
+On the other hand, Cauchy--Schwarz on the \(M\) eigenvalues of \(\sum_i B_i\) gives \(\operatorname{tr}((\sum_i B_i)^2)\ge K^2 M\). The diagonal and cross bounds imply
+\[
+ K^2 M\le KM^2+16BK(K-1).
+\]
+With \(K=2M\), this forces \(M\le32B\), a contradiction.
+
+There are therefore fewer than \(2M\) such scales above \(M\) in each residue class. The number of omitted smaller scales is \(O(1+\log M)\). This proves the bound on the number of exceptions. To obtain the last claim take \(B=cJ\) with a sufficiently small absolute \(c>0\), and apply the bound to the \(J/2+O(1)\) scales in the range.
+\end{proof}
+
+This argument applies to \(\lambda\) without a correlation theorem. It also proves that a fixed bound on the normalized collar cannot hold along any infinite sequence of dyadic scales for any sign sequence. The next result records an exact weighted second-moment asymptotic for the actual Liouville function.
+
+\section{An endpoint obstruction for Liouville itself}\label{sec:tao}
+
+The examples in Section~\ref{sec:obstructions} concern other sequences. To obtain a statement about \(\lambda\) itself we use Tao's logarithmically averaged two-point Chowla theorem \cite{tao}. We need only the consequence
+\begin{equation}\label{eq:chowla}
+ \sum_{t\le T}\frac{\lambda(t)\lambda(t+d)}{t}=o_d(\log T)
+ \qquad(d\ge1\text{ fixed}).
+\end{equation}
+
+\begin{theorem}[Failure of the absolute endpoint]\label{thm:endpoint}
+The Liouville collar satisfies
+\[
+ \lim_{J\to\infty}\frac1J
+ \sum_{j=0}^{J-1}\frac{\E_\lambda(3\cdot 2^j,2^j)}{2^j}=+\infty.
+\]
+In particular, \(\E_\lambda(3H,H)/H\) is unbounded along dyadic \(H\).
+\end{theorem}
+\begin{proof}
+Fix an integer \(M\ge1\). In
+\[
+ |C_{\lambda,h}(M)|^2=
+ \sum_{1\le n,m\le M}\lambda(n)\lambda(m)\lambda(n+h)\lambda(m+h)
+\]
+the diagonal contributes \(M\). For \(n<m\), changing \(t=h+n\) changes the harmonic weights \(1/h\) to \(1/t\) with total error \(O_M(1)\), since \(\sum_{h\ge1}n/(h(h+n))<\infty\). Changing the endpoints costs \(O_M(1)\). By \eqref{eq:chowla}, the logarithmic mean of this off-diagonal term vanishes. The terms with \(m<n\) have the same treatment. Hence
+\begin{equation}\label{eq:loggram}
+ \sum_{h\le T}\frac{|C_{\lambda,h}(M)|^2}{h}
+ =M\log T+o_M(\log T).
+\end{equation}
+When \(H\ge M\) and \(H<h\le2H\), the endpoint \(M\) is admissible at \(N=3H\), and \(1/h\le1/H\). Thus the contribution of that block to \eqref{eq:loggram} is at most \(\E_\lambda(3H,H)/H\). Sum over all dyadic \(H<2^J\), omitting the finitely many with \(H<M\) and the initial \(h=1\). After dividing by \(J\), the lower limit of the displayed average is at least \(M\log 2\). Since \(M\) was arbitrary, the limit is \(+\infty\).
+\end{proof}
+
+The theorem disproves the estimate with a fixed constant at exponent \(\varepsilon=0\). The argument takes \(M\) fixed before \(J\to\infty\) and supplies no positive power of \(H\). One can see the role of uniformity directly from the matrix in \eqref{eq:loggram}.
+
+\begin{proposition}[A power saving in ordinary correlations would obstruct the collar]\label{prop:power}
+Suppose there are \(\delta,\eta>0\) and \(K<\infty\) such that for all sufficiently large dyadic \(H\) and all \(1\le n<m\le H^\eta\),
+\[
+ \left|\sum_{H<h\le2H}\lambda(h+n)\lambda(h+m)\right|
+ \le K H^{1-\delta}.
+\]
+For every \(0<\kappa<\min(\delta,\eta,1)\), one then has \(\E_\lambda(3H,H)\gg H^{1+\kappa}\) for large dyadic \(H\). Thus \eqref{eq:collar} would fail for \(\varepsilon<\kappa\).
+\end{proposition}
+\begin{proof}
+Use \(M=\lfloor H^\kappa\rfloor\) and expand \(\sum_{H<h\le2H}|C_{\lambda,h}(M)|^2\). The diagonal is \(HM\), and the absolute value of the sum of off-diagonal terms is at most \(KM(M-1)H^{1-\delta}\). Its ratio to \(HM\) tends to zero. Use \(M\le H\) to bound the collar below by the resulting second moment.
+\end{proof}
+
+For comparison, ordinary two-point Chowla at every \emph{fixed} shift would imply
+\(\E_\lambda(3H,H)/H\to\infty\) without Ces\`aro averaging. For fixed \(M\), the same expansion and subtraction of partial sums at \(H\) and \(2H\) give
+\[
+ \frac1H\sum_{H<h\le2H}|C_{\lambda,h}(M)|^2\to M .
+\]
+This conclusion uses the stated ordinary correlation input. The recent OpenAI manuscript \cite{oaichowla} gives fixed-affine-form estimates with logarithmic savings. Such savings do not supply the uniform power input in Proposition~\ref{prop:power}. Theorem~\ref{thm:endpoint} uses only the published logarithmic theorem \cite{tao}.
+
+\section{A signed energy and its exact boundary terms}\label{sec:fejer}
+
+Extend the truncation \(a_1,\ldots,a_N\) by zero to the integers, and write
+\[
+ S_{N,H}(t)=\sum_{t<n\le t+H}a_n\one_{[1,N]}(n),\quad
+ \Q_a(N,H)=\frac1H\sum_{t\in\mathbb Z}|S_{N,H}(t)|^2.
+\]
+The sum over \(t\) has finite support. The factor \(H^{-1}\) normalizes the diagonal. Here \(H\ge1\) is any integer. We distinguish this \(H\), the window length, from a dyadic shift range in \(\E_a\).
+
+\begin{proposition}[Fej\'er identity]\label{prop:fejer}
+Let
+\(F_H(\alpha)=H^{-1}|\sum_{j=1}^H\ee(j\alpha)|^2\).
+Then
+\begin{align}
+ \Q_a(N,H)
+ &=\int_0^1 |A_N(\alpha)|^2F_H(\alpha)\dd\alpha \label{eq:fejerfourier}\\
+ &=\sum_{n\le N}a_n^2+
+  2\sum_{h=1}^{\min(H-1,N-1)}(1-h/H) C_{a,h}(N-h).\label{eq:fejershift}
+\end{align}
+For \(L_a(j)=\sum_{n\le j}a_n\) one has
+\begin{equation}\label{eq:fejerlower}
+ \Q_a(N,H)\ge\frac{H}{N+H-1}|L_a(N)|^2 .
+\end{equation}
+If \(H\ge N\), one has the exact formula
+\begin{align}
+ \Q_a(N,H)
+ &=\frac{H-N+1}{H}|L_a(N)|^2\nonumber\\
+ &\quad+\frac1H\sum_{j=1}^{N-1}
+  \bigl(|L_a(j)|^2+|L_a(N)-L_a(j)|^2\bigr). \label{eq:fejerboundary}
+\end{align}
+\end{proposition}
+\begin{proof}
+Two indices \(m,n\in[1,N]\) lie together in exactly \((H-|m-n|)_+\) integer windows, where \(u_+=\max(u,0)\). Expand the squares and group by \(m-n\). This gives \eqref{eq:fejershift}, and the same weights are the Fourier coefficients of \(F_H\), proving \eqref{eq:fejerfourier}. There are at most \(N+H-1\) windows meeting \([1,N]\). Each index lies in \(H\) windows, so \(\sum_t S_{N,H}(t)=H L_a(N)\). Cauchy--Schwarz proves \eqref{eq:fejerlower}. For \(H\ge N\), exactly \(H-N+1\) windows contain \([1,N]\), and each proper nonempty prefix and suffix occurs in one window. This gives \eqref{eq:fejerboundary}.
+\end{proof}
+
+At \(H=N\), let \(Q_a(N)=\Q_a(N,N)\). Completing the square in \eqref{eq:fejerboundary} gives
+\begin{equation}\label{eq:completion}
+ Q_a(N)=\frac{N+1}{2N}|L_a(N)|^2+
+ \frac2N\sum_{j=1}^{N-1}|L_a(j)-\tfrac12 L_a(N)|^2.
+\end{equation}
+In particular, \(\tfrac12|L_a(N)|^2\le Q_a(N)\le
+5\max_{j\le N}|L_a(j)|^2\), with the upper bound following directly from \eqref{eq:fejerboundary}. The two inequalities compare a single positive energy to the sum at its own endpoint and to the maximal prefix sum. They show why the square-root-scale Fej\'er question is neither an unsigned collar estimate nor a positivity statement alone.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=.71cm,y=.65cm]
+\fill[blue!10] (1,0) rectangle (8,1);
+\draw[thick] (1,0) rectangle (8,1);
+\node at (4.5,.5) {support \([1,N]\)};
+\draw[thick,blue!50!black] (-1,1.35)--(6,1.35);
+\draw[thick,blue!50!black] (1,2.05)--(8,2.05);
+\draw[thick,blue!50!black] (3,2.75)--(10,2.75);
+\node[anchor=west] at (6.1,1.35) {prefix};
+\node[anchor=west] at (8.1,2.05) {full sum};
+\node[anchor=east] at (2.9,2.75) {suffix};
+\end{tikzpicture}
+\caption{Windows of length \(N\) in the zero-extended sequence. The boundary terms in \eqref{eq:fejerboundary} are exactly one copy of each proper prefix and suffix.}
+\label{fig:windows}
+\end{figure}
+
+For independent fair signs, \(\mathbf E Q_\epsilon(N)=N\) by \eqref{eq:fejershift}, although the same model violates \eqref{eq:collar}. For alternating signs, \(Q_a(N)=1\) for every \(N\). When \(N\) is odd the full window contributes \(1\), and each proper prefix and its complementary suffix contribute \(1\) between them. When \(N\) is even the full window vanishes, and exactly \(N/2\) pairs of odd prefix and suffix contribute \(2\) each. For constant signs the boundary formula gives \(Q_{\mathbf 1}(N)=(N^2+2\sum_{j<N}j^2)/N=(2N^2+1)/3\). Thus alternating and constant signs have the same maximal absolute energy and different orders of signed energy.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=.72cm,y=1cm]
+\draw[->,thick] (0,0)--(7.3,0) node[right] {\(\log N\)};
+\draw[->,thick] (0,0)--(0,3.35) node[above] {\(\log Q\)};
+\draw[thick,blue!65!black] (.35,.09)--(5.65,.09);
+\draw[thick,teal!75!black] (.35,.18)--(5.65,1.52);
+\draw[thick,orange!85!black] (.35,.21)--(5.65,2.9);
+\node[anchor=west,font=\small,blue!65!black] at (5.73,.28) {alternating};
+\node[anchor=west,font=\small,teal!75!black] at (5.73,1.52) {fair signs (mean)};
+\node[anchor=west,font=\small,orange!85!black] at (5.73,2.9) {constant};
+\end{tikzpicture}
+\caption{Orders of the signed energy in the three models. The slopes are \(0,1,2\), respectively, from the exact formulas. The lines show the exponents schematically.}
+\label{fig:energies}
+\end{figure}
+
+One may shorten the window at a known cost. If \(H=\lfloor N^\alpha\rfloor\) for \(0<\alpha\le1\) and \(\Q_\lambda(N,H)\ll_\varepsilon N^{1+\varepsilon}\), then \eqref{eq:fejerlower} implies \(L(N)\ll_\varepsilon N^{1-\alpha/2+\varepsilon}\). A sequence of such estimates with \(\alpha\) arbitrarily close to \(1\) would suffice for RH. Estimates confined to windows much shorter than \(N\) do not give that conclusion from this inequality.
+
+\section{The zero-free exponent}\label{sec:zero}
+
+We write \(Q_\lambda(N)=\Q_\lambda(N,N)\) and use \(\theta\) for a real number in \([1/2,1]\).
+
+\begin{theorem}[Equivalent zero-free bounds]\label{thm:equiv}
+The following conditions are equivalent.
+\begin{enumerate}
+\item \(\zeta(s)\ne0\) for \(\R s>\theta\).
+\item \(L(x)\ll_{\theta,\varepsilon} x^{\theta+\varepsilon}\) for every \(\varepsilon>0\).
+\item \(Q_\lambda(N)\ll_{\theta,\varepsilon} N^{2\theta+\varepsilon}\) for every \(\varepsilon>0\).
+\end{enumerate}
+In particular, the third condition at \(\theta=1/2\) is equivalent to RH.
+\end{theorem}
+\begin{proof}
+The inequalities following \eqref{eq:completion} give the equivalence of the second and third conditions by rescaling \(\varepsilon\). For the implication from the second to the first, partial summation defines
+\[
+ F(s)=s\int_1^\infty L(x)x^{-s-1}\dd x
+\]
+holomorphically on \(\R s>\theta\). The convergence is locally uniform by taking \(\varepsilon\) smaller than the distance of a compact set from the boundary. For \(\R s>1\), \(F(s)=\sum_{n\ge1}\lambda(n)n^{-s}=\zeta(2s)/\zeta(s)\). This follows from the local factor \((1+p^{-s})^{-1}=(1-p^{-s})/(1-p^{-2s})\). The identity \(\zeta(s)F(s)=\zeta(2s)\) extends meromorphically. The right side has no zero on \(\R s>\theta\). This excludes a zero of the factor \(\zeta(s)\) there.
+
+The reverse implication is classical. Appendix~\ref{sec:perron} supplies the reciprocal growth bound and the contour calculation with their dependence on the fixed distance from \(\R s=\theta\). At \(\theta=1\) the conclusion about \(L(x)\) is trivial. At \(\theta=1/2\), apply the functional equation to exclude nontrivial zeros to the left of the line.
+\end{proof}
+
+\begin{corollary}[Exact growth exponent]\label{cor:exponent}
+Let \(\Theta\) be the supremum of the real parts of the nontrivial zeros of \(\zeta\). Then
+\[
+ \limsup_{N\to\infty}\frac{\log(1+Q_\lambda(N))}{\log N}=2\Theta .
+\]
+\end{corollary}
+\begin{proof}
+The functional equation and the existence of nontrivial zeros give \(1/2\le\Theta\le1\). Theorem~\ref{thm:equiv} at \(\theta=\Theta\) gives the upper bound. If \(\Theta>1/2\) and the limit superior were strictly smaller than \(2\Theta\), choose \(\theta\in[1/2,\Theta)\) strictly above half that limit superior. Theorem~\ref{thm:equiv} would exclude all zeros to the right of \(\theta\), contrary to the definition of \(\Theta\). If \(\Theta=1/2\) and the limit superior were less than \(1\), then \eqref{eq:completion} would give \(L(x)\ll x^\sigma\) with \(\sigma<1/2\). The Mellin integral would be holomorphic near \(1/2\), whereas the identity \(\zeta(s)F(s)=\zeta(2s)\) has a pole there on the right side and no pole on the left side. This is impossible.
+\end{proof}
+
+\begin{corollary}[A boundary constraint at the square-root scale]\label{cor:simple}
+If \(Q_\lambda(N)\ll N(\log(2N))^B\) for some \(B\ge0\), then RH holds and every nontrivial zero has multiplicity at most \(1+B/2\). In particular, if \(B<2\) all nontrivial zeros are simple.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:equiv} gives RH. The same bound and \eqref{eq:completion} give \(L(x)\ll x^{1/2}(\log(2x))^{B/2}\). At a nontrivial zero \(\rho=1/2+i\gamma\), the numerator \(\zeta(2\rho)\) is finite and nonzero by the classical nonvanishing on \(\R s=1\) and \(\gamma\ne0\). For \(u\downarrow0\), the Mellin integral at \(s=\rho+u\) is \(O_\rho(u^{-1-B/2})\) after the change of variable \(v=\log x\). A zero of multiplicity \(m\) gives a pole of order \(m\) in \(F\) at \(\rho\), which forces \(m\le1+B/2\).
+\end{proof}
+
+\section{What the recent results give}\label{sec:frontier}
+
+The recent advances concern different quantities. Anthropic's result controls a lower proportion of simple zeros on the critical line through Weil's form and pair correlation \cite{anthropic}. Lamzouri's independent proof obtains more than \(67.25\%\) of zeros that are both simple and on the line \cite{lamzouri}. Guth and Maynard's large-value estimates bound the number of zeros to the right of a specified line as a function of height \cite{gm}. A count of this type can allow an exceptional zero. Corollary~\ref{cor:exponent} shows that even one such zero affects the energy exponent. A rigorous computation of Platt and Trudgian checks all positive ordinates through \(3\cdot10^{12}\) \cite{pt}. The height cutoff, the proportion and the horizontal threshold are separate quantities.
+
+The OpenAI quasi-Riemann manuscript states that \(\zeta(s)\ne0\) for \(\R s>7/8\), with a Lean formalization of the stated zero-free result in the accompanying repository \cite{oai,oaiscope}. Taking this zero-free statement as input in Theorem~\ref{thm:equiv} gives
+\[
+ L(x)\ll_\varepsilon x^{7/8+\varepsilon},
+ \qquad Q_\lambda(N)\ll_\varepsilon N^{7/4+\varepsilon}.
+\]
+The difference between \(7/4\) and \(1\) is precisely the remaining power in this application. The quasi-Riemann input is used only for this specialization, and the proofs of the energy identities, the equivalence, the counterexamples and the endpoint obstruction do not use it.
+
+The proof attempt in this revision proceeds by retaining the signs through \eqref{eq:fejershift}. At \(H=N\), the desired estimate is exactly an upper bound \(O_\varepsilon(N^{1+\varepsilon})\) for the diagonal \(N\) plus the weighted signed correlation sum. The termwise absolute-value route would require control of a different quantity, and Sections~\ref{sec:obstructions} and \ref{sec:tao} show why naive random-sign or fixed-shift estimates do not provide it. Additive Fourier cancellation controls the energy through \eqref{eq:fejerfourier}, but an \(O(N^{1/2+\varepsilon})\) uniform Fourier bound already includes the estimate for \(L(N)\) at \(\alpha=0\). Using it as an input would therefore assume the required strength. The remaining estimate is the signed energy bound itself, or another estimate that excludes all zeros with \(1/2<\R s\le7/8\) when the quasi-Riemann input is used.
+
+\input{routes}
+
+\section{The character version and GRH}\label{sec:characters}
+
+For a Dirichlet character \(\chi\), including the primitive character of conductor \(1\), put \(a_\chi(n)=\lambda(n)\chi(n)\). Define \(L_\chi^\lambda(N)=\sum_{n\le N}a_\chi(n)\) and
+\[
+ Q_\chi(N)=\frac1N\sum_{t\in\mathbb Z}
+  \left|\sum_{t<n\le t+N}a_\chi(n)\one_{[1,N]}(n)\right|^2 .
+\]
+The boundary identity \eqref{eq:fejerboundary} holds with complex moduli in each term. Thus
+\(\tfrac12|L_\chi^\lambda(N)|^2\le Q_\chi(N)
+ \le5\max_{j\le N}|L_\chi^\lambda(j)|^2\).
+The Fourier identity holds as well, with
+\(C_h=\sum_{n\le N-h}a_\chi(n+h)\overline{a_\chi(n)}\)
+and the real part of its weighted sum.
+
+\begin{theorem}[Signed energy for Dirichlet characters]\label{thm:char-grh}
+Let \(1/2\le\theta\le1\). The following conditions are equivalent.
+\begin{enumerate}
+\item Every Dirichlet \(L\)-function has no zero in \(\R s>\theta\).
+\item For every fixed character \(\chi\) and every \(\varepsilon>0\),
+ \(L_\chi^\lambda(N)\ll_{\chi,\varepsilon}N^{\theta+\varepsilon}\).
+\item For every fixed character \(\chi\) and every \(\varepsilon>0\),
+ \(Q_\chi(N)\ll_{\chi,\varepsilon}N^{2\theta+\varepsilon}\).
+\end{enumerate}
+At \(\theta=1/2\) these are equivalent to Dirichlet GRH.
+\end{theorem}
+\begin{proof}
+The boundary inequalities give the equivalence of the second and third conditions. Under the second condition partial summation extends
+\[
+ F_\chi(s)=\sum_{n\ge1}\lambda(n)\chi(n)n^{-s}
+         =\frac{L(2s,\chi^2)}{L(s,\chi)}
+\]
+holomorphically to \(\R s>\theta\). The numerator has an absolutely convergent nonvanishing Euler product there. This proves the first condition.
+
+For the reverse implication fix \(\chi\). The proof of Lemma~\ref{lem:subpower} applies to \(L(s,\chi)\). For a nonprincipal character, the partial sums of \(\chi\) are bounded by its modulus, and partial summation gives \(L(s,\chi)=s\int_1^\infty(\sum_{n\le x}\chi(n))x^{-s-1}\dd x\) on \(\R s>0\). This gives the polynomial growth on the disks used in that lemma. The Euler product normalizes the logarithm at the center. For a principal character use \(\zeta(s)\) times its finitely many Euler factors. Each is nonzero on \(\R s>0\). The three-circles argument gives reciprocal subpower growth for this fixed \(\chi\), uniformly in each closed strip to the right of \(\theta\). The numerator \(L(2s,\chi^2)\) is bounded on such a strip because \(2\R s>1\). Apply the truncated Perron proof of Proposition~\ref{prop:perron}, using \(|\lambda(n)\chi(n)|\le1\). This proves the second condition. At \(\theta=1\), it is trivial and the Euler product gives the first. The functional equations for primitive characters complete the final assertion.
+\end{proof}
+
+No uniform bound on the dependence of the constants on the conductor is assumed here. To obtain GRH, the estimates must nevertheless hold for every fixed character and at all sufficiently large \(N\). The quasi-Riemann input specializes this criterion to \(\theta=7/8\), giving \(Q_\chi(N)\ll_{\chi,\varepsilon}N^{7/4+\varepsilon}\). The desired exponent is \(1+\varepsilon\).
+
+
+\appendix
+\section{From a fixed zero-free half-plane to summatory cancellation}\label{sec:perron}
+
+We give the reverse implication used in Theorem~\ref{thm:equiv}. Suppose \(1/2\le\theta<1\) and \(\zeta\) has no zeros in \(\R s>\theta\). We use the classical Euler product, the meromorphic continuation and the standard truncated Perron formula as in \cite{titchmarsh}.
+
+\begin{lemma}[Subpower growth of the reciprocal]\label{lem:subpower}
+For \(0<\delta<1/4\) and \(\eta>0\),
+\[
+ \left|\frac{1}{\zeta(\sigma+it)}\right|
+ \ll_{\theta,\delta,\eta}(1+|t|)^\eta
+ \qquad(\theta+\delta\le\sigma\le2),
+\]
+where \(1/\zeta\) is extended by zero at \(s=1\).
+\end{lemma}
+\begin{proof}
+Take \(|t|\ge4\) and use the disk centered at \(2+it\) of radius \(R=2-\theta-\delta/4\). The disk lies in the zero-free half-plane and misses the pole. Choose a holomorphic branch \(G=\log\zeta\) there, normalized at the center by the absolutely convergent Euler product. On the subdisk of radius \(r_0=1/2\), that product bounds \(|G|\) uniformly.
+
+For \(\R s>0\), away from the pole, the identity
+\[
+ \zeta(s)=\frac{s}{s-1}-s\int_1^\infty \{x\}x^{-s-1}\dd x
+\]
+follows from partial summation for \(\R s>1\) and then continuation. It gives a polynomial bound on \(|\zeta|\) on the closed disk of radius \(R\), since its real parts are at least \(\theta+\delta/4\). Thus \(\max\R G\ll\log(2+|t|)\) there. Borel--Carath\'eodory with \(r_2=2-\theta-\delta/2<R\) gives \(\max_{|s-(2+it)|\le r_2}|G(s)|\ll_{\theta,\delta}\log(2+|t|)\). The branch is holomorphic on a neighborhood of that disk because the entire closed disk of radius \(R\) stays away from zeros and the pole.
+
+The three-circles theorem at \(r_1=2-\theta-\delta\), between \(r_0\) and \(r_2\), bounds \(|G|\) by \(C(\log(2+|t|))^\tau\) for some fixed \(\tau<1\) on the disk of radius \(r_1\). This covers all points \(\sigma+it\) in the stated range. Exponentiating \(-\R G\) gives a bound by \((1+|t|)^\eta\) up to a constant. For bounded \(t\), use compactness and the removable extension of the reciprocal at the pole.
+\end{proof}
+
+\begin{proposition}[Perron calculation]\label{prop:perron}
+Under the zero-free hypothesis of Lemma~\ref{lem:subpower}, \(L(x)\ll_{\theta,\varepsilon}x^{\theta+\varepsilon}\) for every \(\varepsilon>0\).
+\end{proposition}
+\begin{proof}
+Take \(x\ge3\) a half-integer, \(c=1+1/\log x\), \(T=x^2\), and \(\sigma_0=\theta+\delta\) with \(0<\delta<\min(1/4,1-\theta,\varepsilon/2)\). Write \(F(s)=\zeta(2s)/\zeta(s)\). In the strip \(\sigma_0\le\R s\le c\), \(F\) is holomorphic and satisfies \(F(\sigma+it)\ll_{\theta,\delta,\eta}(1+|t|)^\eta\), since \(\zeta(2s)\) is bounded there by an absolutely convergent series and Lemma~\ref{lem:subpower} bounds the reciprocal. The singularity at \(s=1\) in the denominator gives a removable zero in \(F\).
+
+Truncated Perron gives
+\[
+ L(x)=\frac{1}{2\pi i}\int_{c-iT}^{c+iT}F(s)\frac{x^s}{s}\dd s
+ +O\!\left(\sum_{n\ge1}(x/n)^c
+       \min\{1,(T|\log(x/n)|)^{-1}\}\right).
+\]
+Here \(|\lambda(n)|=1\). On \(x/2<n<2x\), use \(|\log(x/n)|\gg |x-n|/x\), and sum the reciprocal distances from the half-integer \(x\). Outside that range, use \(|\log(x/n)|\ge\log2\) and \(\zeta(c)\ll\log x\). The error is \(O(x\log x/T)\). Move the integral to \(\sigma_0\) in the rectangle of height \(T\). The two horizontal sides are \(O_{\theta,\delta,\eta}(x^c T^{\eta-1})\). The new vertical side is \(O_{\theta,\delta,\eta}(x^{\sigma_0}(1+T^\eta))\), by integrating \((1+|t|)^{\eta-1}\). Choose \(\eta>0\) with \(2\eta<\min(\varepsilon-\delta,1/2)\). All terms satisfy the required estimate. Every integer prefix is attained at a half-integer \(x\), and extending the bound to all real \(x\ge1\) changes only the constant.
+\end{proof}
+
+\input{ordinary-dilates}
+
+\section{Reproduction and provenance}
+
+The accompanying exact-integer checks test the finite autocorrelation and window formulas, dyadic partitions, the Rudin--Shapiro construction, the finite-prime examples and the independent-sign variance. These checks complement the analytic proofs. The original preprint is cited as \cite{v1}. Version~2 retains its authorship, corrects the endpoint conventions and gives proofs and obstructions for the stronger statements above. Computational and AI-assisted tools were used to develop examples, check finite identities and revise the exposition. This is a review draft.
+
+\begingroup
+\raggedright
+\begin{thebibliography}{99}
+\bibitem{baez} L. B\'aez-Duarte, \emph{A strengthening of the Nyman--Beurling criterion for the Riemann hypothesis}, Rend. Lincei Mat. Appl. \textbf{14} (2003), 5--11, \href{https://www.bdim.eu/item?fmt=pdf&id=RLIN_2003_9_14_1_5_0}{paper}.
+\bibitem{burnol} J.-F. Burnol, \emph{A lower bound in an approximation problem involving the zeros of the Riemann zeta function}, Adv. Math. \textbf{170} (2002), 56--70, \href{https://doi.org/10.1006/aima.2001.2066}{doi:10.1006/aima.2001.2066}.
+\bibitem{bcf} S. Bettin, J. B. Conrey and D. W. Farmer, \emph{An optimal choice of Dirichlet polynomials for the Nyman--Beurling criterion}, \href{https://arxiv.org/abs/1211.5191}{arXiv:1211.5191}.
+\bibitem{bpt} R. P. Brent, D. J. Platt and T. S. Trudgian, \emph{The mean square of the error term in the prime number theorem}, J. Number Theory \textbf{238} (2022), 740--762, \href{https://doi.org/10.1016/j.jnt.2021.09.016}{doi:10.1016/j.jnt.2021.09.016}.
+\bibitem{nbdraft} D. Bhattacharjee, P. Nandi, O. Frederick and P. Samal, \emph{Spectral and Analytic Structure of the Nyman--Beurling--B\'aez--Duarte Approximation}, Preprints.org, version 2, 10 March 2026, \href{https://doi.org/10.20944/preprints202506.0772.v2}{doi:10.20944/preprints202506.0772.v2}.
+\bibitem{pv} D. Bhattacharjee and U. Bhattacharya, \emph{The P\'olya--Vinogradov inequality with \(\log\log q\) for every character}, \href{https://hexagonmath.org/2610.00256v3}{Hexagon 2610.00256v3}, 26 October 2026.
+\bibitem{lsw} J. Li, Y.-C. Sun and H. Wang, \emph{On the lower bound for the \(L^1\) norm of Liouville exponential sums. I}, \href{https://arxiv.org/abs/2611.03589v1}{arXiv:2611.03589v1}, 2 November 2026.
+\bibitem{anthropic} Claude, \emph{More than two thirds of the zeta zeros are simple and on the critical line}, research manuscript, August 2026. Paper and formalization linked from \url{https://www.anthropic.com/research/riemann-zeta}.
+\bibitem{pt} D. J. Platt and T. S. Trudgian, \emph{The Riemann hypothesis is true up to \(3\cdot10^{12}\)}, Bull. Lond. Math. Soc. \textbf{53} (2021), 792--797, \href{https://doi.org/10.1112/blms.12460}{doi:10.1112/blms.12460}.
+\bibitem{v1} D. Bhattacharjee and U. Bhattacharya, \emph{Maximal Large Sieve and Coefficient Uniform Failure for Liouville Correlations}, Preprints.org, 18 June 2026. \href{https://doi.org/10.20944/preprints202606.1350.v1}{doi:10.20944/preprints202606.1350.v1}.
+\bibitem{di} J.-M. Deshouillers and H. Iwaniec, \emph{Kloosterman sums and Fourier coefficients of cusp forms}, Invent. Math. \textbf{70} (1982), 219--288, \href{https://doi.org/10.1007/BF01390728}{doi:10.1007/BF01390728}.
+\bibitem{gm} L. Guth and J. Maynard, \emph{New large value estimates for Dirichlet polynomials}, \href{https://arxiv.org/abs/2405.20552v2}{arXiv:2405.20552v2}, 2026.
+\bibitem{rm} G. A. Karagulyan, M. T. Lacey and Kh. V. Navoyan, \emph{On maximal Calder\'on--Zygmund operators and Weyl multipliers}, Sb. Math. \textbf{216} (2025), 1375--1392, \href{https://doi.org/10.4213/sm10277e}{doi:10.4213/sm10277e}.
+\bibitem{bd-arith} L. B\'aez-Duarte, \emph{Arithmetical aspects of Beurling's real variable reformulation of the Riemann hypothesis}, \href{https://arxiv.org/abs/math/0011254}{arXiv:math/0011254}.
+\bibitem{rs} D. J. Katz and C. M. van der Linden, \emph{Peak sidelobe level and peak crosscorrelation of Golay--Rudin--Shapiro sequences}, \href{https://arxiv.org/abs/2108.07318}{arXiv:2108.07318}.
+\bibitem{lamzouri} Y. Lamzouri, \emph{A new proof that more than \(2/3\) of the zeros of the Riemann zeta function are simple and on the critical line}, \href{https://arxiv.org/abs/2609.02882v2}{arXiv:2609.02882v2}, 2026.
+\bibitem{mrt} K. Matom\"aki, M. Radziwi\l\l\ and T. Tao, \emph{An averaged form of Chowla's conjecture}, Algebra Number Theory \textbf{9} (2015), 2167--2196, \href{https://arxiv.org/abs/1503.05121}{arXiv:1503.05121}.
+\bibitem{oai} OpenAI, \emph{The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane \(\R s>7/8\)}, research manuscript, 30 September 2026, \href{https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf}{paper}.
+\bibitem{oaiscope} OpenAI, \emph{The quasi-Riemann hypothesis}, formalization scope for family 003, \href{https://github.com/openai/math/blob/main/lean/docs/003.md}{Lean statement map}.
+\bibitem{oaichowla} OpenAI, \emph{Ordinary two-point correlations of multiplicative functions}, research manuscript, 24 September 2026, \href{https://github.com/openai/math/blob/main/preprints/Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026/final.pdf}{paper}.
+\bibitem{tao} T. Tao, \emph{The logarithmically averaged Chowla and Elliott conjectures for two-point correlations}, Forum Math. Pi \textbf{4} (2016), e8, \href{https://doi.org/10.1017/fmp.2016.6}{doi:10.1017/fmp.2016.6}.
+\bibitem{titchmarsh} E. C. Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, second ed., revised by D. R. Heath-Brown, Clarendon Press, Oxford, 1986.
+\end{thebibliography}
+\endgroup
+\end{document}
