@@ -1,0 +1,245 @@
+[
+  {
+    "query": "related_identifiers.identifier:\"https://github.com/creelie/Openproblemsforfieldsmedal1/tree/v2.0.0\"",
+    "total": 0,
+    "records": []
+  },
+  {
+    "query": "\"Signed Liouville energies and the limits of maximal correlation bounds\"",
+    "total": 1,
+    "records": [
+      {
+        "id": 24014165,
+        "doi": "10.5281/zenodo.24014165",
+        "metadata": {
+          "title": "Signed Liouville energies and the limits of maximal correlation bounds",
+          "doi": "10.5281/zenodo.24014165",
+          "publication_date": "2026-11-06",
+          "description": "Version 2 research revision of the Liouville-correlation preprint. The manuscript proves deterministic obstructions for maximal correlation energies, develops signed Fejer energy criteria for RH and Dirichlet GRH, and derives reciprocal-dilate approximation results, including a fixed bounded-variation taper obstruction and quantitative coefficient-cost bounds. The Riemann Hypothesis and Dirichlet GRH remain unproved. The 7/8 specialization is explicitly attributed to the external OpenAI quasi-Riemann manuscript. Novelty and journal suitability remain subject to specialist review.",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Bhattacharjee, Deep",
+              "affiliation": "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India. Formerly, University of Calcutta, Senate House, 87/1 College Street, Kolkata 700073, West Bengal, India.",
+              "orcid": "0000-0003-0466-750X"
+            },
+            {
+              "name": "Bhattacharya, Ushashi",
+              "affiliation": "Formerly, National Taiwan University, Taipei 106319, Taiwan.",
+              "orcid": "0009-0002-2254-3914"
+            }
+          ],
+          "keywords": [
+            "Riemann hypothesis",
+            "Liouville function",
+            "Nyman-Beurling criterion",
+            "M\u00f6bius approximation",
+            "Dirichlet GRH",
+            "Fejer energy"
+          ],
+          "related_identifiers": [
+            {
+              "identifier": "10.20944/preprints202606.1350.v1",
+              "relation": "isNewVersionOf",
+              "scheme": "doi"
+            }
+          ],
+          "version": "2.0.0",
+          "custom": {
+            "code:codeRepository": "https://github.com/creelie/Openproblemsforfieldsmedal1"
+          },
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "24014164"
+                }
+              }
+            ]
+          }
+        },
+        "files": [
+          {
+            "key": "creelie/Openproblemsforfieldsmedal1-v2.0.0.zip"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "error": "KeyError: 'html'"
+  },
+  {
+    "query": "related_identifiers.identifier:\"https://github.com/creelie/Openproblemsforfieldsmedal1/tree/v2.0.0\"",
+    "total": 0,
+    "records": []
+  },
+  {
+    "query": "\"Signed Liouville energies and the limits of maximal correlation bounds\"",
+    "total": 1,
+    "records": [
+      {
+        "id": 24014165,
+        "doi": "10.5281/zenodo.24014165",
+        "metadata": {
+          "title": "Signed Liouville energies and the limits of maximal correlation bounds",
+          "doi": "10.5281/zenodo.24014165",
+          "publication_date": "2026-11-06",
+          "description": "Version 2 research revision of the Liouville-correlation preprint. The manuscript proves deterministic obstructions for maximal correlation energies, develops signed Fejer energy criteria for RH and Dirichlet GRH, and derives reciprocal-dilate approximation results, including a fixed bounded-variation taper obstruction and quantitative coefficient-cost bounds. The Riemann Hypothesis and Dirichlet GRH remain unproved. The 7/8 specialization is explicitly attributed to the external OpenAI quasi-Riemann manuscript. Novelty and journal suitability remain subject to specialist review.",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Bhattacharjee, Deep",
+              "affiliation": "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India. Formerly, University of Calcutta, Senate House, 87/1 College Street, Kolkata 700073, West Bengal, India.",
+              "orcid": "0000-0003-0466-750X"
+            },
+            {
+              "name": "Bhattacharya, Ushashi",
+              "affiliation": "Formerly, National Taiwan University, Taipei 106319, Taiwan.",
+              "orcid": "0009-0002-2254-3914"
+            }
+          ],
+          "keywords": [
+            "Riemann hypothesis",
+            "Liouville function",
+            "Nyman-Beurling criterion",
+            "M\u00f6bius approximation",
+            "Dirichlet GRH",
+            "Fejer energy"
+          ],
+          "related_identifiers": [
+            {
+              "identifier": "10.20944/preprints202606.1350.v1",
+              "relation": "isNewVersionOf",
+              "scheme": "doi"
+            }
+          ],
+          "version": "2.0.0",
+          "custom": {
+            "code:codeRepository": "https://github.com/creelie/Openproblemsforfieldsmedal1"
+          },
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "24014164"
+                }
+              }
+            ]
+          }
+        },
+        "files": [
+          {
+            "key": "creelie/Openproblemsforfieldsmedal1-v2.0.0.zip"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "error": "KeyError: 'html'"
+  },
+  {
+    "query": "related_identifiers.identifier:\"https://github.com/creelie/Openproblemsforfieldsmedal1/tree/v2.0.0\"",
+    "total": 0,
+    "records": []
+  },
+  {
+    "query": "\"Signed Liouville energies and the limits of maximal correlation bounds\"",
+    "total": 1,
+    "records": [
+      {
+        "id": 24014165,
+        "doi": "10.5281/zenodo.24014165",
+        "metadata": {
+          "title": "Signed Liouville energies and the limits of maximal correlation bounds",
+          "doi": "10.5281/zenodo.24014165",
+          "publication_date": "2026-11-06",
+          "description": "Version 2 research revision of the Liouville-correlation preprint. The manuscript proves deterministic obstructions for maximal correlation energies, develops signed Fejer energy criteria for RH and Dirichlet GRH, and derives reciprocal-dilate approximation results, including a fixed bounded-variation taper obstruction and quantitative coefficient-cost bounds. The Riemann Hypothesis and Dirichlet GRH remain unproved. The 7/8 specialization is explicitly attributed to the external OpenAI quasi-Riemann manuscript. Novelty and journal suitability remain subject to specialist review.",
+          "access_right": "open",
+          "creators": [
+            {
+              "name": "Bhattacharjee, Deep",
+              "affiliation": "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India. Formerly, University of Calcutta, Senate House, 87/1 College Street, Kolkata 700073, West Bengal, India.",
+              "orcid": "0000-0003-0466-750X"
+            },
+            {
+              "name": "Bhattacharya, Ushashi",
+              "affiliation": "Formerly, National Taiwan University, Taipei 106319, Taiwan.",
+              "orcid": "0009-0002-2254-3914"
+            }
+          ],
+          "keywords": [
+            "Riemann hypothesis",
+            "Liouville function",
+            "Nyman-Beurling criterion",
+            "M\u00f6bius approximation",
+            "Dirichlet GRH",
+            "Fejer energy"
+          ],
+          "related_identifiers": [
+            {
+              "identifier": "10.20944/preprints202606.1350.v1",
+              "relation": "isNewVersionOf",
+              "scheme": "doi"
+            }
+          ],
+          "version": "2.0.0",
+          "custom": {
+            "code:codeRepository": "https://github.com/creelie/Openproblemsforfieldsmedal1"
+          },
+          "resource_type": {
+            "title": "Preprint",
+            "type": "publication",
+            "subtype": "preprint"
+          },
+          "license": {
+            "id": "cc-by-4.0"
+          },
+          "relations": {
+            "version": [
+              {
+                "index": 0,
+                "is_last": true,
+                "parent": {
+                  "pid_type": "recid",
+                  "pid_value": "24014164"
+                }
+              }
+            ]
+          }
+        },
+        "files": [
+          {
+            "key": "creelie/Openproblemsforfieldsmedal1-v2.0.0.zip"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "error": "KeyError: 'html'"
+  }
+]
