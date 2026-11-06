@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY = "creelie/Openproblemsforfieldsmedal1"
 TAG = "v2.0.0"
 TITLE = "Signed Liouville energies and the limits of maximal correlation bounds"
+SEARCHES = []
 
 
 def records(query):
@@ -16,8 +17,17 @@ def records(query):
         {"q": query, "size": 10, "sort": "mostrecent"}
     )
     request = Request(endpoint, headers={"User-Agent": "RH-research-archive-verifier"})
-    with urlopen(request, timeout=30) as response:
-        return json.load(response)["hits"]["hits"]
+    with urlopen(request, timeout=15) as response:
+        hits = json.load(response)["hits"]
+    SEARCHES.append({
+        "query": query, "total": hits.get("total"),
+        "records": [
+            {"id": r["id"], "doi": r.get("doi"), "metadata": r.get("metadata"),
+             "files": [{"key": f["key"]} for f in r.get("files", [])]}
+            for r in hits["hits"]
+        ],
+    })
+    return hits["hits"]
 
 
 def matches(record):
@@ -28,6 +38,10 @@ def matches(record):
         and TAG in item.get("identifier", "")
         for item in links
     )
+    repository_match = repository_match or any(
+        "Openproblemsforfieldsmedal1" in f["key"] and TAG in f["key"]
+        for f in record.get("files", [])
+    )
     return (repository_match and metadata.get("version") in ("2.0.0", TAG)
             and metadata.get("title", "").casefold() == TITLE.casefold())
 
@@ -37,7 +51,7 @@ def main():
         'related_identifiers.identifier:"https://github.com/' + REPOSITORY + '/tree/' + TAG + '"',
         '"' + TITLE + '"',
     ]
-    for attempt in range(24):
+    for attempt in range(3):
         try:
             for query in queries:
                 for record in records(query):
@@ -63,8 +77,11 @@ def main():
                     print(json.dumps(result, indent=2))
                     return
         except Exception as error:
-            print(type(error).__name__, str(error))
-        if attempt < 23:
+            SEARCHES.append({"error": type(error).__name__ + ": " + str(error)})
+        (ROOT / "docs" / "ARCHIVE-SEARCH.json").write_text(
+            json.dumps(SEARCHES, indent=2) + "\n", encoding="utf-8"
+        )
+        if attempt < 2:
             time.sleep(15)
     raise SystemExit("The exact Zenodo archive has not yet been verified")
 
