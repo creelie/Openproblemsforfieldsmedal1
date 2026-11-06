@@ -6,4 +6,4 @@ The package includes the manuscript PDF and TeX, exact finite checks, and the fi
 
 The new conductor section proves an absolute \(O(X)\) bound for the weighted smoothed Liouville mean square at primitive conductors at least \(X^{1/3}\), extends it to induced characters, and identifies the exact exponent of the full primitive sum. The small-conductor bound that would prove Dirichlet GRH remains open.
 
-The paper links to the [all-versions Zenodo DOI](https://doi.org/10.5281/zenodo.24014164), which resolves to the latest archived version. The preceding release has its own [v2.0.0 DOI](https://doi.org/10.5281/zenodo.24014165).
+The [v2.1.0 archive](https://doi.org/10.5281/zenodo.24015191) preserves the tagged source snapshot. The DOI-stamped manuscript and TeX ZIP also print that version DOI. The [all-versions DOI](https://doi.org/10.5281/zenodo.24014164) resolves to the latest archived version.

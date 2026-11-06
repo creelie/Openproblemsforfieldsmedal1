@@ -17,4 +17,4 @@ The signed Fejér energy has growth exponent twice the supremum of real parts of
 
 OpenGluon is the upstream research workspace ([creelie/OpenGluon](https://github.com/creelie/OpenGluon)). The proof and checker in this draft are readable and runnable without cloning that workspace.
 
-The [Zenodo archive](https://doi.org/10.5281/zenodo.24014164) resolves to the latest archived version. [Zenodo v2.0.0](https://doi.org/10.5281/zenodo.24014165) identifies the previous release.
+The [v2.1.0 release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.1.0) is archived at [10.5281/zenodo.24015191](https://doi.org/10.5281/zenodo.24015191). The [all-versions DOI](https://doi.org/10.5281/zenodo.24014164) resolves to the latest archived version.
