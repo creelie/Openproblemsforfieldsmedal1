@@ -11,8 +11,12 @@ SOURCE_PATHS = [
     ".gitignore", ".zenodo.json", "CITATION.cff", "LICENSE", "README.md",
     "RELEASE-NOTES.md", "release.json", ".github/workflows/release.yml",
     "paper/main.tex", "paper/routes.tex", "paper/ordinary-dilates.tex",
+    "paper/dirichlet-smoothing.tex",
     "paper/LICENSE", "checks/verify.py", "checks/verification-results.txt",
-    "docs/RESEARCH.md", "docs/INPUTS.sha256", "scripts/make_release.py",
+    "docs/RESEARCH.md", "docs/INPUTS.sha256", "docs/DIRICHLET-SMOOTHING-ATTEMPT.md",
+    "scripts/make_release.py",
+    "lean/GramCore.lean", "lean/lean-toolchain", "lean/lakefile.toml",
+    "lean/README.md", "lean/logs/GramCore.build.log",
 ]
 
 

@@ -1,11 +1,9 @@
-# Version 2.0.0 research revision
+# Version 2.1.0 research revision
 
-The maximal correlation estimate in the June 2026 paper concealed stronger consequences and obstructions. This revision gives its Dirichlet GRH implication, proves a deterministic lower bound for every sign sequence, and replaces the absolute energy with a signed Fejér energy whose growth exponent is determined by the rightmost zeta zeros.
+This revision gives the exact tail identity for the balanced logarithmic taper and states the necessary and sufficient endpoint concentration condition for passing from shifted norms to the critical norm. It proves quantitative lower bounds forced by a hypothetical off-line zero for the smoothed Liouville sum and the integrated prime-number error. It computes the power growth exponent of the full balanced logarithmic taper and records recent claimed zero-free thresholds with their sources.
 
-The paper also develops two routes that bypass Chowla. A single exponential smoothing gives an equivalent zero-free criterion. In the reciprocal-dilate setting, a fixed bounded-variation taper cannot converge in the critical norm. The proof detects a Mellin pole using the finite variation measure. A separate inequality quantifies the harmonic coefficient energy needed by any convergent adaptive approximants. The explicit linear family has growth exponent Θ − 1/2. A changing logarithmic taper has a shifted-norm limit, and one balancing coefficient yields an interior criterion for RH.
+The package includes the manuscript PDF and TeX, exact finite checks, and the finite Gram proof in Lean 4.34.1 with its axiom report. The prefix-correlation transfer and analytic arguments are outside the Lean scope. The two critical estimates required for RH remain open.
 
-The two original authors are retained. Affiliations, ORCIDs and contact addresses follow the recently supplied Pólya–Vinogradov v3. The manuscript includes diagrams, footnotes and appendices.
+The new conductor section proves an absolute \(O(X)\) bound for the weighted smoothed Liouville mean square at primitive conductors at least \(X^{1/3}\), extends it to induced characters, and identifies the exact exponent of the full primitive sum. The small-conductor bound that would prove Dirichlet GRH remains open.
 
-RH and Dirichlet GRH remain unproved. The proof checks in the package cover exact finite identities and examples. The analytic arguments were developed and checked with AI assistance and require specialist review. No Lean formalization or certified novelty is claimed.
-
-The compiled manuscript, all three TeX sources, exact checker and result log are included. The source ZIP compiles with main.tex as its entry point. Reference copies of external articles are cited rather than inserted into the manuscript.
+The paper links to the [all-versions Zenodo DOI](https://doi.org/10.5281/zenodo.24014164), which resolves to the latest archived version. The preceding release has its own [v2.0.0 DOI](https://doi.org/10.5281/zenodo.24014165).

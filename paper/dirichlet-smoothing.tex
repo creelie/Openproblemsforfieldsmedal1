@@ -1,0 +1,109 @@
+\section{Smoothing across Dirichlet conductors}\label{sec:conductors}
+
+For \(X>0\), define the smoothed twists and their weighted mean square by
+\begin{align*}
+ B_\chi(X)&=\sum_{n\ge1}\lambda(n)\chi(n)e^{-n/X},\\
+ A_*(X)&=\sum_{q\ge1}\frac{1}{q^2\varphi(q)}
+                 \sum_{\chi\bmod q}^{*}|B_\chi(X)|^2 .
+\end{align*}
+The star restricts to primitive characters. The character of conductor one is included. Absolute convergence follows from \(|B_\chi(X)|\le X\), since \(\sum_{n\ge1}e^{-n/X}=(e^{1/X}-1)^{-1}\le X\).
+
+\begin{theorem}[Large conductors]\label{thm:large-conductors}
+For \(X>0\) and \(Q\ge1\),
+\[
+ \sum_{q\ge Q}\frac{1}{q^2\varphi(q)}
+       \sum_{\chi\bmod q}^{*}|B_\chi(X)|^2
+ \ll X^2Q^{-3}+XQ^{-1}.
+\]
+The constant is absolute. In particular, for \(X\ge1\) the contribution from \(q\ge X^{1/3}\) is \(O(X)\). The same bound holds if one includes imprimitive characters with primitive conductor at least \(Q\) and weights each character by its modulus.
+\end{theorem}
+\begin{proof}
+Put \(T_\chi(y)=\sum_{n\le y}\lambda(n)\chi(n)\), interpreted as zero for \(y<1\). On a block \(R\le q<2R\), use \(1/(q^2\varphi(q))\le R^{-3}q/\varphi(q)\). The multiplicative large sieve \cite{mv-large} gives
+\[
+ \sum_{R\le q<2R}\frac{1}{q^2\varphi(q)}
+             \sum_{\chi\bmod q}^{*}|T_\chi(y)|^2
+ \ll R^{-3}(y+4R^2)y .
+\]
+The square norm of the coefficient sequence in the sieve is at most \(y\). Partial summation writes \(B_\chi(X)=X^{-1}\int_0^\infty T_\chi(y)e^{-y/X}\dd y\). Minkowski's integral inequality in the weighted Euclidean norm bounds the square root of the block contribution by
+\[
+ \frac{C}{XR^{3/2}}\int_0^\infty(y+2R\sqrt y)e^{-y/X}\dd y
+ \ll XR^{-3/2}+\sqrt{X/R}.
+\]
+Squaring and summing over \(R=2^jQ\), \(j\ge0\), gives the assertion for primitive characters. This argument applies to all sequences of modulus at most one.
+
+For a character modulo \(rk\) induced by a primitive character \(\chi_*\) modulo \(r\), inclusion-exclusion and complete multiplicativity give
+\[
+ B_\chi(X)=\sum_{d\mid k}\mu(d)\lambda(d)\chi_*(d)B_{\chi_*}(X/d).
+\]
+The factors at primes dividing \(r\) vanish automatically. For fixed \(k\) there is one lift per primitive character, and \(\varphi(rk)\ge\varphi(r)\varphi(k)\) by the prime-power formula. Apply the triangle inequality to the weighted norm over all \(r\ge Q\) in this layer. Its upper bound is
+\[
+ \frac{C\tau(k)}{k\sqrt{\varphi(k)}}
+       \bigl(XQ^{-3/2}+\sqrt{X/Q}\bigr),
+\]
+using the primitive bound at \(X/d>0\) and \(|\mu(d)\lambda(d)\chi_*(d)|\le1\). Squaring and summing over \(k\) is allowed because \(\sum_{k\ge1}\tau(k)^2/(k^2\varphi(k))<\infty\), by the elementary divisor bound.
+\end{proof}
+
+For the uniform estimate over completely multiplicative signs, the term \(X^2/Q^3\) is necessary. Choose an odd prime \(r\asymp Q\), \(r\ge Q\), and extend the Legendre character \(\chi_r\) to a sign function \(f\) by setting \(f(r)=1\) and keeping complete multiplicativity. The \(\chi_r\) twist of \(f\) is the indicator of integers coprime to \(r\), so its smoothed sum is \(\gg X\) for \(X\ge2\). That single primitive term contributes \(\gg X^2/Q^3\).
+
+\begin{theorem}[Exact exponent across conductors]\label{thm:conductor-exponent}
+Let \(\Theta_D\) be the supremum of real parts of nontrivial zeros over primitive Dirichlet \(L\)-functions, including \(\zeta\). Then
+\[
+ \limsup_{X\to\infty}\frac{\log(1+A_*(X))}{\log X}
+ =2\Theta_D .
+\]
+\end{theorem}
+\begin{proof}
+Write \(r\) for the limit superior. Every fixed character has positive weight, so \(B_\chi(X)\ll_{\chi,\varepsilon} X^{r/2+\varepsilon}\). For \(\R s>1\), the Mellin identity is
+\[
+ \int_0^\infty B_\chi(X)X^{-s}\frac{\dd X}{X}
+ =\Gamma(s)\frac{L(2s,\chi^2)}{L(s,\chi)} .
+\]
+The integral near zero is entire by exponential decay. At a zero \(\rho\) with \(\R\rho>1/2\), the numerator has a nonvanishing Euler product and Gamma has no zeros. If \(r/2<\R\rho\), take \(\varepsilon\) smaller than the difference. The growth bound then extends the integral holomorphically across \(\rho\), a contradiction. For the conductor-one character, the quotient also has a pole at \(s=1/2\) from \(\zeta(2s)\), since \(\zeta(1/2)\ne0\) by the alternating-series formula. This gives \(r\ge1\) even when \(\Theta_D=1/2\).
+
+If \(\Theta_D=1\), the bound \(A_*(X)\ll X^2\) gives the upper estimate. Otherwise fix \(\Theta_D<\sigma<1\). For every \(\eta>0\) there is a constant independent of \(q\) and \(t\) with
+\[
+ |L(u+it,\chi)^{-1}|
+ \ll_{\sigma,\Theta_D,\eta}(q(2+|t|))^\eta
+ \qquad(\sigma\le u\le2).
+\]
+For a nonprincipal character the sums over complete periods vanish and the partial sums have modulus at most \(q\). Partial summation gives \(|L(s,\chi)|\le q|s|/\R s\) on \(\R s>0\). To get the reciprocal bound, use the disks of Lemma~\ref{lem:subpower} centered at \(2+it\), with radii
+\(1/2<2-\sigma<R_2<R<2-\Theta_D\).
+The logarithm normalized at the center by the Euler product has real part \(O(\log(q(2+|t|)))\) from above on radius \(R\). Borel--Carath\'eodory gives the same bound on its modulus on radius \(R_2\), and the Euler product bounds it absolutely on radius \(1/2\). Three circles at radius \(2-\sigma\) give a bound by a fixed power less than one of \(\log(q(2+|t|))\). Exponentiating yields the displayed estimate. For conductor one use Lemma~\ref{lem:subpower}, with the reciprocal extended by zero at the principal pole.
+
+Inverting the exponential Mellin transform and shifting from \(\R s=2\) to \(\R s=\sigma\) gives \(|B_\chi(X)|\ll_{\sigma,\Theta_D,\eta}q^\eta X^\sigma\). The quotient is holomorphic on this strip and its numerator is bounded there by \(\zeta(2\sigma)\). Stirling's formula supplies exponential decay on the horizontal edges and integrability on the new line. Choose \(0<\eta<1/2\) and sum over conductors. Since \(\sum_q q^{-2+2\eta}<\infty\), we obtain \(A_*(X)\ll X^{2\sigma}\). Let \(\sigma\downarrow\Theta_D\).
+\end{proof}
+
+By the functional equations, Dirichlet GRH holds if and only if \(\Theta_D=1/2\). The two theorems therefore reduce this approach to
+\[
+ \sum_{q<X^{1/3}}\frac{1}{q^2\varphi(q)}
+       \sum_{\chi\bmod q}^{*}|B_\chi(X)|^2
+       \ll_\varepsilon X^{1+\varepsilon}
+       \qquad(\varepsilon>0).
+\]
+The estimate remains open. Conductor one alone contributes \(|B_{\chi_1}(X)|^2\), so positive averaging retains the original RH obstruction.
+
+\subsection{Orthogonality and square divisors}
+
+Write \(A(X)\) for the sum over all characters. Orthogonality on the reduced residue classes yields
+\[
+ A(X)=\sum_{n,m\ge1}\lambda(n)\lambda(m)e^{-(n+m)/X}
+          \sum_{\substack{q\mid n-m\\(q,n)=1}}q^{-2}.
+\]
+All positive \(q\) divide zero in the diagonal term. The innermost sum is bounded by \(\zeta(2)\), which justifies rearrangement. The diagonal equals
+\[
+ \zeta(2)\sum_{d\ge1}\frac{\mu(d)}{d^2(e^{2d/X}-1)}
+ =\frac{\zeta(2)}{2\zeta(3)}X+O(1).
+\]
+Indeed, inclusion-exclusion gives \(\sum_{(q,n)=1}q^{-2}=\zeta(2)\sum_{d\mid n}\mu(d)d^{-2}\). Summing over multiples of \(d\) gives the geometric denominator. Use \((e^y-1)^{-1}=y^{-1}+O(1)\) uniformly for \(y>0\), and sum the absolutely convergent series. The signed off-diagonal includes \(|B_{\chi_1}(X)|^2-\sum_ne^{-2n/X}\).
+
+The prime-power identities
+\[
+ \lambda(n)=\sum_{d^2\mid n}\mu(n/d^2),\qquad
+ \mu(n)=\sum_{d^2\mid n}\mu(d)\lambda(n/d^2)
+\]
+give two vector relations. Let \(M_\chi(X)=\sum_{n\ge1}\mu(n)\chi(n)e^{-n/X}\), and let \(U_d\) act on the \(\chi\)-coordinate by multiplication by \(\chi(d)^2\). Then
+\[
+ B(X)=\sum_{d\ge1}U_d M(X/d^2),\qquad
+ M(X)=\sum_{d\ge1}\mu(d)U_d B(X/d^2).
+\]
+The series are absolutely convergent in the weighted norm because the smoothed sums are bounded absolutely by \(X/d^2\). Each \(U_d\) is a contraction. A bound \(O_\varepsilon(X^{1/2+\varepsilon})\) in either weighted norm transfers to the other by Minkowski and \(\sum_d d^{-1-2\varepsilon}<\infty\). Exponential decay gives the same upper bound for \(0<X<1\) with a changed constant. Both factorizations leave the small-conductor cancellation in the \(d=1\) term.

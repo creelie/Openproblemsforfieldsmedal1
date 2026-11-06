@@ -28,10 +28,11 @@
 \email{itsdeep@live.com}
 \email{egspl@proton.me}
 \thanks{Deep Bhattacharjee is the corresponding author. ORCID \href{https://orcid.org/0000-0003-0466-750X}{0000-0003-0466-750X}. Ushashi Bhattacharya's ORCID is \href{https://orcid.org/0009-0002-2254-3914}{0009-0002-2254-3914}.}
+\thanks{Zenodo archive for all versions, resolving to the latest archived release: \href{https://doi.org/10.5281/zenodo.24014164}{10.5281/zenodo.24014164}. The preceding v2.0.0 release is \href{https://doi.org/10.5281/zenodo.24014165}{10.5281/zenodo.24014165}.}
 \author{Ushashi Bhattacharya}
 \address{Formerly, National Taiwan University, Taipei 106319, Taiwan}
 \email{rai.bhattacharya.in@gmail.com}
-\date{6 November 2026. Version 2 research draft.}
+\date{6 November 2026. Version 2.1.0 research revision.}
 \subjclass[2020]{Primary 11M26. Secondary 11N37, 11N35, 11F72.}
 \keywords{Liouville function, Riemann hypothesis, autocorrelation, Fej\'er kernel, spectral large sieve}
 \begin{document}
@@ -446,6 +447,29 @@ The difference between \(7/4\) and \(1\) is precisely the remaining power in thi
 
 The proof attempt in this revision proceeds by retaining the signs through \eqref{eq:fejershift}. At \(H=N\), the desired estimate is exactly an upper bound \(O_\varepsilon(N^{1+\varepsilon})\) for the diagonal \(N\) plus the weighted signed correlation sum. The termwise absolute-value route would require control of a different quantity, and Sections~\ref{sec:obstructions} and \ref{sec:tao} show why naive random-sign or fixed-shift estimates do not provide it. Additive Fourier cancellation controls the energy through \eqref{eq:fejerfourier}, but an \(O(N^{1/2+\varepsilon})\) uniform Fourier bound already includes the estimate for \(L(N)\) at \(\alpha=0\). Using it as an input would therefore assume the required strength. The remaining estimate is the signed energy bound itself, or another estimate that excludes all zeros with \(1/2<\R s\le7/8\) when the quasi-Riemann input is used.
 
+\subsection{Refinements after the seven-eighths manuscript}
+
+Liu's revised arXiv preprint \cite{liu1} reports the threshold
+\begin{align*}
+ b_1&=\frac{18\xi+7}{18\xi+9}=0.874957019420098946\ldots,\\
+ 0&=1188\xi^3-2160\xi^2+171\xi+190,
+\end{align*}
+with \(\xi\in(0.38858,0.38859)\). A later preprint \cite{liu2} reports a general-number-field threshold \(b_2=0.874886647039964\ldots\), specified by a quartic equation. The version 3 PDF of \cite{liu3}, Theorem 1.1, reports
+\[
+ b_{\rm tw}=0.87405850379185900499\ldots
+\]
+for all finite-order Hecke \(L\)-functions over all number fields, by a further unit-twisted comparison. These are external research preprints. The conditional specializations below use their stated zero-free theorems, whose full analytic proofs are not reproduced or independently verified in this revision.
+
+For any of these thresholds \(b\), taking the corresponding zero-free statement as input in Theorem~\ref{thm:equiv} and Proposition~\ref{prop:smoothed} gives
+\[
+ L(x)\ll_\varepsilon x^{b+\varepsilon},\qquad
+ B(X)\ll_\varepsilon X^{b+\varepsilon},\qquad
+ Q_\lambda(N)\ll_\varepsilon N^{2b+\varepsilon}.
+\]
+The same input for all Dirichlet characters specializes Theorem~\ref{thm:char-grh}. These deductions follow directly from the proved transfer criteria, and are attributed to their zero-free input.
+
+The comparison in \cite{liu3}, Section 25, improves a starting boundary through a recurrence \(b_{j+1}=b_{\rm tw}+(b_j-b_{\rm tw})/50\). Its exact solution is \(b_j=b_{\rm tw}+(b_0-b_{\rm tw})/50^j\), by induction. Thus that iteration converges to \(b_{\rm tw}\). Section 27 gives a limitation for its stated comparison system even under an improved width input. Neither calculation gives an iteration to \(1/2\).
+
 \input{routes}
 
 \section{The character version and GRH}\label{sec:characters}
@@ -486,6 +510,8 @@ For the reverse implication fix \(\chi\). The proof of Lemma~\ref{lem:subpower} 
 
 No uniform bound on the dependence of the constants on the conductor is assumed here. To obtain GRH, the estimates must nevertheless hold for every fixed character and at all sufficiently large \(N\). The quasi-Riemann input specializes this criterion to \(\theta=7/8\), giving \(Q_\chi(N)\ll_{\chi,\varepsilon}N^{7/4+\varepsilon}\). The desired exponent is \(1+\varepsilon\).
 
+
+\input{dirichlet-smoothing}
 
 \appendix
 \section{From a fixed zero-free half-plane to summatory cancellation}\label{sec:perron}
@@ -534,6 +560,8 @@ Here \(|\lambda(n)|=1\). On \(x/2<n<2x\), use \(|\log(x/n)|\gg |x-n|/x\), and su
 
 The accompanying exact-integer checks test the finite autocorrelation and window formulas, dyadic partitions, the Rudin--Shapiro construction, the finite-prime examples and the independent-sign variance. These checks complement the analytic proofs. The original preprint is cited as \cite{v1}. Version~2 retains its authorship, corrects the endpoint conventions and gives proofs and obstructions for the stronger statements above. Computational and AI-assisted tools were used to develop examples, check finite identities and revise the exposition. This is a review draft.
 
+The companion file \texttt{lean/GramCore.lean} checks the finite matrix inequality in the deterministic obstruction with Lean and Mathlib 4.34.1. It constructs averaged Gram matrices from finite sign vectors and proves the trace and self-pairing bounds. Given the stated cross-pairing bound \(16B\), it derives \(m\le32B\) for \(2m\) matrices in dimension \(m\). The transfer from prefix correlations to the cross-pairing bound, scale counting, and the analytic arguments remain outside this formalization. The source archive includes the toolchain, Mathlib revision and axiom report.
+
 \begingroup
 \raggedright
 \begin{thebibliography}{99}
@@ -553,7 +581,11 @@ The accompanying exact-integer checks test the finite autocorrelation and window
 \bibitem{bd-arith} L. B\'aez-Duarte, \emph{Arithmetical aspects of Beurling's real variable reformulation of the Riemann hypothesis}, \href{https://arxiv.org/abs/math/0011254}{arXiv:math/0011254}.
 \bibitem{rs} D. J. Katz and C. M. van der Linden, \emph{Peak sidelobe level and peak crosscorrelation of Golay--Rudin--Shapiro sequences}, \href{https://arxiv.org/abs/2108.07318}{arXiv:2108.07318}.
 \bibitem{lamzouri} Y. Lamzouri, \emph{A new proof that more than \(2/3\) of the zeros of the Riemann zeta function are simple and on the critical line}, \href{https://arxiv.org/abs/2609.02882v2}{arXiv:2609.02882v2}, 2026.
+\bibitem{liu1} B. Liu, \emph{Improved zero-free half-planes for the quasi-Riemann hypothesis}, \href{https://arxiv.org/abs/2610.12234v2}{arXiv:2610.12234v2}, 12 October 2026.
+\bibitem{liu2} B. Liu, \emph{Zero-free half-planes for Hecke \(L\)-functions over number fields and Quasi-Riemann Hypothesis}, \href{https://arxiv.org/abs/2610.26835v2}{arXiv:2610.26835v2}, 29 October 2026.
+\bibitem{liu3} B. Liu, \emph{An improved zero-free half-plane for Hecke \(L\)-functions over number fields and Quasi-Riemann Hypothesis}, \href{https://hexagonmath.org/pdf/2610.00655v3}{Hexagon 2610.00655v3, version 3 PDF}, 2026.
 \bibitem{mrt} K. Matom\"aki, M. Radziwi\l\l\ and T. Tao, \emph{An averaged form of Chowla's conjecture}, Algebra Number Theory \textbf{9} (2015), 2167--2196, \href{https://arxiv.org/abs/1503.05121}{arXiv:1503.05121}.
+\bibitem{mv-large} H. L. Montgomery and R. C. Vaughan, \emph{The large sieve}, Mathematika \textbf{20} (1973), 119--134, \href{https://doi.org/10.1112/S0025579300004708}{doi:10.1112/S0025579300004708}.
 \bibitem{oai} OpenAI, \emph{The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane \(\R s>7/8\)}, research manuscript, 30 September 2026, \href{https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf}{paper}.
 \bibitem{oaiscope} OpenAI, \emph{The quasi-Riemann hypothesis}, formalization scope for family 003, \href{https://github.com/openai/math/blob/main/lean/docs/003.md}{Lean statement map}.
 \bibitem{oaichowla} OpenAI, \emph{Ordinary two-point correlations of multiplicative functions}, research manuscript, 24 September 2026, \href{https://github.com/openai/math/blob/main/preprints/Ordinary-two-point-correlations-of-multiplicative-functions-September-24-2026/final.pdf}{paper}.

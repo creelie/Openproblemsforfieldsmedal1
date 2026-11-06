@@ -1,5 +1,6 @@
 /tmp/
 /dist/
+/lean/.lake/
 __pycache__/
 *.aux
 *.fdb_latexmk

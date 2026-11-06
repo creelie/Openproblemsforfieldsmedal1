@@ -34,7 +34,7 @@ jobs:
           git config user.email "itsdeep@live.com"
           git add output/pdf/signed-liouville-energies-v2.pdf output/signed-liouville-energiestex.zip checks/verification-results.txt
           if ! git diff --cached --quiet; then
-            git commit -m "Build the v2.0.0 research manuscript and TeX package"
+            git commit -m "Build the research manuscript and TeX package"
             git push origin HEAD:main
           fi
       - name: Publish the research release
@@ -44,5 +44,5 @@ jobs:
           tag=$(python -c 'import json; print(json.load(open("release.json"))["tag"])')
           gh release create "$tag" dist/* \
             --target "$(git rev-parse HEAD)" \
-            --title "Signed Liouville energies v2.0.0 research revision" \
+            --title "Signed Liouville energies ${tag} research revision" \
             --notes-file RELEASE-NOTES.md

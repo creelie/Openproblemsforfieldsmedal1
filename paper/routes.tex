@@ -385,7 +385,80 @@ Under RH, Cram\'er's mean-square estimate gives
 Conversely, bounded interior norms give a weighted integral \(O((\log(2M))^2)\). On every dyadic block \([Y,2Y]\), Cauchy--Schwarz then bounds \(\int_Y^{2Y}|\psi(y)-\lfloor y\rfloor|y^{-\sigma-1}\dd y\) by \(O_\sigma((\log(2Y))Y^{1/2-\sigma})\). Thus the Mellin transform of \(\psi(y)-\lfloor y\rfloor\) is holomorphic on \(\R s>1/2\). For \(\R s>1\) it equals \((-\zeta'(s)/\zeta(s)-\zeta(s))/s\), by the absolutely convergent Dirichlet series of \(\Lambda\) and of the constant sequence. A zero in \(\R s>1/2\) would give a pole there, and the functional equation completes the implication to RH. Convergence implies boundedness, which closes the equivalence.
 \end{proof}
 
-The interval \(0<x<1/M\) is outside Proposition~\ref{prop:interior}. The calculation isolates one precise prime-error bound that would suffice for RH, without an estimate for that additional tail.
+\subsection{The tail and quantitative tests at a zero}
+
+Write \(\ell=\log M\), \(E(y)=\lfloor y\rfloor-\psi(y)\) and
+\(q_M=M(1-\ell D_M^{\log}(1))\). The balanced residual has the exact formula
+\begin{equation}\label{eq:log-all-y}
+ \ell\widetilde u_M(1/y)=E(y)
+ -\sum_{M<n\le y}\mu(n)\log(n/M)\lfloor y/n\rfloor
+ -q_M\lfloor y/M\rfloor,\qquad y\ge1.
+\end{equation}
+Indeed the untruncated sum with weight \(\mu(n)\log(M/n)\lfloor y/n\rfloor\) is
+\(\ell+\psi(y)\). On removing its terms with \(n>M\), expanding the balanced dilates, and inserting the coefficient of \(g_M\), one obtains \eqref{eq:log-all-y}. The tail norm squared on \(0<x<1/M\) is the integral of the squared right-hand side against \(\ell^{-2}y^{-2}\dd y\) on \(y>M\). The terms must be kept together in this expression.
+
+For any sequence \(u_M\) in \(L^2(0,1)\) with \(\|u_M\|_\sigma\to0\) at one \(\sigma>1/2\), convergence in the critical norm holds if and only if
+\[
+ \lim_{r\downarrow0}\limsup_{M\to\infty}\int_0^r|u_M(x)|^2\dd x=0.
+\]
+The necessity follows by bounding the tail by the whole integral. For sufficiency, the part on \([r,1]\) is at most \(r^{1-2\sigma}\|u_M\|_\sigma^2\). For instance, \(u_M=\sqrt M\one_{(0,1/M)}\) has critical norm one and shifted norm squared \(M^{1-2\sigma}/(2\sigma)\). Convergence at every fixed shifted exponent thus allows concentration at the endpoint. For the explicit linear taper, splitting at \(r=M^{-a}\) and using \(\|u_M\|_\sigma\ll M^{-\delta}\) and \(|u_M|\ll M\) gives the upper bound \(O(M^{a(2\sigma-1)-2\delta}+M^{2-a})\) for the critical norm squared. These estimates require both \(a>2\) and \(a<\delta/(\sigma-1/2)\le1\) to give decay.
+
+\begin{proposition}[Growth forced by an off-line zero]\label{prop:two-pole-bounds}
+Let \(\rho\) be a zeta zero of order \(m\) with \(\beta=\R\rho>1/2\), and set \(I(Y)=\int_1^Y|E(y)|^2\dd y/y^2\). Then
+\begin{align*}
+ \limsup_{X\to\infty}\frac{|B(X)|}{X^\beta(\log X)^{m-1}}
+ &\ge \frac{m|\Gamma(\rho)\zeta(2\rho)|}{|\zeta^{(m)}(\rho)|},\\
+ \limsup_{Y\to\infty}\frac{I(Y)}{Y^{2\beta-1}}
+ &\ge \frac{m^2}{(2\beta-1)|\rho|^2}.
+\end{align*}
+\end{proposition}
+\begin{proof}
+If the first limit superior is finite, denote it by \(A\). For any \(a>A\), the large-\(X\) portion of the integral in \eqref{eq:gamma} is holomorphic for \(\R s>\beta\). At \(s=\rho+\varepsilon\), multiplying it by \(\varepsilon^m\) gives a modulus bounded by \(a(m-1)!\), using
+\(\int_1^\infty X^{-\varepsilon}(\log X)^{m-1}\dd X/X=(m-1)!/\varepsilon^m\).
+The bounded-\(X\) portion tends to zero after multiplication. By continuation from \(\R s>1\), the limit is the leading Laurent coefficient \(m!\Gamma(\rho)\zeta(2\rho)/\zeta^{(m)}(\rho)\). Let \(a\downarrow A\).
+
+For the second inequality put \(\alpha=2\beta-1>0\). If the second limit superior is \(C<\infty\), choose \(c>C\) so that \(I(y)\le c y^\alpha\) for all sufficiently large \(y\). For \(\varepsilon>0\), integration by parts gives
+\[
+ \int_1^\infty y^{-\alpha-\varepsilon}\dd I(y)
+ \le O(1)+c\frac{\alpha+\varepsilon}{\varepsilon}
+ \qquad (0<\varepsilon\le1).
+\]
+Cauchy--Schwarz applied to the Mellin transform \(F_E(s)=\int_1^\infty E(y)y^{-s-1}\dd y\) now gives
+\[
+ |F_E(\rho+\varepsilon)|^2
+ \le \left(\int_1^\infty y^{-\alpha-\varepsilon}\dd I(y)\right)
+      \left(\int_1^\infty y^{-2\beta-\varepsilon+\alpha}\dd y\right)
+ =\frac1\varepsilon\int_1^\infty y^{-\alpha-\varepsilon}\dd I(y).
+\]
+The same bound on absolute integrals is locally uniform for \(\R s>\beta\), so the transform is holomorphic there. Its continuation from \(\R s>1\) is \((\zeta(s)+\zeta'(s)/\zeta(s))/s\), as in Proposition~\ref{prop:interior}. The residue at \(\rho\) is \(m/\rho\). Taking \(\varepsilon\downarrow0\) yields \(m^2/|\rho|^2\le c\alpha\), and then \(c\downarrow C\) proves the bound. Infinite limit superiors require no estimate.
+\end{proof}
+
+Since \(I\) is nondecreasing, the second lower bound also holds with \(Y\) restricted to integers. By Proposition~\ref{prop:interior}, it gives a positive lower limit superior for \(M^{1-2\beta}(\log M)^2\|\widetilde u_M\|_{L^2(1/M,1)}^2\). At a high zero the Gamma factor in the first inequality is small, but the exponent \(\beta\) still exceeds \(1/2\). A zero-density estimate allows isolated zeros in this range. To exclude them by either route requires an upper estimate that contradicts the corresponding lower bound.
+
+\begin{corollary}[Power growth of the balanced logarithmic taper]
+If \(\Theta\) is the supremum of the real parts of the nontrivial zeros, then
+\[
+ \limsup_{M\to\infty}
+ \frac{\log(1+\|\widetilde u_M\|_{1/2})}{\log M}
+ =\Theta-\frac12 .
+\]
+\end{corollary}
+\begin{proof}
+For \(\Theta>1/2\), Proposition~\ref{prop:two-pole-bounds} gives a lower bound \(\beta-1/2\) for each zero with \(\beta>1/2\). The added one makes the lower bound zero automatic if \(\Theta=1/2\).
+
+For the upper bound take \(s=1/2+it\) in the Mellin integral for \(D_M^{\log}(s)\) and move the \(w\)-line from two to \(\Theta-1/2+\delta>0\), for \(0<\delta<1/4\). The rectangle has no poles. Lemma~\ref{lem:subpower} bounds the reciprocal on the new line by \(O_{\delta,\eta}((1+|t+\operatorname{Im}w|)^\eta)\) for every \(\eta>0\) if \(\Theta<1\), and absolute convergence suffices if \(\Theta=1\). As for the linear taper, the kernel's quadratic decay gives
+\[
+ |D_M^{\log}(1/2+it)|
+ \ll_{\delta,\eta} \frac{M^{\Theta-1/2+\delta}(1+|t|)^\eta}{\log M}.
+\]
+The Mellin formula for \(u_M^{\log}\), convexity on the critical line, and Plancherel give \(\|u_M^{\log}\|_{1/2}\ll_\delta M^{\Theta-1/2+\delta}\), since \(D_M^{\log}(1)=O(\log M)\) and one may take \(\eta<1/8\).
+
+The bound \(\|g_M\|_{1/2}\ll M^{-1/2}\) follows from \(|g_M|\le2\) on \((0,1/M)\) and \(|g_M(x)|\le1/(Mx)\) on \([1/M,1]\). If \(\Theta<1\), the double-residue calculation at \(s=1\) with \(w\)-line \(\Theta-1+\delta\), for \(0<\delta<1-\Theta\), gives
+\[
+ D_M^{\log}(1)=1/\log M+O_\delta(M^{\Theta-1+\delta}/\log M).
+\]
+The balancing term thus has norm \(O_\delta(M^{\Theta-1/2+\delta}/\log M)\). For \(\Theta=1\) the elementary bound for \(D_M^{\log}(1)\) instead gives \(O(\sqrt M\log M)\). Combining the bounds and sending \(\delta\downarrow0\) gives the upper exponent. In the case \(\Theta=1/2\), this exponent alone gives no critical-norm convergence.
+\end{proof}
 
 \subsection{What the quasi-Riemann proof transfers}
 
