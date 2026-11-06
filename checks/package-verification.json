@@ -22,16 +22,16 @@
   },
   "files": {
     "zero-free-exponent-liouville-energies-v2.2.0.pdf": {
-      "bytes": 814570,
-      "sha256": "86fca368f58fb59a6bce3238f28fb219ac188725dbdbc2f477a8a9b2c909a763"
+      "bytes": 814571,
+      "sha256": "7d161c3b3bfed763d48c699f319b9f900bcc4a84c091b465b2e8335653273722"
     },
     "zero-free-exponent-liouville-energies-v2.2.0tex.zip": {
-      "bytes": 132899,
-      "sha256": "730f6330f75b324ea5aa0f1faf5b485e65fe46ab8ed0f5cd363a9eca513f0be4"
+      "bytes": 132913,
+      "sha256": "dd3e50ecb46bd5f21a87d4371385b29969806421ec7347eac4b74b00cb0aae7d"
     }
   },
-  "archive_doi": null,
-  "archive_status": "Awaiting new version DOI",
+  "archive_doi": "10.5281/zenodo.24022872",
+  "archive_status": "Published and independently verified via Zenodo public API",
   "standalone_source_compile": true,
   "standalone_pages": 54,
   "previous_v21_labels_retained": 63,

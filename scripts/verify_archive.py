@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 meta=json.loads((ROOT/'release.json').read_text(encoding='utf-8'))
 tag=meta['tag']
 repo=meta['repository']
-params={'q':'conceptrecid:24014164','all_versions':'true','size':30,'sort':'mostrecent'}
+params={'q':'conceptrecid:24014164','all_versions':'true','size':25,'sort':'mostrecent'}
 request=Request('https://zenodo.org/api/records?'+urlencode(params),
     headers={'User-Agent':'RH-research-archive-verifier/2.2'})
 with urlopen(request,timeout=30) as response:
@@ -24,7 +24,8 @@ for record in records:
     assert doi.startswith('10.5281/zenodo.')
     result={'repository':repo,'tag':tag,'record_id':record['id'],'doi':doi,
         'concept_doi':record.get('conceptdoi'),'title':m['title'],'version':m['version'],
-        'zenodo_url':record['links']['html'],
+        'zenodo_url':record.get('links',{}).get('self_html',
+            record.get('links',{}).get('html','https://zenodo.org/records/'+str(record['id']))),
         'files':[{'key':f['key'],'checksum':f.get('checksum')} for f in record['files']]}
     (ROOT/'docs/ZENODO-ARCHIVE.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,indent=2))

@@ -1,0 +1,38 @@
+{
+  "id": 437097103,
+  "tag_name": "v2.2.0",
+  "name": "The Zero-Free Exponent of Signed Liouville Energies (v2.2.0)",
+  "html_url": "https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.2.0",
+  "published_at": "2026-11-06T21:51:54Z",
+  "draft": false,
+  "assets": [
+    {
+      "id": 718685725,
+      "name": "SHA256SUMS-v2.2.0.txt",
+      "size": 365,
+      "digest": "sha256:b9e0c1d0641c802995cd60778a1e812b54e4c51b4ab28cb558cca57b9c3f5f39",
+      "browser_download_url": "https://github.com/creelie/Openproblemsforfieldsmedal1/releases/download/v2.2.0/SHA256SUMS-v2.2.0.txt"
+    },
+    {
+      "id": 718685728,
+      "name": "zero-free-exponent-liouville-energies-v2.2.0-research-package.zip",
+      "size": 1004424,
+      "digest": "sha256:32d3b0c85c7c69c2032a3198ec5a419e2145db760395f029e4d29ca8f235ebce",
+      "browser_download_url": "https://github.com/creelie/Openproblemsforfieldsmedal1/releases/download/v2.2.0/zero-free-exponent-liouville-energies-v2.2.0-research-package.zip"
+    },
+    {
+      "id": 718685729,
+      "name": "zero-free-exponent-liouville-energies-v2.2.0.pdf",
+      "size": 814570,
+      "digest": "sha256:86fca368f58fb59a6bce3238f28fb219ac188725dbdbc2f477a8a9b2c909a763",
+      "browser_download_url": "https://github.com/creelie/Openproblemsforfieldsmedal1/releases/download/v2.2.0/zero-free-exponent-liouville-energies-v2.2.0.pdf"
+    },
+    {
+      "id": 718685727,
+      "name": "zero-free-exponent-liouville-energies-v2.2.0tex.zip",
+      "size": 132899,
+      "digest": "sha256:730f6330f75b324ea5aa0f1faf5b485e65fe46ab8ed0f5cd363a9eca513f0be4",
+      "browser_download_url": "https://github.com/creelie/Openproblemsforfieldsmedal1/releases/download/v2.2.0/zero-free-exponent-liouville-energies-v2.2.0tex.zip"
+    }
+  ]
+}

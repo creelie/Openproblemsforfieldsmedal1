@@ -9,6 +9,7 @@ This expanded v2 retains the mathematical content of the original v1 with correc
 - [Paper PDF](paper/paper.pdf)
 - [Complete compiling TeX ZIP](paper/tex.zip)
 - [Release v2.2.0](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.2.0)
+- [Version DOI 10.5281/zenodo.24022872](https://doi.org/10.5281/zenodo.24022872)
 - [Zenodo archive, all versions](https://doi.org/10.5281/zenodo.24014164)
 - [Original v1](https://doi.org/10.20944/preprints202606.1350.v1)
 
@@ -34,3 +35,5 @@ The exact finite checks complement the written proofs. They do not verify analyt
 The original optional figure script requires NumPy and Matplotlib. The manuscript's exponent diagram uses native PGFPlots and needs no Python plotting library.
 
 Authorship and AI assistance are separate: both named human authors remain credited; the paper records computational and AI-assisted preparation. No AI system is an author. License: CC BY 4.0.
+
+The immutable release tag is archived by Zenodo. The attached PDF and TeX ZIP carry the subsequently verified version DOI; this bibliographic imprint does not alter the mathematical text.

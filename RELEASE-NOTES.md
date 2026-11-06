@@ -9,3 +9,5 @@ The paper proves local reconstruction and finite-prime comparison estimates. A n
 The source ZIP contains all TeX inputs and figures and is independently compiled. The full research ZIP also includes exact checks, the original v1 source/supplement and the limited Lean Gram-core formalization. RH and Dirichlet GRH remain unproved. No new zero-free region or full analytic Lean verification is claimed.
 
 The initial immutable tag identifies the existing all-versions Zenodo concept. Once the new version DOI is verified, the repository and attached PDF/ZIP receive its bibliographic imprint without changing the mathematical text or moving the tag.
+
+Confirmed version DOI: [10.5281/zenodo.24022872](https://doi.org/10.5281/zenodo.24022872). The PDF and ZIP attachments carry this DOI imprint. The immutable tag and its Zenodo source archive retain the pre-imprint concept-DOI text; the mathematical content is unchanged.

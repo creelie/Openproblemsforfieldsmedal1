@@ -1,5 +1,9 @@
 # Publication status
 
-Version 2.2.0 is an accurately scoped research revision. RH and Dirichlet GRH remain unproved. The new release and version DOI are being verified; the printed all-versions DOI is 10.5281/zenodo.24014164.
+Version 2.2.0 is published at https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.2.0. Its exact Zenodo version archive was verified by title, version and GitHub archive filename.
 
-The paper retains v1 mathematical content with corrections, adds the exact zero-free exponent and the later analytic constructions, and identifies the remaining square-root estimate. Novelty priority has not been independently established. Exact checks and the finite Lean core do not formalize the analytic results.
+Version DOI: https://doi.org/10.5281/zenodo.24022872
+
+The 54-page research revision retains the original v1 mathematics with corrections. RH and Dirichlet GRH remain unproved. No new zero-free region or full analytic Lean formalization is claimed.
+
+The immutable tag contains the initial concept-DOI imprint. The attached PDF and TeX source were refreshed after DOI verification; the mathematical content is unchanged. The exact finite checks pass, the source ZIP compiles independently and all pages were visually reviewed.

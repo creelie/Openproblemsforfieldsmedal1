@@ -104,7 +104,8 @@ with zipfile.ZipFile(research,'w',zipfile.ZIP_DEFLATED) as z:
     z.write(texzip,'paper/tex.zip')
     for folder in ('checks','docs','lean','source-history'):
         for p in sorted((ROOT/folder).rglob('*')):
-            if p.is_file() and '__pycache__' not in p.parts and '.lake' not in p.parts:
+            if (p.is_file() and '__pycache__' not in p.parts and '.lake' not in p.parts
+                    and p.name != 'GITHUB-RELEASE.json'):
                 z.write(p,p.relative_to(ROOT).as_posix())
     for name in ('README.md','LICENSE','CITATION.cff','.zenodo.json','RELEASE-NOTES.md','release.json'):
         z.write(ROOT/name,name)

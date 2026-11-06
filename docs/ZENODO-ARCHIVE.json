@@ -1,0 +1,16 @@
+{
+  "repository": "creelie/Openproblemsforfieldsmedal1",
+  "tag": "v2.2.0",
+  "record_id": 24022872,
+  "doi": "10.5281/zenodo.24022872",
+  "concept_doi": "10.5281/zenodo.24014164",
+  "title": "The Zero-Free Exponent of Signed Liouville Energies",
+  "version": "2.2.0",
+  "zenodo_url": "https://zenodo.org/records/24022872",
+  "files": [
+    {
+      "key": "creelie/Openproblemsforfieldsmedal1-v2.2.0.zip",
+      "checksum": "md5:93f216269b164b950f24113740f06a81"
+    }
+  ]
+}
