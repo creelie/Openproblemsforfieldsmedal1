@@ -1,0 +1,21 @@
+{
+  "archive": "computational verification files",
+  "files": [
+    {
+      "file": "make_figure.py",
+      "size_bytes": 2239,
+      "sha256": "5aab8e44d094680b08fefaf0f3382f511cc50db215dcd19a3aca7604a107c479"
+    },
+    {
+      "file": "verify_exponents.py",
+      "size_bytes": 1597,
+      "sha256": "ae266f766cc13d20282430f2b57f463d293864f11f73b7bf4b599259ff9005d6"
+    },
+    {
+      "file": "README.md",
+      "size_bytes": 1683,
+      "sha256": "d0400e98633ec596bfbe1a029dcb40a35c52f9c3c863c910bd15b38d0bcd51e0"
+    }
+  ],
+  "contains_tex_or_pdf": false
+}

@@ -1,8 +1,8 @@
 {
-  "title": "Signed Liouville energies and the limits of maximal correlation bounds",
+  "title": "The Zero-Free Exponent of Signed Liouville Energies",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "Research revision of the Liouville-correlation preprint. It proves a deterministic obstruction for maximal correlation energies, quantitative Mellin pole bounds, and an exact exponent identity for smoothed Liouville sums across Dirichlet conductors. A large-sieve estimate controls the contribution from primitive conductors at least X^(1/3). The companion Lean file checks the finite Gram inequality. RH and Dirichlet GRH remain unproved.",
+  "description": "Expanded v2 research revision retaining the original v1 mathematical content with corrections. The signed Fejer energy growth exponent equals twice the supremum of the real parts of the nontrivial zeta zeros. The revision includes local reconstruction, a finite-prime main term, logarithmic-order prime-tail cancellation and explicit limitations of finite Abel-moment arguments. RH and Dirichlet GRH remain unproved. No new analytic Lean formalization or new zero-free region is claimed.",
   "creators": [
     {
       "name": "Bhattacharjee, Deep",
@@ -16,8 +16,8 @@
     }
   ],
   "license": "cc-by-4.0",
-  "publication_date": "2026-11-06",
-  "version": "2.1.0",
+  "publication_date": "2026-11-07",
+  "version": "2.2.0",
   "keywords": [
     "Riemann hypothesis",
     "Liouville function",

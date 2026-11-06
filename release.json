@@ -1,8 +1,10 @@
 {
-  "version": "2.1.0",
-  "tag": "v2.1.0",
+  "version": "2.2.0",
+  "tag": "v2.2.0",
   "repository": "creelie/Openproblemsforfieldsmedal1",
   "manuscript_status": "research revision",
   "RH_proved": false,
-  "Dirichlet_GRH_proved": false
+  "Dirichlet_GRH_proved": false,
+  "title": "The Zero-Free Exponent of Signed Liouville Energies",
+  "archive_status": "Awaiting new version DOI"
 }

@@ -1,48 +1,33 @@
-name: Build and publish the RH research revision
-
+name: Publish reviewed research assets
 on:
   push:
     branches: [main]
-    paths: [release.json]
+    paths: [release-request.json, paper/archive-imprint.json]
   workflow_dispatch:
-
 permissions:
   contents: write
-
-concurrency:
-  group: research-release
-  cancel-in-progress: false
-
 jobs:
-  release:
+  publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Check finite identities
-        run: python checks/verify.py | tee checks/verification-results.txt
-      - name: Compile the manuscript
-        uses: xu-cheng/latex-action@e2f99d4b3685b0da93f97e1b86ad8fab81105098
+      - uses: actions/setup-python@v5
         with:
-          working_directory: paper
-          root_file: main.tex
-      - name: Prepare publication assets
-        run: python scripts/make_release.py --pdf paper/main.pdf
-      - name: Record compiled publication files
+          python-version: '3.12'
+      - name: Verify finite identities and reviewed assets
         run: |
-          git config user.name "Deep Bhattacharjee"
-          git config user.email "itsdeep@live.com"
-          git add output/pdf/signed-liouville-energies-v2.pdf output/signed-liouville-energiestex.zip checks/verification-results.txt
-          if ! git diff --cached --quiet; then
-            git commit -m "Build the research manuscript and TeX package"
-            git push origin HEAD:main
-          fi
-      - name: Publish the research release
+          python checks/verify.py
+          python checks/attack_exact.py
+          python checks/v1_retention.py
+          python scripts/verify_assets.py
+      - name: Publish or refresh release assets
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           tag=$(python -c 'import json; print(json.load(open("release.json"))["tag"])')
-          gh release create "$tag" dist/* \
-            --target "$(git rev-parse HEAD)" \
-            --title "Signed Liouville energies ${tag} research revision" \
-            --notes-file RELEASE-NOTES.md
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" publication/* --clobber
+            gh release edit "$tag" --title "The Zero-Free Exponent of Signed Liouville Energies ($tag)" --notes-file RELEASE-NOTES.md
+          else
+            gh release create "$tag" publication/* --target "$(git rev-parse HEAD)" --title "The Zero-Free Exponent of Signed Liouville Energies ($tag)" --notes-file RELEASE-NOTES.md
+          fi

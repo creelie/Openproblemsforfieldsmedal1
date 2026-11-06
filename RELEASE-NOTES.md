@@ -1,9 +1,11 @@
-# Version 2.1.0 research revision
+# Research revision 2.2.0
 
-This revision gives the exact tail identity for the balanced logarithmic taper and states the necessary and sufficient endpoint concentration condition for passing from shifted norms to the critical norm. It proves quantitative lower bounds forced by a hypothetical off-line zero for the smoothed Liouville sum and the integrated prime-number error. It computes the power growth exponent of the full balanced logarithmic taper and records recent claimed zero-free thresholds with their sources.
+**The Zero-Free Exponent of Signed Liouville Energies**
 
-The package includes the manuscript PDF and TeX, exact finite checks, and the finite Gram proof in Lean 4.34.1 with its axiom report. The prefix-correlation transfer and analytic arguments are outside the Lean scope. The two critical estimates required for RH remain open.
+This release expands the original v1 into a single manuscript with corrected endpoint conventions, a common-support maximal large sieve argument, the original explicit coefficient construction and exponent diagram, and the complete square-divisor correlation expansion. It retains all 25 original references with duplicate records consolidated and checked metadata updated.
 
-The new conductor section proves an absolute \(O(X)\) bound for the weighted smoothed Liouville mean square at primitive conductors at least \(X^{1/3}\), extends it to induced characters, and identifies the exact exponent of the full primitive sum. The small-conductor bound that would prove Dirichlet GRH remains open.
+The paper proves local reconstruction and finite-prime comparison estimates. A new corollary of classical Davenport cancellation proves that the actual exponential prime tail cancels the finite-prime main term to every logarithmic order. The square-root error is proved equivalent to RH, not proved to hold. The inherited exact energy exponent and Dirichlet-character criteria remain fully derived.
 
-The [v2.1.0 archive](https://doi.org/10.5281/zenodo.24015191) preserves the tagged source snapshot. The DOI-stamped manuscript and TeX ZIP also print that version DOI. The [all-versions DOI](https://doi.org/10.5281/zenodo.24014164) resolves to the latest archived version.
+The source ZIP contains all TeX inputs and figures and is independently compiled. The full research ZIP also includes exact checks, the original v1 source/supplement and the limited Lean Gram-core formalization. RH and Dirichlet GRH remain unproved. No new zero-free region or full analytic Lean verification is claimed.
+
+The initial immutable tag identifies the existing all-versions Zenodo concept. Once the new version DOI is verified, the repository and attached PDF/ZIP receive its bibliographic imprint without changing the mathematical text or moving the tag.

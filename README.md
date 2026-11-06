@@ -1,20 +1,36 @@
-# Riemann Hypothesis research
+# The Zero-Free Exponent of Signed Liouville Energies
 
-**Signed Liouville energies and the limits of maximal correlation bounds**  
-Deep Bhattacharjee and Ushashi Bhattacharya. Version 2.1 research draft, 6 November 2026.
+Deep Bhattacharjee and Ushashi Bhattacharya · Research revision 2.2.0 · 7 November 2026
 
-This revises [Preprints.org version 1](https://doi.org/10.20944/preprints202606.1350.v1). It develops two routes that bypass Chowla, through an exponentially smoothed Liouville sum and through balanced reciprocal-dilate approximation. The Riemann Hypothesis remains open. The revised paper distinguishes the results proved here, deductions from stated zero-free assumptions, and recent outside research.
+This expanded v2 retains the mathematical content of the original v1 with corrections. It proves identities, conditional criteria and counterexamples. **RH and Dirichlet GRH remain unproved.**
 
-- `paper/main.tex` is the TeX entry point. It includes the companion TeX files in the same directory. Figures are built with TikZ.
-- `output/pdf/signed-liouville-energies-v2.pdf` is the compiled manuscript.
-- `checks/verify.py` runs exact finite checks with the Python standard library.
-- `lean/GramCore.lean` checks the finite Gram inequality. See `lean/README.md` for its scope and build instructions.
-- `docs/RESEARCH.md` records the proof routes, source scope, and author metadata.
+## Read and download
 
-From `paper/`, run `latexmk -pdf main.tex` or run `pdflatex main.tex` three times to resolve the references. From the repository root, run `python checks/verify.py`.
+- [Paper PDF](paper/paper.pdf)
+- [Complete compiling TeX ZIP](paper/tex.zip)
+- [Release v2.2.0](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.2.0)
+- [Zenodo archive, all versions](https://doi.org/10.5281/zenodo.24014164)
+- [Original v1](https://doi.org/10.20944/preprints202606.1350.v1)
 
-The signed Fejér energy has growth exponent twice the supremum of real parts of the nontrivial zeta zeros. The absolute collar would imply Dirichlet GRH. A deterministic Gram argument disproves its zero-loss endpoint for every sign sequence. The reciprocal-dilate results give a fixed-taper obstruction and an explicit coefficient-cost inequality for adaptive approximants. The character version supplies an equivalent signed-energy target for Dirichlet GRH. These statements use the inputs specified in the paper. The finite checks verify formulas and examples at the recorded sizes.
+## Results and limits
 
-OpenGluon is the upstream research workspace ([creelie/OpenGluon](https://github.com/creelie/OpenGluon)). The proof and checker in this draft are readable and runnable without cloning that workspace.
+The signed Fejer energy has growth exponent exactly twice the rightmost-zero supremum. The paper derives zero-free and Dirichlet-character criteria, a local reconstruction kernel, the finite-prime comparison and logarithmic-order cancellation of its main term. The square-root remainder estimate is equivalent to RH and is not proved.
 
-The [v2.1.0 release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.1.0) is archived at [10.5281/zenodo.24015191](https://doi.org/10.5281/zenodo.24015191). The [all-versions DOI](https://doi.org/10.5281/zenodo.24014164) resolves to the latest archived version.
+The maximal-correlation construction, its exponent figure, square-divisor expansion, terminal-range criterion and original literature context are integrated into the manuscript. [The v1 content map](docs/V1-CONTENT-MAP.md) records the changes. Original TeX and supplemental scripts are preserved under `source-history/v1/`.
+
+## Reproduction
+
+Compile `paper/main.tex` with pdfLaTeX, three passes. The source ZIP has `main.tex` at its root and contains all manuscript inputs and figures.
+
+```sh
+python checks/verify.py
+python checks/attack_exact.py
+python checks/v1_retention.py
+python scripts/build_release.py
+```
+
+The exact finite checks complement the written proofs. They do not verify analytic asymptotics. The existing Lean file checks only the finite Gram-matrix core; the analytic results are not Lean-formalized. Its toolchain and axiom report are under `lean/`.
+
+The original optional figure script requires NumPy and Matplotlib. The manuscript's exponent diagram uses native PGFPlots and needs no Python plotting library.
+
+Authorship and AI assistance are separate: both named human authors remain credited; the paper records computational and AI-assisted preparation. No AI system is an author. License: CC BY 4.0.

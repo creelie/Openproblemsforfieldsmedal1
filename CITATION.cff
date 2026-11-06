@@ -1,7 +1,7 @@
 cff-version: 1.2.0
-message: "Cite this v2 research draft with its two authors and date."
+message: "Cite this research revision with both authors. The DOI is the all-versions concept until the version archive is confirmed."
 type: article
-title: "Signed Liouville energies and the limits of maximal correlation bounds"
+title: "The Zero-Free Exponent of Signed Liouville Energies"
 authors:
   - family-names: Bhattacharjee
     given-names: Deep
@@ -9,7 +9,7 @@ authors:
   - family-names: Bhattacharya
     given-names: Ushashi
     orcid: "https://orcid.org/0009-0002-2254-3914"
-version: "2.1.0"
-doi: "10.5281/zenodo.24015191"
+version: "2.2.0"
+doi: "10.5281/zenodo.24014164"
 repository-code: "https://github.com/creelie/Openproblemsforfieldsmedal1"
-date-released: 2026-11-06
+date-released: 2026-11-07

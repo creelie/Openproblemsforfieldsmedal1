@@ -1,0 +1,270 @@
+\section{Mellin positivity and one-sided pole detection}
+\label{app:mellin-positivity}
+
+The real pole at \(s=1/2\) gives a negative bias in the smoothed
+Liouville sum. It is natural to test whether one can prove an eventual
+sign and thereby exclude right-hand zeros. This appendix proves
+the relevant implications, including the positivity principle,
+without assuming RH. An eventual sign is not proved here.
+
+\begin{lemma}[The positivity principle]\label{lem:landau-positive}
+Let \(f:[0,\infty)\to[0,\infty)\) be locally integrable, and suppose
+its Laplace integral
+\[
+ \mathcal L(s)=\int_0^\infty f(t)e^{-st}\dd t
+\]
+converges for all sufficiently large real \(s\). If its abscissa
+of convergence \(a\) is finite, then \(\mathcal L\) cannot extend
+holomorphically to a neighborhood of the real point \(a\).
+\end{lemma}
+\begin{proof}
+Suppose there is such a continuation, holomorphic in
+\(\operatorname{Re}s>a\) and in a disc of radius \(r\) about \(a\).
+Choose \(b=a+r/4\). The disc about \(b\) of radius \(r/2\)
+lies in the union of those two domains. Differentiation in the
+convergent integral gives the Taylor coefficients of
+\(\mathcal L(b-z)\):
+\[
+ \frac1{j!}\int_0^\infty t^j f(t)e^{-bt}\dd t\ge0.
+\]
+The differentiations are justified by convergence at a real
+point strictly between \(a\) and \(b\). For a real
+\(z\in(r/4,r/2)\), the Taylor series converges. By Tonelli its
+sum is
+\[
+ \int_0^\infty f(t)e^{-bt}
+                 \sum_{j\ge0}\frac{(zt)^j}{j!}\dd t
+ =\int_0^\infty f(t)e^{-(b-z)t}\dd t.
+\]
+But \(b-z<a\), contradicting the definition of the abscissa.
+\end{proof}
+
+The same principle applies to a nonnegative function \(A(X)\) on
+\([X_0,\infty)\) with Mellin integral
+\(\int_{X_0}^\infty A(X)X^{-s}\dd X/X\), by putting
+\(X=X_0e^t\). Changing \(X_0\) only changes the meromorphic
+continuation by an entire function.
+
+\begin{theorem}[Both signs forced by a right-hand zero]
+\label{thm:two-sided-smoothed}
+Let \(\rho=\beta+i\gamma\) be a nontrivial zeta zero of order \(r\)
+with \(\beta>1/2\). Define
+\[
+ C_\rho=\frac{r|\Gamma(\rho)\zeta(2\rho)|}
+                     {|\zeta^{(r)}(\rho)|}>0.
+\]
+Then
+\begin{align*}
+ \limsup_{X\to\infty}
+  \frac{B(X)}{X^\beta(\log X)^{r-1}}&\ge C_\rho,\\
+ \liminf_{X\to\infty}
+  \frac{B(X)}{X^\beta(\log X)^{r-1}}&\le-C_\rho.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Put \(\Phi(s)=\Gamma(s)\zeta(2s)/\zeta(s)\).
+It is the Mellin transform in \eqref{eq:gamma} for
+\(\operatorname{Re}s>1\). It has no singularity at any real
+point greater than \(1/2\). For \(1/2<s<1\), this follows from
+\(\zeta(s)=\eta(s)/(1-2^{1-s})<0\), where the alternating
+series \(\eta(s)>0\); at one the pole of \(\zeta\) gives a
+removable zero in the quotient. At \(\rho\) the leading
+Laurent coefficient is
+\[
+ A_\rho=\frac{r!\Gamma(\rho)\zeta(2\rho)}
+                     {\zeta^{(r)}(\rho)}.
+\]
+The numerator is nonzero since \(\operatorname{Re}(2\rho)>1\).
+
+Suppose the first inequality fails. Choose
+\(0<c<C_\rho\) such that
+\[
+ A(X)=cX^\beta(\log X)^{r-1}-B(X)\ge0
+\]
+for every \(X\ge X_0\), with \(X_0>1\). Its Mellin transform
+converges for real \(s>1\) and continues meromorphically as
+\[
+ \frac{c(r-1)!}{(s-\beta)^r}-\Phi(s)+E(s),
+\]
+where \(E\) is entire, accounting for the finite initial interval.
+The real pole at \(\beta\) forces the abscissa of the positive
+integral to be at least \(\beta\). If that abscissa were greater
+than \(\beta\), the displayed continuation would be holomorphic
+there, contradicting Lemma~\ref{lem:landau-positive}. Hence it
+is exactly \(\beta\).
+
+Positivity now gives, for \(\delta>0\),
+\[
+ \left|\int_{X_0}^\infty A(X)X^{-\beta-\delta-i\gamma}
+                       \frac{\dd X}{X}\right|
+ \le\int_{X_0}^\infty A(X)X^{-\beta-\delta}
+                       \frac{\dd X}{X}.
+\]
+Multiply by \(\delta^r\) and let \(\delta\downarrow0\).
+The complex pole on the left gives \(|A_\rho|\); the real
+pole on the right gives \(c(r-1)!\). Therefore
+\(c\ge |A_\rho|/(r-1)!=C_\rho\), a contradiction.
+For the second inequality apply the identical argument to
+\(A(X)=cX^\beta(\log X)^{r-1}+B(X)\).
+\end{proof}
+
+This strengthens the absolute-value pole test of
+Proposition~\ref{prop:two-pole-bounds} to both one-sided
+oscillations. It still gives lower bounds, not the square-root
+upper bound needed to exclude \(\rho\).
+
+\begin{proposition}[The real pole and an eventual sign]
+\label{prop:eventual-smoothed-sign}
+Put
+\[
+ c_0=-\frac{\sqrt\pi}{2\zeta(1/2)}>0.
+\]
+Unconditionally,
+\[
+ \liminf_{X\to\infty}\frac{B(X)}{\sqrt X}\le-c_0.
+\]
+If in addition \(B(X)\le0\) for all sufficiently large \(X\),
+then RH holds, every nontrivial zero is simple, and each such
+zero satisfies
+\[
+ \left|\frac{\Gamma(\rho)\zeta(2\rho)}{\zeta'(\rho)}\right|
+ \le c_0.
+\]
+\end{proposition}
+\begin{proof}
+The function \(\Phi\) has a simple real pole at \(1/2\)
+with residue \(-c_0\). Suppose the asserted limit inferior
+were greater than \(-c_0\). Choose \(0<c<c_0\) such that
+\(B(X)+c\sqrt X\ge0\) eventually. The Mellin transform of
+this nonnegative function has continuation
+\[
+ \Phi(s)+\frac c{s-1/2}+E(s).
+\]
+Its pole at \(1/2\) has negative residue \(c-c_0\).
+The positivity principle and absence of real singularities to
+the right force its abscissa to be \(1/2\). The integral is
+nonnegative on the real axis there, but the continuation
+tends to \(-\infty\) as \(s\downarrow1/2\), a contradiction.
+
+Now assume \(B\le0\) eventually, and apply the positivity
+principle to \(-B\). Its Mellin continuation is
+\(-\Phi+E\), with positive residue \(c_0\) at \(1/2\).
+Its abscissa is exactly \(1/2\), by the same real-axis
+argument. Thus \(\Phi\) is holomorphic in
+\(\operatorname{Re}s>1/2\), which excludes all right-hand
+zeros. The functional equation gives RH.
+
+At a critical zero of order \(r\), the numerator of \(\Phi\)
+is nonzero by nonvanishing of \(\zeta\) on the line
+\(\operatorname{Re}s=1\). Positivity bounds the complex
+Mellin integral at \(s=\rho+\delta\) by its real value at
+\(s=1/2+\delta\), the latter being \(c_0/\delta+O(1)\).
+The complex pole has order \(r\), so \(r\le1\), and comparison
+of residues gives the displayed inequality.
+\end{proof}
+
+An eventual-sign argument would therefore need more than the
+square-root estimate with an arbitrary \(X^\varepsilon\) loss:
+it would also establish simplicity. Neither the sign assertion
+nor the required upper bound for \(B\) has been proved.
+The negative-bias lower bound alone does not control positive
+excursions or rule out right-hand zeros.
+
+\begin{proposition}[The real-pole normalization of local energy]
+\label{prop:local-energy-lower}
+With \(c_0\) as above, unconditionally
+\[
+ \limsup_{X\to\infty}\frac{\mathcal H_B(X)}X
+ \ge\frac32c_0^2=\frac{3\pi}{8\zeta(1/2)^2}.
+\]
+\end{proposition}
+\begin{proof}
+There is nothing to prove if the limit superior is infinite.
+Otherwise choose \(C\) greater than it, so that
+\(\mathcal H_B(X)\le CX\) for all sufficiently large \(X\).
+For \(\eta>0\), Tonelli and the substitution \(Y=tX\) give
+\[
+ \int_0^\infty\mathcal H_B(X)X^{-1-\eta}\frac{\dd X}{X}
+ =r(1+\eta)P(\eta),
+\]
+where
+\[
+ r(s)=\int_{1/2}^2t^s\frac{\dd t}{t}
+     =\frac{2^s-2^{-s}}s,\qquad
+ P(\eta)=\int_0^\infty|B(Y)|^2Y^{-1-\eta}\frac{\dd Y}{Y}.
+\]
+The small-\(X\) part is uniformly finite near \(\eta=0\),
+by exponential decay. The assumed large-\(X\) upper bound gives
+\[
+ P(\eta)\le\frac{C/\eta+O(1)}{r(1+\eta)}.
+\]
+For \(\delta>0\), Cauchy--Schwarz on \([1,\infty)\) now gives
+\[
+ \left|\int_1^\infty B(Y)Y^{-1/2-\delta}
+                       \frac{\dd Y}{Y}\right|^2
+ \le\frac{P(\delta)}{\delta}.
+\]
+The absolute integral is convergent by the same estimate.
+It agrees with \(\Phi(1/2+\delta)\) up to the entire
+small-\(Y\) term, by continuation from
+\(\operatorname{Re}s>1\). Multiplying by \(\delta^2\) and
+letting \(\delta\downarrow0\) gives
+\(c_0^2\le C/r(1)=2C/3\).
+Let \(C\) decrease to the limit superior.
+\end{proof}
+
+For the comparison function \(B_0(X)=-c_0\sqrt X\), the local energy
+is exactly \((3/2)c_0^2X\). Thus the constant in this pole comparison
+is the one dictated by the real residue. This proposition supplies
+a lower constraint on any proposed upper estimate; it does not
+establish such an estimate for the actual sum.
+
+\section{Elementary prime bounds and exact checks}
+\label{app:attack-checks}
+
+Here are details of the prime estimate used in
+Theorem~\ref{thm:finite-prime}. If
+\(\vartheta(t)=\sum_{p\le t}\log p\), then
+\(\prod_{n<p\le2n}p\) divides \(\binom{2n}{n}\le4^n\).
+Summing over dyadic intervals gives
+\(\vartheta(t)\le4(\log2)t\) for \(t\ge2\). Separating
+primes at \(\sqrt t\) gives
+\[
+ \pi(t)\le\sqrt t+\frac{2\vartheta(t)}{\log t}
+        \le7\,\frac t{\log t}.
+\]
+The last inequality uses \(\log t\le\sqrt t\).
+Partial summation gives
+\[
+ \sum_{p\le y}p^{-1/2}
+ =\frac{\pi(y)}{\sqrt y}
+  +\frac12\int_2^y\frac{\pi(t)}{t^{3/2}}\dd t
+ \ll\frac{\sqrt y}{\log y}.
+\]
+For instance split the integral at \(\sqrt y\); the first
+part is \(O(y^{1/4})\) and on the second part
+\(\log t\ge\frac12\log y\). This proves the asserted order
+without the prime number theorem or any zero-free input.
+Similarly
+\(\sum_{p\le y}(\log p)/p\ll\log y\), by partial summation
+of \(\vartheta\), proving the derivative bound used in
+\eqref{eq:prime-tail-double-zero}.
+
+The new checker \path{checks/attack_exact.py} uses rational
+arithmetic for the following independent finite tests:
+the Legendre reproducing kernel on polynomial monomials,
+its evaluation norm bound, the positive coefficients of the
+diagonal error, both finite-prime convolution identities,
+the coprime-pair decomposition, and the prime-dilation Gram
+identity. It also checks an exponential interval certificate
+for \(B(1)>0\) and \(B(3)<-1/20\).
+The latter rules out assigning one sign to every scale
+product in \eqref{eq:lambda-log-renewal}; it is not a test
+of an eventual sign.
+
+The checker proves none of the infinite arithmetic estimates.
+The analytic arguments are supplied in the text and have
+not been formalized in Lean. The original finite Gram
+formalization retains exactly the scope stated in the
+reproduction appendix. No new RH proof, zero-free
+half-plane or novelty priority is asserted in this revision.

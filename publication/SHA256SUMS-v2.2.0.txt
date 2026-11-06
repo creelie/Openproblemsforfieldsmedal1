@@ -1,0 +1,3 @@
+86fca368f58fb59a6bce3238f28fb219ac188725dbdbc2f477a8a9b2c909a763  zero-free-exponent-liouville-energies-v2.2.0.pdf
+730f6330f75b324ea5aa0f1faf5b485e65fe46ab8ed0f5cd363a9eca513f0be4  zero-free-exponent-liouville-energies-v2.2.0tex.zip
+32d3b0c85c7c69c2032a3198ec5a419e2145db760395f029e4d29ca8f235ebce  zero-free-exponent-liouville-energies-v2.2.0-research-package.zip

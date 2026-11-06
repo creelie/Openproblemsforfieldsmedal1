@@ -1,0 +1,85 @@
+\section{Continuity with version 1 and the role of the literature}
+\label{app:v1-record}
+
+This revision contains the mathematical arguments of the original
+preprint \cite{v1} within the expanded exposition. The square
+identity is Lemma~\ref{lem:square}; its exact finite-dimensional
+duality statement uses the corrected extremizer
+\(\beta_h=\overline{C_h}/\|C\|_2\).
+Proposition~\ref{prop:v1-terminal} retains the original
+terminal-\(\eta\) criterion. The maximal argument appears in
+Theorem~\ref{thm:bessel} on a common support, with its
+\((K+1)^2\) cost displayed before absorbing logarithms into
+an arbitrarily small power. The padding covers the entire
+support: for coefficients on \((N,2N]\), use
+\(2N\le2^K<4N\). No assertion about arbitrary translated
+intervals follows from a spectral bound tied to the size of
+the indices.
+
+Proposition~\ref{prop:uniform} strengthens the original
+coefficient-uniform failure theorem to an exact maximum.
+Corollary~\ref{cor:v1-power-gap} and Figure~\ref{fig:v1-gap}
+retain its particular \(9/4\), \(15/8\) comparison.
+Lemma~\ref{lem:v1-square-divisor} retains the square-divisor
+decomposition and displays every correlation stratum. The
+original conditional RH conclusion is included, and strengthened
+to a conditional Dirichlet-GRH implication, in
+Theorem~\ref{thm:grh}. The elementary RH criterion and its
+reverse direction are given in Theorem~\ref{thm:equiv} and
+Appendix~\ref{sec:perron}. These are implications, not proofs
+of their correlation hypotheses.
+
+\subsection{The analytic context retained from the original paper}
+
+The elementary identities sit within the standard analytic
+number theory of \cite{apostol,iwaniec-kowalski,titchmarsh}.
+The spectral input in Section~\ref{sec:sieve} belongs to the
+large-sieve framework of
+\cite{di,iwaniec-spectral,friedlander-iwaniec,bombieri,montgomery}.
+The present maximal argument is an elementary consequence of a
+fixed-support Bessel inequality; it does not supply a new spectral
+input. Work on exceptional eigenvalues \cite{pascadi} addresses
+a different refinement.
+
+The role of signs is also central in M\"obius disjointness
+\cite{sarnak-letter,bourgain-sarnak-ziegler} and in the correlation
+theorems of \cite{mr-short,mrt,matomaki-radziwill-tao-signs,tao,
+tao-teravainen,klurman,teravainen-binary}. The related settings
+of Bohr sets, partial sums and Chowla variants are represented
+by \cite{teravainen-walker,chavez,krishnamoorthy-chowla}.
+These references are retained for context. None is taken here
+as a proof of the maximal collar or of the square-root
+prime-tail estimate. Classical zero results \cite{selberg},
+finite-height verification \cite{pt}, and the disproof of the
+Mertens conjecture \cite{odlyzko-teriele} likewise have their
+own scopes. The character-sum viewpoint is represented by
+\cite{granville-soundararajan}; the present character criteria
+do not import an unstated uniform bound from that theory.
+
+The recent Hexagon paper \cite{caceres} studies weighted-prime
+margin criteria, reports finite verification, and analyzes
+the obstruction to inferring a global bound from averaged
+information. Its discussion of moving scales and exceptional
+sets is pertinent to our kernel comparison. We use it as
+related work, not as an input to any theorem here. In
+particular, finite verification does not establish the bound
+at every \(X\), and a criterion equivalent to RH does not
+establish its required inequality.
+
+\subsection{Funding and availability}
+This research received no external funding. No empirical dataset
+is used. The full research package contains the supplied v1 TeX
+source and its original supplemental scripts under
+\texttt{source-history/v1/}, together with their checksums and
+a section-by-section content map. The original exponent check
+and optional plotting script are preserved without alteration.
+The latter requires NumPy and Matplotlib; it is not needed to
+compile the manuscript, whose comparison figure is native
+TikZ/PGFPlots. The new exact checks use Python's standard library.
+
+\subsection{Ethics and interests}
+The work is theoretical mathematics and involves no human
+participants, animal subjects or clinical data requiring ethical
+approval. The authors declare no conflicts of interest. The
+computational and AI-assistance statement, including the
+limited scope of the Lean verification, follows below.

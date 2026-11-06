@@ -1,0 +1,41 @@
+{
+  "version": "2.2.0",
+  "title": "The Zero-Free Exponent of Signed Liouville Energies",
+  "date": "2026-11-07",
+  "pages": 54,
+  "RH_proved": false,
+  "Dirichlet_GRH_proved": false,
+  "new_zero_free_region_proved": false,
+  "analytic_results_Lean_formalized": false,
+  "novelty_priority_not_established": true,
+  "original_v1_references_retained": 25,
+  "original_v1_source_preserved": true,
+  "latex_errors": 0,
+  "undefined_references": 0,
+  "overfull_boxes": 0,
+  "abstract_words": 89,
+  "unique_labels": 97,
+  "exact_checks": {
+    "verify.py": "PASS window identities and bounds: 4606 cases\nPASS Rudin-Shapiro complementary blocks: 11 cases\nPASS independent-sign moments: 4680 cases\nPASS complete multiplicativity model: 1500 cases\nPASS ordinary-dilate Gram and minimizer: 152 cases\nPASS balanced reciprocal-dilate identities: 480 cases\nPASS linear Riesz rescaling: 241 cases\nPASS adaptive coefficient inversion and bounds: 120 cases\nPASS complex Dirichlet-character windows: 24 cases\nPASS separated Gram-window overlap: 9 cases\n",
+    "attack_exact.py": "PASS: Legendre reproduction and evaluation cost (231 checks)\nPASS: positive diagonal-error coefficients (36 checks)\nPASS: finite-prime convolution identities (3000 checks)\nPASS: coprime pairs and coherent prime Gram (149 checks)\nPASS: rational smoothed-sign certificates (2 checks)\nPASS: explicit finite moment interpolation (55 checks)\nScope: finite identities only; RH and the signed upper estimate remain unproved.\n",
+    "v1_retention.py": "Exact rational exponent gap: 3 identities passed.\nSquare-divisor identity: 1000 integers passed.\nExpanded correlation and gcd obstruction: 576 pairs passed.\n"
+  },
+  "files": {
+    "zero-free-exponent-liouville-energies-v2.2.0.pdf": {
+      "bytes": 814570,
+      "sha256": "86fca368f58fb59a6bce3238f28fb219ac188725dbdbc2f477a8a9b2c909a763"
+    },
+    "zero-free-exponent-liouville-energies-v2.2.0tex.zip": {
+      "bytes": 132899,
+      "sha256": "730f6330f75b324ea5aa0f1faf5b485e65fe46ab8ed0f5cd363a9eca513f0be4"
+    }
+  },
+  "archive_doi": null,
+  "archive_status": "Awaiting new version DOI",
+  "standalone_source_compile": true,
+  "standalone_pages": 54,
+  "previous_v21_labels_retained": 63,
+  "original_v1_all_mathematical_items_mapped": true,
+  "pages_rendered": 54,
+  "visual_review_passed": true
+}

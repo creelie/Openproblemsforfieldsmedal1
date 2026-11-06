@@ -1,0 +1,88 @@
+% Proof-ready insertion after eq:prime-tail-target in local-energy.tex.
+% Uses the classical Davenport estimate already invoked in sec:sieve.
+\begin{proposition}[Prime-tail cancellation to logarithmic order]
+\label{prop:prime-tail-logarithmic}
+For \(y=(\log X)^2\), and every fixed \(A>0\),
+\[
+ T_y(X)=-c_yX+O_A\!\left(\frac{X}{(\log X)^A}\right).
+\]
+In particular, \(T_y(X)/(c_yX)\to-1\).
+\end{proposition}
+\begin{proof}
+The classical uniform additive estimate of Davenport, in the
+Liouville form recalled in Section~\ref{sec:sieve} and quoted in
+\cite{mrt}, gives at additive frequency zero
+\[
+ L(t)\ll_A \frac{t}{(\log(2t))^A}
+ \qquad(t\ge1).
+\]
+Partial summation gives the absolutely convergent identity
+\[
+ B(X)=\frac1X\int_1^\infty L(t)e^{-t/X}\dd t.
+\]
+For \(X\ge4\), the contribution from \(1\le t\le\sqrt X\)
+has modulus at most \(X^{-1}\int_1^{\sqrt X}t\dd t\le1/2\).
+For \(t\ge\sqrt X\), use
+\(\log(2t)\ge\tfrac12\log X\) to bound the remaining part by
+\[
+ \frac{C_A2^A}{X(\log X)^A}
+     \int_0^\infty te^{-t/X}\dd t
+ =\frac{C_A2^AX}{(\log X)^A}.
+\]
+Consequently \(B(X)\ll_A X/(\log X)^A\).
+By Theorem~\ref{thm:finite-prime} and
+\eqref{eq:prime-tail-exact},
+\[
+ T_y(X)+c_yX
+   =B(X)-\bigl(B_y(X)-c_yX\bigr)
+   =O_A\!\left(\frac{X}{(\log X)^A}\right)
+        +O(X^{1/2+o(1)}).
+\]
+For each fixed \(A\), the last error is absorbed in the first.
+Finally \(c_y\ge(\log X)^{-4}\) gives
+\(T_y(X)/(c_yX)=-1+O_A((\log X)^{4-A})\).
+Take any \(A>4\).
+\end{proof}
+
+This proves the main-term cancellation in the actual exponential
+kernel. It is a consequence of classical additive cancellation,
+not a new zero-free theorem. Its error is larger than the
+square-root error requested in \eqref{eq:prime-tail-target}.
+
+\begin{proposition}[The precise power-saving endpoint]
+\label{prop:prime-tail-rh-equivalence}
+For \(y=(\log X)^2\), the estimate
+\[
+ T_y(X)+c_yX\ll_\varepsilon X^{1/2+\varepsilon}
+ \quad\text{for every }\varepsilon>0
+\]
+is equivalent to RH.
+\end{proposition}
+\begin{proof}
+The exact identity and Theorem~\ref{thm:finite-prime} give
+\[
+ T_y(X)+c_yX-B(X)=O(X^{1/2+o(1)}).
+\]
+Hence the asserted family of bounds holds if and only if
+\(B(X)\ll_\varepsilon X^{1/2+\varepsilon}\) for every
+\(\varepsilon>0\). The equivalence of the latter condition
+with RH is Proposition~\ref{prop:smoothed}.
+\end{proof}
+
+% Suitable following the existing Abel double-zero discussion.
+For clarity, the double zero in \eqref{eq:prime-tail-double-zero}
+does not exclude nonreal poles. For fixed \(y\), each finite
+Euler factor of \(c_y(s)\) is holomorphic and nonzero on
+\(\operatorname{Re}s>0\). If \(\rho\) were a zeta zero of
+order \(r\) with \(\operatorname{Re}\rho>1/2\), then
+\eqref{eq:prime-tail-abel} would have the leading Laurent term
+\[
+ H_y(s)=
+ \frac{(r!)^2\zeta(2\rho)}
+      {c_y(\rho)(\zeta^{(r)}(\rho))^2}
+       (s-\rho)^{-2r}
+       +O((s-\rho)^{1-2r}).
+\]
+The coefficient is nonzero. The local cancellation at one
+therefore supplies no contradiction to such a zero; excluding
+it requires the global power-saving estimate.

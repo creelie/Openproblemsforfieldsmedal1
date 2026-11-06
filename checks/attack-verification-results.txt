@@ -1,0 +1,7 @@
+PASS: Legendre reproduction and evaluation cost (231 checks)
+PASS: positive diagonal-error coefficients (36 checks)
+PASS: finite-prime convolution identities (3000 checks)
+PASS: coprime pairs and coherent prime Gram (149 checks)
+PASS: rational smoothed-sign certificates (2 checks)
+PASS: explicit finite moment interpolation (55 checks)
+Scope: finite identities only; RH and the signed upper estimate remain unproved.

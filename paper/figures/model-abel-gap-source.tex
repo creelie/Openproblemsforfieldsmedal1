@@ -1,0 +1,28 @@
+
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,pgfplots}
+\pgfplotsset{compat=1.18}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+ width=13cm,height=6.1cm,
+ xmin=0,xmax=18,ymin=-100,ymax=100,
+ axis lines=left,grid=major,grid style={gray!18},
+ xlabel={$t=\log X$},ylabel={Normalized leading term},
+ title={Constructed comparison model; not Liouville data},
+ title style={font=\small},
+ tick label style={font=\small},
+ label style={font=\small},
+ legend style={at={(.02,.02)},anchor=south west,draw=none,
+               fill=white,font=\small},
+ samples=401,domain=0:18,
+]
+\addplot[blue!65!black,thick] {exp(x/4)*cos(deg(x))};
+\addlegendentry{$e^{t/4}\cos t$}
+\addplot[orange!65!black,dashed] {exp(x/4)};
+\addlegendentry{envelopes $\pm e^{t/4}$}
+\addplot[orange!65!black,dashed,forget plot] {-exp(x/4)};
+\end{axis}
+\end{tikzpicture}
+\end{document}

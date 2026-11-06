@@ -6,6 +6,10 @@ The posted June 2026 v1 is the base manuscript. The attached submission ZIP cont
 
 The exact finite model proofs, analytic equivalences and counterexamples are in the manuscript. The Liouville endpoint obstruction uses Tao's published logarithmic two-point theorem. The optional 7/8 and ordinary two-point deductions explicitly invoke the respective OpenAI manuscripts. The research draft neither reproduces the full external quasi-Riemann argument nor relies on it for the principal equivalences.
 
+## Direct attack of 7 November 2026
+
+The complete v2.2 working manuscript adds the constructions in [ATTACK-2026-11-07.md](ATTACK-2026-11-07.md). The new proofs are self-contained from classical zeta facts and the elementary arguments supplied in the text. Neither an external quasi-Riemann theorem nor Chowla is an input to the new localization, prime-product or Mellin-positivity results. The required signed upper bound is not proved. Both the old exact checks and the new rational-arithmetic checker pass; the analytic arguments are not Lean-formalized. This is a local working draft, not a new published RH proof.
+
 ## Proof targets
 
 - **Signed Fejér energy:** prove Q(N) = O(N^(1+epsilon)) for every fixed epsilon > 0. This is equivalent to RH. The weighted energy keeps the signs of different shifts.
