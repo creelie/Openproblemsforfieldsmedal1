@@ -8,7 +8,7 @@ Submission route: Preprints.org, v1 to v2. The platform version is independent o
 
 Existing record: [v1](https://doi.org/10.20944/preprints202606.1350.v1). The v2 identifier is not claimed to exist before submission is accepted by the platform.
 
-Research release: [v2.8.0](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.0). Version DOI: [release page](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.0) (DOI awaiting archive verification).
+Research release: [v2.8.0](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.0). Version DOI: [10.5281/zenodo.24044460](https://doi.org/10.5281/zenodo.24044460).
 
 ## Abstract to paste
 
