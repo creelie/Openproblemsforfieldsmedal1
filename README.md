@@ -1,3 +1,11 @@
+# Zeta Zeros and the Exact Growth of Signed Liouville Energies
+
+The complete manuscript incorporates a fixed deterministic completely multiplicative construction with all logarithmic savings and maximal Abel vanishing but an energy exponent 2 max(Theta,beta), plus rigidity of the exact Abel coefficient. RH and GRH remain open.
+
+[Complete PDF](revision-v2.5.0/RH.pdf) · [TeX ZIP](revision-v2.5.0/RHtex.zip) · [Submission package](revision-v2.5.0/RH.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.5.0) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24014164)
+
+<!-- integrated-round26 -->
+
 # Zeta Zeros and Signed Liouville Energies
 
 A multipole theorem bounds the normalized Liouville energy from below by a sum of pole contributions. A positive Fejer weight and a certified finite calculation give an unconditional limsup lower bound strictly greater than 1811/2500. RH and Dirichlet GRH remain open.

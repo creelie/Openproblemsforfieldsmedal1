@@ -1,8 +1,8 @@
 {
-  "title": "Zeta Zeros and Signed Liouville Energies",
+  "title": "Zeta Zeros and the Exact Growth of Signed Liouville Energies",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "A multipole theorem bounds the normalized Liouville energy from below by a sum of pole contributions. A positive Fejer weight and a certified finite calculation give an unconditional limsup lower bound strictly greater than 1811/2500. RH and Dirichlet GRH remain open.",
+  "description": "The complete manuscript incorporates a fixed deterministic completely multiplicative construction with all logarithmic savings and maximal Abel vanishing but an energy exponent 2 max(Theta,beta), plus rigidity of the exact Abel coefficient. RH and GRH remain open.",
   "creators": [
     {
       "name": "Bhattacharjee, Deep",
@@ -17,7 +17,7 @@
   ],
   "license": "cc-by-4.0",
   "publication_date": "2026-11-07",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "keywords": [
     "Riemann hypothesis",
     "Liouville function",

@@ -4,6 +4,7 @@
 \raggedbottom
 \usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
 \usepackage{tikz,pgfplots}
+\usetikzlibrary{arrows.meta}
 \pgfplotsset{compat=1.18}
 \usepackage{graphicx}
 \newtheorem{theorem}{Theorem}[section]
@@ -22,7 +23,7 @@
 \newcommand{\one}{\mathbf 1}
 \newcommand{\RH}{\mathrm{RH}}
 \numberwithin{equation}{section}
-\title[Zeta zeros and Liouville energies]{Zeta Zeros and Signed Liouville Energies}
+\title[Exact growth of Liouville energies]{Zeta Zeros and the Exact Growth of Signed Liouville Energies}
 \author{Deep Bhattacharjee}
 \address{Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India}
 \curraddr{Formerly, University of Calcutta, Senate House, 87/1 College Street, Kolkata 700073, West Bengal, India}
@@ -30,17 +31,17 @@
 \email{itsdeep@live.com}
 \email{egspl@proton.me}
 \thanks{Deep Bhattacharjee is the corresponding author. ORCID \href{https://orcid.org/0000-0003-0466-750X}{0000-0003-0466-750X}. Ushashi Bhattacharya's ORCID is \href{https://orcid.org/0009-0002-2254-3914}{0009-0002-2254-3914}.}
-\thanks{Research revision 2.4.0. \href{https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.4.0}{Release v2.4.0}. Version DOI \href{https://doi.org/10.5281/zenodo.24025791}{10.5281/zenodo.24025791}.}
+\input{round26-imprint}
 \author{Ushashi Bhattacharya}
 \address{Formerly, National Taiwan University, Taipei 106319, Taiwan}
 \email{rai.bhattacharya.in@gmail.com}
-\date{7 November 2026. Version 2.4.0. Research revision.}
+\date{7 November 2026. Version 2.5.0. Research revision.}
 \subjclass[2020]{Primary 11M26. Secondary 11N37, 11N35, 11F72.}
 \keywords{Liouville function, Riemann hypothesis, autocorrelation, Fej\'er kernel, spectral large sieve}
 \begin{document}
-\hypersetup{pdftitle={Zeta Zeros and Signed Liouville Energies}}
+\hypersetup{pdftitle={Zeta Zeros and the Exact Growth of Signed Liouville Energies}}
 \begin{abstract}
-The growth exponent of a signed Fej\'er energy of the Liouville function detects the supremum of the real parts of the nontrivial zeta zeros. We prove a lower bound from any finite set of poles on a common vertical line. Positive weighting gives a certified limit superior strictly greater than $1811/2500$ at the square-root scale. A signed cancellation estimate equivalent to the Riemann hypothesis remains open.
+The growth exponent of signed Liouville energies equals twice the supremum of the real parts of the nontrivial zeta zeros. Pole contributions and positive weights give a certified lower bound. A deterministic multiplicative construction preserves every logarithmic saving and the maximal Abel zero order while its energy grows with exponent $2\max(\Theta,\beta)$. The precise Abel leading coefficient is rigid. The signed upper bound equivalent to the Riemann hypothesis remains open.
 \end{abstract}
 \maketitle
 \tableofcontents
@@ -445,6 +446,8 @@ Theorem~\ref{thm:equiv} gives RH. The same bound and \eqref{eq:completion} give 
 \input{fejer-positive-weight}
 \input{fejer-two-frequency}
 
+\input{round26-sparse-primes}
+
 \section{What the recent results give}\label{sec:frontier}
 
 The recent advances concern different quantities. Anthropic's result controls a lower proportion of simple zeros on the critical line through Weil's form and pair correlation \cite{anthropic}. Lamzouri's independent proof obtains more than \(67.25\%\) of zeros that are both simple and on the line \cite{lamzouri}. Guth and Maynard's large-value estimates bound the number of zeros to the right of a specified line as a function of height \cite{gm}. A count of this type can allow an exceptional zero. Corollary~\ref{cor:exponent} shows that even one such zero affects the energy exponent. A rigorous computation of Platt and Trudgian checks all positive ordinates through \(3\cdot10^{12}\) \cite{pt}. The height cutoff, the proportion and the horizontal threshold are separate quantities.
@@ -575,6 +578,8 @@ Here \(|\lambda(n)|=1\). On \(x/2<n<2x\), use \(|\log(x/n)|\gg |x-n|/x\), and su
 
 \input{v1-record}
 
+\input{round26-check-appendix}
+
 \section{Reproduction and provenance}
 
 The accompanying exact-integer checks test the finite autocorrelation and window formulas, dyadic partitions, the Rudin--Shapiro construction, the finite-prime examples and the independent-sign variance. These checks complement the analytic proofs. The original preprint is cited as \cite{v1}. Version~2 retains its authorship, corrects the endpoint conventions and gives proofs and obstructions for the stronger statements above. Computational and AI-assisted tools were used to develop examples, check finite identities and revise the exposition. This research revision records conditional criteria separately from proved estimates; it does not prove RH or Dirichlet GRH.
@@ -697,6 +702,26 @@ Forum Math. Pi \textbf{14} (2026), e8, 1--54,
 \bibitem{granville-soundararajan}A. Granville and K. Soundararajan, \emph{Large character sums:
 pretentious characters and the P\'olya--Vinogradov theorem},
 J. Amer. Math. Soc. \textbf{20} (2007), 357--384.
+
+\bibitem{Round26aymone} M. Aymone,
+\emph{On multiplicative functions that are small on average and zero-free
+regions for the Riemann zeta function}, Lithuanian Math. J. \textbf{62}
+(2022), 146--149. \href{https://doi.org/10.1007/s10986-022-09555-y}{DOI}.
+\bibitem{Round26aymone-sidoravicius} M. Aymone and V. Sidoravicius,
+\emph{Partial sums of biased random multiplicative functions},
+J. Number Theory \textbf{172} (2017), 343--382.
+\href{https://doi.org/10.1016/j.jnt.2016.08.020}{DOI}.
+\bibitem{Round26davenport} H. Davenport,
+\emph{On some infinite series involving arithmetical functions (II)},
+Quart. J. Math. Oxford Ser. \textbf{8} (1937), 313--320.
+\href{https://doi.org/10.1093/qmath/os-8.1.313}{DOI}.
+\bibitem{Round26mrt} K. Matom\"aki, M. Radziwi\l\l\ and T. Tao,
+\emph{An averaged form of Chowla's conjecture}, Algebra Number Theory
+\textbf{9} (2015), 2167--2196.
+\href{https://doi.org/10.2140/ant.2015.9.2167}{DOI}.
+\bibitem{Round26titchmarsh} E. C. Titchmarsh,
+\emph{The Theory of the Riemann Zeta-Function}, 2nd ed., revised by
+D. R. Heath-Brown, Clarendon Press, Oxford, 1986.
 
 \end{thebibliography}
 \endgroup
