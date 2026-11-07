@@ -22,7 +22,7 @@
 \newcommand{\one}{\mathbf 1}
 \newcommand{\RH}{\mathrm{RH}}
 \numberwithin{equation}{section}
-\title[The zero-free exponent of Liouville energies]{The Zero-Free Exponent of Signed Liouville Energies}
+\title[Zeta zeros and Liouville energies]{Zeta Zeros and Signed Liouville Energies}
 \author{Deep Bhattacharjee}
 \address{Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India}
 \curraddr{Formerly, University of Calcutta, Senate House, 87/1 College Street, Kolkata 700073, West Bengal, India}
@@ -30,16 +30,17 @@
 \email{itsdeep@live.com}
 \email{egspl@proton.me}
 \thanks{Deep Bhattacharjee is the corresponding author. ORCID \href{https://orcid.org/0000-0003-0466-750X}{0000-0003-0466-750X}. Ushashi Bhattacharya's ORCID is \href{https://orcid.org/0009-0002-2254-3914}{0009-0002-2254-3914}.}
-\thanks{Research revision 2.2.0. Repository and release: \href{https://github.com/creelie/Openproblemsforfieldsmedal1}{source} and \href{https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.2.0}{v2.2.0}. Version DOI \href{https://doi.org/10.5281/zenodo.24022872}{10.5281/zenodo.24022872}. All versions \href{https://doi.org/10.5281/zenodo.24014164}{10.5281/zenodo.24014164}.}
+\thanks{Research revision 2.3.0. \href{https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.3.0}{Release v2.3.0}. Zenodo concept DOI \href{https://doi.org/10.5281/zenodo.24014164}{10.5281/zenodo.24014164}.}
 \author{Ushashi Bhattacharya}
 \address{Formerly, National Taiwan University, Taipei 106319, Taiwan}
 \email{rai.bhattacharya.in@gmail.com}
-\date{7 November 2026. Version 2.2.0. Research revision.}
+\date{7 November 2026. Version 2.3.0. Research revision.}
 \subjclass[2020]{Primary 11M26. Secondary 11N37, 11N35, 11F72.}
 \keywords{Liouville function, Riemann hypothesis, autocorrelation, Fej\'er kernel, spectral large sieve}
 \begin{document}
+\hypersetup{pdftitle={Zeta Zeros and Signed Liouville Energies}}
 \begin{abstract}
-The growth exponent of a signed Fej\'er energy of the Liouville function equals twice the supremum of the real parts of the nontrivial zeta zeros. We prove the corresponding zero-free and Dirichlet-character criteria, construct local reconstruction kernels, and separate an explicit finite-prime main term from its signed remainder. That remainder cancels the main term to every logarithmic order. Its square-root bound is equivalent to the Riemann hypothesis and remains unproved. Deterministic correlation obstructions and bounded-coefficient constructions explain why absolute bounds and finitely many Abel cancellations do not supply it.
+The growth exponent of a signed Fej\'er energy of the Liouville function detects the supremum of the real parts of the nontrivial zeta zeros. We prove a lower bound from any finite set of poles on a common vertical line. Positive weighting gives a certified limit superior strictly greater than $3257/5000$ at the square-root scale. A signed cancellation estimate equivalent to the Riemann hypothesis remains open.
 \end{abstract}
 \maketitle
 \tableofcontents
@@ -439,6 +440,9 @@ If \(Q_\lambda(N)\ll N(\log(2N))^B\) for some \(B\ge0\), then RH holds and every
 \begin{proof}
 Theorem~\ref{thm:equiv} gives RH. The same bound and \eqref{eq:completion} give \(L(x)\ll x^{1/2}(\log(2x))^{B/2}\). At a nontrivial zero \(\rho=1/2+i\gamma\), the numerator \(\zeta(2\rho)\) is finite and nonzero by the classical nonvanishing on \(\R s=1\) and \(\gamma\ne0\). For \(u\downarrow0\), the Mellin integral at \(s=\rho+u\) is \(O_\rho(u^{-1-B/2})\) after the change of variable \(v=\log x\). A zero of multiplicity \(m\) gives a pole of order \(m\) in \(F\) at \(\rho\), which forces \(m\le1+B/2\).
 \end{proof}
+
+\input{fejer-pole-energy}
+\input{fejer-positive-weight}
 
 \section{What the recent results give}\label{sec:frontier}
 

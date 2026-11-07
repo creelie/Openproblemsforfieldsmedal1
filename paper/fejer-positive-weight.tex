@@ -1,0 +1,65 @@
+\paragraph{Two certified numerical lower bounds.}
+Using the first \(1000\) positive simple critical zeros and their
+conjugates in \eqref{eq:fejer-critical-poles} gives a right side
+strictly above \(45769/100000\). The calculation uses
+outward-rounded ball arithmetic at \(128\) bits. The supplied
+verification script isolates the zeros, checks that the ordinate
+enclosures are disjoint, and encloses the derivative and residue
+at each zero. The \texttt{python-flint}~0.9.0 interface calls
+the rigorous FLINT zeta routines described in its
+\href{https://flintlib.org/doc/acb_dirichlet/index.html\#zeros-of-the-riemann-zeta-function}%
+{documentation}. No zero outside the stated set enters the sum.
+
+A positive weighting in the logarithmic variable yields
+the stronger certified bound
+\begin{equation}\label{eq:fejer-weight-bound}
+ \limsup_{N\to\infty}\frac{Q_\lambda(N)}{N}
+ >\frac{3257}{5000}=0.6514.
+\end{equation}
+To prove it, let \(C\) denote the limit superior in
+\eqref{eq:fejer-weight-bound}. If \(C<\infty\), the proof of
+Proposition~\ref{prop:fejer-multipole} gives, for
+\(F(t)=e^{-t/2}U_{e^t}\),
+\(\limsup_{t\to\infty}\|F(t)\|_{\mathcal H}=\sqrt C\).
+Let \(\rho_1=1/2+i\gamma_1\) be the first positive critical zero,
+\(A_1=\zeta(2\rho_1)/(\rho_1\zeta'(\rho_1))\), and
+\(a=-1/\zeta(1/2)>0\). For \(m=100\), put
+\[
+ P(t)=\frac{1}{m+1}
+     \left|\sum_{j=0}^{m}e^{ij(\gamma_1t-\theta)}\right|^2,
+ \qquad e^{i\theta}A_1=-|A_1|.
+\]
+The trigonometric polynomial is nonnegative and its constant
+coefficient is one, so
+\(\delta\int_0^\infty e^{-\delta t}P(t)\dd t\to1\).
+For each \(\varepsilon>0\), the norm of \(F(t)\) is at most
+\(\sqrt C+\varepsilon\) outside a fixed bounded interval. The
+integral on that interval vanishes after multiplication by
+\(\delta\). Thus the limit of
+\(\delta\int_0^\infty e^{-\delta t}P(t)F(t)\dd t\), when it
+exists, has norm at most \(\sqrt C\).
+
+For \(2\le k\le100\), ball arithmetic verifies
+\(\zeta(1/2+ik\gamma_1)\ne0\) by enclosing its value over the
+whole ordinate enclosure. Equation~\eqref{eq:fejer-vector-mellin}
+then shows that the terms at those frequencies and their
+conjugates vanish in the limit. The constant term contributes
+\(-a w_{1/2}\). The two terms at frequencies \(\pm\gamma_1\)
+give \(-c\R w_{\rho_1}\) with
+\(c=2m|A_1|/(m+1)\), since the first Fourier coefficient of
+\(P\) has modulus \(m/(m+1)\). The limit therefore exists and
+\[
+ C\ge \|a w_{1/2}+c\R w_{\rho_1}\|_{\mathcal H}^2.
+\]
+Writing \(v=\R w_{\rho_1}\), direct integration gives
+\begin{align*}
+ \|w_{1/2}\|_{\mathcal H}^2&=\frac23,\\
+ \|v\|_{\mathcal H}^2&=\frac32+\R\frac1{1+2\rho_1}
+                       -2\R\frac1{1+\rho_1},\\
+ \langle w_{1/2},v\rangle_{\mathcal H}
+    &=\frac13-\R\frac1{1+\rho_1}+2\R\frac1{3/2+\rho_1}.
+\end{align*}
+The same script encloses the squared norm and verifies that
+its lower endpoint exceeds the exact rational \(3257/5000\).
+This proves \eqref{eq:fejer-weight-bound}, including the
+immediate case \(C=\infty\).

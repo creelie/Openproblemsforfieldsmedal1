@@ -1,0 +1,166 @@
+\subsection{Simultaneous pole contributions to the Fej\'er energy}
+\label{ssec:fejer-multipole}
+
+The signed Fej\'er energy also gives quantitative information at a
+fixed exponent. The following bound records the contributions of any
+finite set of poles on the same vertical line.
+
+\begin{proposition}[A sum of pole contributions]\label{prop:fejer-multipole}
+Put
+\[
+ M(s)=\frac{\zeta(2s)}{s\zeta(s)},\qquad
+ K(s)=1+\frac{2}{1+2\R s}-2\R\frac1{1+s}.
+\]
+Fix \(\beta\ge1/2\) and an integer \(r\ge1\). For a finite set
+\(\mathcal P\) of distinct poles \(\rho=\beta+i\gamma\) of \(M\)
+of order exactly \(r\), write
+\(A_\rho=\lim_{s\to\rho}(s-\rho)^rM(s)\). Then
+\begin{equation}\label{eq:fejer-multipole}
+ \limsup_{N\to\infty}
+  \frac{Q_\lambda(N)}{N^{2\beta}(\log N)^{2r-2}}
+ \ge \sum_{\rho\in\mathcal P}K(\rho)
+              \left|\frac{A_\rho}{(r-1)!}\right|^2.
+\end{equation}
+If the limit superior is finite, \(M\) has no pole in
+\(\R s>\beta\) and every pole on \(\R s=\beta\) has order at
+most \(r\).
+\end{proposition}
+
+\begin{proof}
+Take \(L(X)=0\) on \(0<X<1\). In the complex Hilbert space
+\(\mathcal H=L^2((0,1);\mathbb C^2)\), put
+\[
+ U_X(u)=(L(uX),L(X)-L(uX)),\qquad w_s(u)=(u^s,1-u^s).
+\]
+For an integer \(N\), the value \(L(uN)=L(j)\) occupies the
+interval \([j/N,(j+1)/N)\) for \(0\le j<N\). By
+\eqref{eq:fejerboundary}, this gives
+\(\|U_N\|_{\mathcal H}^2=Q_\lambda(N)\). For \(X=N+a\),
+\(0\le a<1\), the substitution \(v=uX\) gives the exact
+interpolation
+\begin{equation}\label{eq:fejer-norm-interpolation}
+ \|U_X\|_{\mathcal H}^2
+   =\frac{NQ_\lambda(N)+a|L(N)|^2}{X}.
+\end{equation}
+Since \(|L(N)|^2\le2Q_\lambda(N)\) by \eqref{eq:completion},
+the numerator in \eqref{eq:fejer-multipole} can be replaced by
+\(\|U_X\|_{\mathcal H}^2\) and the limit superior taken over
+real \(X\), with the denominator at \(X\). Denote the resulting
+limit superior by \(C\).
+
+For \(\R s>1\), \(\|U_X\|_{\mathcal H}\ll X\) ensures absolute
+convergence of the Hilbert space integral
+\begin{equation}\label{eq:fejer-vector-mellin}
+ \int_1^\infty U_X X^{-s}\frac{\dd X}{X}=M(s)w_s.
+\end{equation}
+For the first coordinate, substitute \(v=uX\), and use
+\(L(v)=0\) below~1. For the second, subtract the first coordinate
+from the transform of \(L(X)\). The scalar transform of \(L\) is
+\(M(s)\) by partial summation and the Euler product. The map
+\(s\mapsto w_s\) is holomorphic into \(\mathcal H\) on
+\(\R s>-1/2\), since on compact subsets the derivatives of
+\(u^s\) are dominated in \(L^2\) by a power of \(u\) times a
+power of \(|\log u|\). Direct integration gives
+\(\|w_s\|_{\mathcal H}^2=K(s)>0\) there.
+
+If \(C=\infty\), \eqref{eq:fejer-multipole} is immediate.
+Otherwise put \(F(t)=e^{-\beta t}U_{e^t}\) for \(t\ge0\).
+The definition of \(C\) gives
+\(\|F(t)\|_{\mathcal H}\ll 1+t^{r-1}\).
+Consequently the integral in \eqref{eq:fejer-vector-mellin}
+is holomorphic for \(\R s>\beta\). Meromorphic continuation
+identifies it with the displayed right side there. As
+\(w_s\ne0\), this excludes poles of \(M\) in that open
+half-plane. At a boundary point \(\rho\), the same bound on
+\(F\) gives \(\|M(\rho+\delta)w_{\rho+\delta}\|_{\mathcal H}
+=O(\delta^{-r})\) as \(\delta\downarrow0\), which excludes
+a pole of order greater than \(r\).
+
+For each \(\delta>0\), equip the space of \(\mathcal H\)-valued
+functions on \([0,\infty)\) with the \(L^2\) norm for the
+measure \(e^{-\delta t}\dd t\). Denote its inner product by
+\(\langle\cdot,\cdot\rangle_\delta\), linear in its first
+argument, and put \(G_r=\Gamma(2r-1)\). For every
+\(\varepsilon>0\), the bound
+\(\|F(t)\|_{\mathcal H}^2\le(C+\varepsilon)t^{2r-2}\) holds
+for all sufficiently large \(t\). Its integral over a fixed
+bounded interval remains bounded as \(\delta\downarrow0\).
+Thus Euler's gamma integral gives
+\begin{equation}\label{eq:fejer-multipole-abel}
+ \limsup_{\delta\downarrow0}\delta^{2r-1}\|F\|_\delta^2
+ \le C G_r.
+\end{equation}
+
+For each \(\rho=\beta+i\gamma\in\mathcal P\), take the test
+function
+\[
+ g_{\rho,\delta}(t)=\frac{\delta^{r-1/2}}{\sqrt{G_r}}
+    t^{r-1} e^{i\gamma t}\,v_\rho,
+ \qquad v_\rho=\frac{w_\rho}{\|w_\rho\|_{\mathcal H}}.
+\]
+Its norm is one. For \(\rho\ne\rho'\), the magnitude of
+\(\langle g_{\rho,\delta},g_{\rho',\delta}\rangle_\delta\)
+is at most
+\((\delta/|\delta-i(\gamma-\gamma')|)^{2r-1}\), again by
+the gamma integral. Hence the largest eigenvalue of this finite
+Gram matrix tends to one. By \eqref{eq:fejer-vector-mellin},
+\[
+ \langle F,g_{\rho,\delta}\rangle_\delta
+  =\frac{\delta^{r-1/2}}{\sqrt{G_r}}
+  \left\langle
+   (-1)^{r-1}\frac{\dd^{r-1}}{\dd s^{r-1}}
+           [M(s)w_s]\bigg|_{s=\rho+\delta},v_\rho
+  \right\rangle_{\mathcal H}.
+\]
+The signed derivative of the leading Laurent term
+\(A_\rho w_\rho(s-\rho)^{-r}\) is
+\(G_r A_\rho w_\rho(s-\rho)^{-(2r-1)}/(r-1)!\).
+Consequently
+\[
+ \lim_{\delta\downarrow0}\delta^{r-1/2}
+       \langle F,g_{\rho,\delta}\rangle_\delta
+   =\sqrt{G_r}\,\frac{A_\rho}{(r-1)!}\|w_\rho\|_{\mathcal H}.
+\]
+The sum of the squared scalar products with the tests is at
+most \(\|F\|_\delta^2\) times their largest Gram eigenvalue.
+Indeed the operator sending coordinate vectors to the tests
+has squared norm equal to that eigenvalue, and the analysis
+map taking scalar products is its adjoint. Multiply by
+\(\delta^{2r-1}\), let \(\delta\downarrow0\) using
+\eqref{eq:fejer-multipole-abel}, and divide by \(G_r\).
+This proves \eqref{eq:fejer-multipole}.
+\end{proof}
+
+\begin{corollary}[A critical-line lower bound]\label{cor:fejer-critical-poles}
+For every finite set \(\mathcal Z\) of simple critical-line
+zeros of \(\zeta\),
+\begin{equation}\label{eq:fejer-critical-poles}
+ \limsup_{N\to\infty}\frac{Q_\lambda(N)}N
+ \ge\frac{2}{3|\zeta(1/2)|^2}
+ +\sum_{\rho\in\mathcal Z}
+   \left(2-2\R\frac1{1+\rho}\right)
+   \left|\frac{\zeta(2\rho)}{\rho\zeta'(\rho)}\right|^2.
+\end{equation}
+The left side is infinite if RH fails or if any critical-line
+zero has multiplicity greater than one.
+\end{corollary}
+
+\begin{proof}
+At \(s=1/2\) the residue of \(M\) is \(1/\zeta(1/2)\),
+and \(K(1/2)=2/3\). At a simple critical zero \(\rho\), its
+residue is \(\zeta(2\rho)/(\rho\zeta'(\rho))\). The numerator
+is nonzero by the classical nonvanishing of \(\zeta\) on
+\(\R s=1\). Apply Proposition~\ref{prop:fejer-multipole} with
+\(\beta=1/2\), \(r=1\) and \(\mathcal P=\{1/2\}\cup\mathcal Z\).
+Any right-hand zero, or critical zero of higher multiplicity,
+would give an excluded pole in the case of a finite limit
+superior. The functional equation reflects any off-line zero
+to the right of the critical line if necessary.
+\end{proof}
+
+The verified simple zeros of \cite{pt} give strictly positive
+terms in \eqref{eq:fejer-critical-poles}. Each finite set of
+such zeros gives a lower bound, and adding further zeros
+increases it. The estimate concerns the lower side of the
+energy question. The square-root-scale upper bound with an
+arbitrary power loss remains open.

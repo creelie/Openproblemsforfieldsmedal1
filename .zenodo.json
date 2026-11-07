@@ -1,8 +1,8 @@
 {
-  "title": "The Zero-Free Exponent of Signed Liouville Energies",
+  "title": "Zeta Zeros and Signed Liouville Energies",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "Expanded v2 research revision retaining the original v1 mathematical content with corrections. The signed Fejer energy growth exponent equals twice the supremum of the real parts of the nontrivial zeta zeros. The revision includes local reconstruction, a finite-prime main term, logarithmic-order prime-tail cancellation and explicit limitations of finite Abel-moment arguments. RH and Dirichlet GRH remain unproved. No new analytic Lean formalization or new zero-free region is claimed.",
+  "description": "A multipole theorem bounds the normalized Liouville energy from below by a sum of pole contributions. A positive Fejer weight and a certified finite calculation give an unconditional limsup lower bound strictly greater than 3257/5000. RH and Dirichlet GRH remain open.",
   "creators": [
     {
       "name": "Bhattacharjee, Deep",
@@ -17,7 +17,7 @@
   ],
   "license": "cc-by-4.0",
   "publication_date": "2026-11-07",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "keywords": [
     "Riemann hypothesis",
     "Liouville function",

@@ -1,3 +1,15 @@
+# Zeta Zeros and Signed Liouville Energies
+
+A multipole theorem bounds the normalized Liouville energy from below by a sum of pole contributions. A positive Fejer weight and a certified finite calculation give an unconditional limsup lower bound strictly greater than 3257/5000. RH and Dirichlet GRH remain open.
+
+[PDF](revision-v2.3.0/paper.pdf) · [TeX ZIP](revision-v2.3.0/tex.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.3.0) · [Zenodo concept DOI](https://doi.org/10.5281/zenodo.24014164)
+
+<!-- current-2026-11-07-revision -->
+
+## Earlier revision and repository guide
+
+## Earlier revision and repository guide
+
 # The Zero-Free Exponent of Signed Liouville Energies
 
 Deep Bhattacharjee and Ushashi Bhattacharya · Research revision 2.2.0 · 7 November 2026
