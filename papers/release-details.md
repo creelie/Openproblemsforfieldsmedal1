@@ -6,7 +6,7 @@ Repository: https://github.com/creelie/Openproblemsforfieldsmedal1
 
 Release: [v2.8.0](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.0)
 
-Version DOI: [release page](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.0) (DOI awaiting archive verification)
+Version DOI: [10.5281/zenodo.24044460](https://doi.org/10.5281/zenodo.24044460)
 
 Date: 2026-11-08
 
