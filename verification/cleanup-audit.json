@@ -1,0 +1,335 @@
+{
+  "scope": "Only superseded compiled manuscript/archive copies and generated build artifacts are discarded from active main. Every removed mathematical source or release-evidence file is preserved byte-for-byte at the recorded historical path. Git history and all existing release tags are retained.",
+  "previous_main": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+  "entries": [
+    {
+      "previous_path": ".github/workflows/archive.yml",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/.github/workflows/archive.yml",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "67641024b9dd2ce93ba755a83225ba8a7c87511cc1d1878c7516cc8b7d98c8eb"
+    },
+    {
+      "previous_path": ".github/workflows/publish-integrated-rh.yml",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/.github/workflows/publish-integrated-rh.yml",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "2030120a7f0292471a1261485ad3bd8412188b3a05a68ccfacba3481a2280870"
+    },
+    {
+      "previous_path": ".github/workflows/publish-v2.3.0.yml",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/.github/workflows/publish-v2.3.0.yml",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "4eb7453c140c597903978af66f060765885b352f78ddf1d1df116ed295a7e89e"
+    },
+    {
+      "previous_path": ".github/workflows/publish-v2.4.0.yml",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/.github/workflows/publish-v2.4.0.yml",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "eb46bab1a0462726f09a96d62c7d6e0125337366d99a3249fc2a1ed2d4327046"
+    },
+    {
+      "previous_path": "archive-request.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/archive-request.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "840fdd03e9dd90435d1585c67208e3c2b7714c4f98ab315bc2c37afe5bd15379"
+    },
+    {
+      "previous_path": "docs/ARCHIVE-SEARCH.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/docs/ARCHIVE-SEARCH.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "7bc29603599f1402b1dcd23358e80219b82c1f14203f138884b78bd2d90b6464"
+    },
+    {
+      "previous_path": "docs/GITHUB-RELEASE.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/docs/GITHUB-RELEASE.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "a53fa569c7cbc6928e54b1e3f87b22d489b5ed6ca9f50ffd5b7cb91974d3c1f5"
+    },
+    {
+      "previous_path": "docs/ZENODO-ARCHIVE.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/docs/ZENODO-ARCHIVE.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "66c2489fe73bc164f39730b6767ecbd07f11b534fd2e66e092c15177bcab0c5c"
+    },
+    {
+      "previous_path": "output/pdf/signed-liouville-energies-v2.pdf",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "7d161c3b3bfed763d48c699f319b9f900bcc4a84c091b465b2e8335653273722"
+    },
+    {
+      "previous_path": "output/pdf/zero-free-exponent-liouville-energies-v2.2.0.pdf",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "7d161c3b3bfed763d48c699f319b9f900bcc4a84c091b465b2e8335653273722"
+    },
+    {
+      "previous_path": "output/zero-free-exponent-liouville-energies-v2.2.0tex.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "dd3e50ecb46bd5f21a87d4371385b29969806421ec7347eac4b74b00cb0aae7d"
+    },
+    {
+      "previous_path": "paper/archive-imprint.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/paper/archive-imprint.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "4f4170fda0063e6ce4ad9ec54d758724beb26fe5a127633e8c3b9eaa25d98038"
+    },
+    {
+      "previous_path": "paper/paper.pdf",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "1828c1cfda75e3d44f3d82f55ca1c718d5e1f04ffd73ef8b823c25dad8fada72"
+    },
+    {
+      "previous_path": "paper/tex.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "ac72b5def2fa55ab759011557d2aef7610c01157daa72bd3999653d8b4a09931"
+    },
+    {
+      "previous_path": "publication/SHA256SUMS-v2.2.0.txt",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/publication/SHA256SUMS-v2.2.0.txt",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "a6f4826e68e31515bc4922383209452d58fee98ec5a0512936f34891a006aacb"
+    },
+    {
+      "previous_path": "publication/zero-free-exponent-liouville-energies-v2.2.0-research-package.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "a2f236b1260e36549126d110877db6db9bccbf786686b01d9e8a5702c2b1f8fe"
+    },
+    {
+      "previous_path": "publication/zero-free-exponent-liouville-energies-v2.2.0.pdf",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "7d161c3b3bfed763d48c699f319b9f900bcc4a84c091b465b2e8335653273722"
+    },
+    {
+      "previous_path": "publication/zero-free-exponent-liouville-energies-v2.2.0tex.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "dd3e50ecb46bd5f21a87d4371385b29969806421ec7347eac4b74b00cb0aae7d"
+    },
+    {
+      "previous_path": "release-request.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/release-request.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "5441abf9ba866e073030bcd7e879e3465f694675e074cb1fb638efaa3bb136c0"
+    },
+    {
+      "previous_path": "release.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/release.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "5bfaeb12260664a7daf4d73f030c2e90bea3eae72356ef79ec815b66cdf289b7"
+    },
+    {
+      "previous_path": "revision-v2.3.0/RELEASE-NOTES.md",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.3.0/RELEASE-NOTES.md",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "72c118b23901a544ada335129c40b439f96448ba785c888ed518998e45196101"
+    },
+    {
+      "previous_path": "revision-v2.3.0/SHA256SUMS.txt",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.3.0/SHA256SUMS.txt",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "c0ea6ffcf56ae2b064e5ffbfe015fcf05dd7c744d6fbd3891309d351489a8905"
+    },
+    {
+      "previous_path": "revision-v2.3.0/paper.pdf",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "264caa491ed6b310a2ffba3828ccbae1c6d9682a1ba994ffe2fd340809434793"
+    },
+    {
+      "previous_path": "revision-v2.3.0/release.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.3.0/release.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "e1c02c5890e33fb97d3eccc3eb4586a394781f14ad263ec15f7230088657a4c8"
+    },
+    {
+      "previous_path": "revision-v2.3.0/tex.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "804a288acd9c32d6ce3c88cc079c70b6b0689fcdcd8e17c00fe1a19b1fc60909"
+    },
+    {
+      "previous_path": "revision-v2.4.0/RELEASE-NOTES.md",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.4.0/RELEASE-NOTES.md",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "d108d321a8e5077e532e32e21120caeeb180f247a01c5cc91ace37189dd1f83e"
+    },
+    {
+      "previous_path": "revision-v2.4.0/SHA256SUMS.txt",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.4.0/SHA256SUMS.txt",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "f1ee6e0ac114754cb63f0b0989cfe64bea085a69c2f3a67905740938f69aaacd"
+    },
+    {
+      "previous_path": "revision-v2.4.0/paper.pdf",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "28eb95bad298c122a3266bab2c2e0797ab187b0fb65bcf318d5ece68c3815d2c"
+    },
+    {
+      "previous_path": "revision-v2.4.0/release.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.4.0/release.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "76276e1e1daccf22b8aa53372c83cf3bf5718878430db6233b043ad01dbce25a"
+    },
+    {
+      "previous_path": "revision-v2.4.0/tex.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "991704b627e8add733063f7d242b6cd261cd51a31b216b20969c79a4edfe847d"
+    },
+    {
+      "previous_path": "revision-v2.5.0/RELEASE-NOTES.md",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.5.0/RELEASE-NOTES.md",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "242d7e0c80855dd5c14809079fc38819fa61d6063905fe75faf869a69a07661e"
+    },
+    {
+      "previous_path": "revision-v2.5.0/RH.pdf",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "a16bf3f9f83260b22a58cda794b73085cab874e2b734a6f412e4916b1525ffca"
+    },
+    {
+      "previous_path": "revision-v2.5.0/RH.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "8114a1d82d1f4b630928b80f1deb29a1313d86cf6ca42807a5d1967e0eaef88e"
+    },
+    {
+      "previous_path": "revision-v2.5.0/RHtex.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "cf6bdcb511ffb00bb5cce21db97a9a39b8d9a649c7aa06bd77d0ce02903b1e9d"
+    },
+    {
+      "previous_path": "revision-v2.5.0/SHA256SUMS.txt",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.5.0/SHA256SUMS.txt",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "e4f31866398e41d1a1aa22e1ce514965b695272fdb95a70383ff9483c841f7db"
+    },
+    {
+      "previous_path": "revision-v2.5.0/release.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.5.0/release.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "9b0ca0363f4cbcd3d84e5b7a25f542f349579f04831935b2f5c47fa4675babf8"
+    },
+    {
+      "previous_path": "revision-v2.6.0/RELEASE-NOTES.md",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.6.0/RELEASE-NOTES.md",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "fef10e150d6caee2aa19dced2dc8258e5720ef12fa4ca951990a0acc3f5a2e78"
+    },
+    {
+      "previous_path": "revision-v2.6.0/RH.pdf",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "946cc5e4320fb8d6590e9bebb8d39a59e3007e62be235ed698d061719cefc6c0"
+    },
+    {
+      "previous_path": "revision-v2.6.0/RH.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "8cd2812b20d99d1e1777d350d059e85d74e5d6214e5b687e4ba0a7c46bcac4ea"
+    },
+    {
+      "previous_path": "revision-v2.6.0/RHtex.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "f8c936dac7a9803ff0a7cf168e0c586ac96885ed1cb996bf1e21eebb21942d43"
+    },
+    {
+      "previous_path": "revision-v2.6.0/SHA256SUMS.txt",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.6.0/SHA256SUMS.txt",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "fe6cd60eace4cc638fc0f0351c8ee2987819465955fcdf6da091ae47a93378d2"
+    },
+    {
+      "previous_path": "revision-v2.6.0/release.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.6.0/release.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "70295a626978949beaaf0301791b719fe92a1ea4b4ee9c9a708a0c9ebec51cbe"
+    },
+    {
+      "previous_path": "revision-v2.7.0/RELEASE-NOTES.md",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.7.0/RELEASE-NOTES.md",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "058e9bac35b6e3d0a7f5ba70246888c6a6fafd2271b3a1bce27374d88271b445"
+    },
+    {
+      "previous_path": "revision-v2.7.0/RH.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "9ca96f2d335c8dda64884d84806b723ed08a2b22929f96c768f88c4d1223c689"
+    },
+    {
+      "previous_path": "revision-v2.7.0/RHtex.zip",
+      "category": "superseded compiled manuscript or source archive",
+      "preserved_path": null,
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "ac72b5def2fa55ab759011557d2aef7610c01157daa72bd3999653d8b4a09931"
+    },
+    {
+      "previous_path": "revision-v2.7.0/SHA256SUMS.txt",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.7.0/SHA256SUMS.txt",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "2a16beca5e60c2ae77bc0ce76d8512a8bbdded866a6ca0870e09629758450354"
+    },
+    {
+      "previous_path": "revision-v2.7.0/release.json",
+      "category": "historical source or release evidence retained byte-for-byte",
+      "preserved_path": "verification/historical-release-metadata/revision-v2.7.0/release.json",
+      "previous_commit": "959fd371683ca7d5f6e68dcb67ba17ff21ca20f7",
+      "sha256": "8a85f65f3144c45ebb6f5cb1976c91c3c372225ea6014cc01cfe02c5aa328d8c"
+    }
+  ]
+}

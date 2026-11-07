@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-08",
+  "release": "v2.8.0",
+  "scope": "Finite controls only; no proof of the remaining conjecture or new full Lean formalization.",
+  "results": [
+    {
+      "paper": "rh",
+      "script": "abel-jet-bounds.py",
+      "exit_code": 0,
+      "stdout": "PASS: P=2**320, beta=3/4, r=1/8, derivatives 0..3 have error < 1e-6.\nPASS: local-energy obstruction applies for every 0 < epsilon < 1/2.\nThe analytic proof supplies the infinite construction and the pole; this script checks constants only.\n",
+      "stderr": ""
+    },
+    {
+      "paper": "rh",
+      "script": "check_exact.py",
+      "exit_code": 0,
+      "stdout": "PASS signed-window energy and prefix identity for all 2046 sign strings of lengths 1\u201310\n",
+      "stderr": ""
+    },
+    {
+      "paper": "rh",
+      "script": "check_primitive_identities.py",
+      "exit_code": 0,
+      "stdout": "PASS: direct gcd sums and both divisor inversions for k=1..1024.\nPASS: principal-character lifting coefficients for seven primes and n=1..1024.\nScope: finite identities only. No critical upper bound or RH proof is checked.\n",
+      "stderr": ""
+    },
+    {
+      "paper": "rh",
+      "script": "fejer-pole-certificate.py",
+      "exit_code": 0,
+      "stdout": "python-flint 0.9.0, precision 128 bits\nVerified 1000 disjoint positive simple critical zero boxes\nMultiple-pole lower bound: [0.4576979093654629306676613723110425 +/- 2.56e-35]\nVerified the 99 higher harmonic boxes are disjoint and zero-free at the tested points\nPositive-weight lower bound: [0.65141850292189736542231365915664087 +/- 3.53e-36]\n",
+      "stderr": ""
+    },
+    {
+      "paper": "rh",
+      "script": "fejer-two-frequency.py",
+      "exit_code": 0,
+      "stdout": "python-flint 0.9.0, precision 128 bits\nFejer degree 30 at each of two frequencies\nVerified 3721 strictly separated frequency enclosures\nVerified nonvanishing on 3716 regular frequency enclosures\nSquared vector norm: [0.72445959780354945892543005712377997 +/- 7.55e-36]\nCertified limsup Q_lambda(N)/N > 1811/2500\n",
+      "stderr": ""
+    }
+  ]
+}

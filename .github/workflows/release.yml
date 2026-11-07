@@ -1,33 +1,21 @@
-name: Publish reviewed research assets
+name: Publish current manuscript files
 on:
-  push:
-    branches: [main]
-    paths: [release-request.json, paper/archive-imprint.json]
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Reviewed current manuscript tag'
+        required: true
 permissions:
   contents: write
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Verify finite identities and reviewed assets
-        run: |
-          python checks/verify.py
-          python checks/attack_exact.py
-          python checks/v1_retention.py
-          python scripts/verify_assets.py
-      - name: Publish or refresh release assets
+      - run: python scripts/verify_current_package.py
+      - name: Create a reviewed release
         env:
           GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
         run: |
-          tag=$(python -c 'import json; print(json.load(open("release.json"))["tag"])')
-          if gh release view "$tag" >/dev/null 2>&1; then
-            gh release upload "$tag" publication/* --clobber
-            gh release edit "$tag" --title "The Zero-Free Exponent of Signed Liouville Energies ($tag)" --notes-file RELEASE-NOTES.md
-          else
-            gh release create "$tag" publication/* --target "$(git rev-parse HEAD)" --title "The Zero-Free Exponent of Signed Liouville Energies ($tag)" --notes-file RELEASE-NOTES.md
-          fi
+          gh release create "$TAG" papers/* --target "$GITHUB_SHA" --title "$TAG" --notes-file RELEASE-NOTES.md

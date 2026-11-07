@@ -1,13 +1,7 @@
-# Research revision 2.2.0
+Adds the weighted Mellin energy certificate and a quantitative lower bound at a pole.
 
-**The Zero-Free Exponent of Signed Liouville Energies**
+The upper bound for the critical Liouville energy, or equivalently finiteness of every weighted energy J(sigma) for sigma > 1/2, is not proved. Dirichlet GRH is not proved.
 
-This release expands the original v1 into a single manuscript with corrected endpoint conventions, a common-support maximal large sieve argument, the original explicit coefficient construction and exponent diagram, and the complete square-divisor correlation expansion. It retains all 25 original references with duplicate records consolidated and checked metadata updated.
+The full earlier manuscript is retained, with a short abstract and unchanged title. `papers/` contains the current PDF, compilable TeX ZIP, submission notes and AI provenance. Superseded compiled manuscript bundles were removed from the main branch; earlier release tags retain the historical record.
 
-The paper proves local reconstruction and finite-prime comparison estimates. A new corollary of classical Davenport cancellation proves that the actual exponential prime tail cancels the finite-prime main term to every logarithmic order. The square-root error is proved equivalent to RH, not proved to hold. The inherited exact energy exponent and Dirichlet-character criteria remain fully derived.
-
-The source ZIP contains all TeX inputs and figures and is independently compiled. The full research ZIP also includes exact checks, the original v1 source/supplement and the limited Lean Gram-core formalization. RH and Dirichlet GRH remain unproved. No new zero-free region or full analytic Lean verification is claimed.
-
-The initial immutable tag identifies the existing all-versions Zenodo concept. Once the new version DOI is verified, the repository and attached PDF/ZIP receive its bibliographic imprint without changing the mathematical text or moving the tag.
-
-Confirmed version DOI: [10.5281/zenodo.24022872](https://doi.org/10.5281/zenodo.24022872). The PDF and ZIP attachments carry this DOI imprint. The immutable tag and its Zenodo source archive retain the pre-imprint concept-DOI text; the mathematical content is unchanged.
+Version DOI: [release page](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.0) (DOI awaiting archive verification).

@@ -1,9 +1,7 @@
-# Publication status
+Adds the weighted Mellin energy certificate and a quantitative lower bound at a pole.
 
-Version 2.2.0 is published at https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.2.0. Its exact Zenodo version archive was verified by title, version and GitHub archive filename.
+The upper bound for the critical Liouville energy, or equivalently finiteness of every weighted energy J(sigma) for sigma > 1/2, is not proved. Dirichlet GRH is not proved.
 
-Version DOI: https://doi.org/10.5281/zenodo.24022872
+The full earlier manuscript is retained, with a short abstract and unchanged title. `papers/` contains the current PDF, compilable TeX ZIP, submission notes and AI provenance. Superseded compiled manuscript bundles were removed from the main branch; earlier release tags retain the historical record.
 
-The 54-page research revision retains the original v1 mathematics with corrections. RH and Dirichlet GRH remain unproved. No new zero-free region or full analytic Lean formalization is claimed.
-
-The immutable tag contains the initial concept-DOI imprint. The attached PDF and TeX source were refreshed after DOI verification; the mathematical content is unchanged. The exact finite checks pass, the source ZIP compiles independently and all pages were visually reviewed.
+Version DOI: [release page](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.0) (DOI awaiting archive verification).
