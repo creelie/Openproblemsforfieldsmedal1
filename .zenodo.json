@@ -1,8 +1,8 @@
 {
-  "title": "Critical Liouville Energies and Zeta-Zero Detection",
+  "title": "Zero-Free Criteria from Signed Liouville Energies",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "The complete manuscript adds explicit Euler-factor bounds and a quantitative theorem showing that completely multiplicative functions can match any prescribed finite normalized Abel jet to arbitrary accuracy while retaining a pole beyond one half and violating the critical local-energy estimate. It supplies an exact rational example with cutoff 2^320. The required upper bound for the actual Liouville function, RH and GRH remain unproved.",
+  "description": "The complete manuscript retains the earlier arguments and adds an exact coprime decomposition, a one-sided primitive-correlation criterion, the sharp signed dilation norm and its low-frequency behavior, and the conductor-one lifting calculation. It includes the quantitative Abel-jet obstruction and all earlier appendices. The critical upper estimate and the Riemann and generalized Riemann hypotheses remain unproved.",
   "creators": [
     {
       "name": "Bhattacharjee, Deep",
@@ -17,7 +17,7 @@
   ],
   "license": "cc-by-4.0",
   "publication_date": "2026-11-07",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "keywords": [
     "Riemann hypothesis",
     "Liouville function",

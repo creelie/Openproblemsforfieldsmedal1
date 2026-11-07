@@ -23,7 +23,7 @@
 \newcommand{\one}{\mathbf 1}
 \newcommand{\RH}{\mathrm{RH}}
 \numberwithin{equation}{section}
-\title[Critical Liouville energies]{Critical Liouville Energies and Zeta-Zero Detection}
+\title[Liouville energies and zero-free criteria]{Zero-Free Criteria from Signed Liouville Energies}
 \author{Deep Bhattacharjee}
 \address{Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India}
 \curraddr{Formerly, University of Calcutta, Senate House, 87/1 College Street, Kolkata 700073, West Bengal, India}
@@ -35,13 +35,13 @@
 \author{Ushashi Bhattacharya}
 \address{Formerly, National Taiwan University, Taipei 106319, Taiwan}
 \email{rai.bhattacharya.in@gmail.com}
-\date{7 November 2026. Version 2.6.0. Research revision.}
+\date{7 November 2026. Version 2.7.0. Research revision.}
 \subjclass[2020]{Primary 11M26. Secondary 11N37, 11N35, 11F72.}
 \keywords{Liouville function, Riemann hypothesis, Abel derivatives, Fej\'er energy, completely multiplicative functions}
 \begin{document}
-\hypersetup{pdftitle={Critical Liouville Energies and Zeta-Zero Detection},pdfauthor={Deep Bhattacharjee and Ushashi Bhattacharya}}
+\hypersetup{pdftitle={Zero-Free Criteria from Signed Liouville Energies},pdfauthor={Deep Bhattacharjee and Ushashi Bhattacharya}}
 \begin{abstract}
-The signed Liouville energy has growth exponent twice the supremum of the real parts of the nontrivial zeta zeros. We derive pole-sensitive criteria and quantitative lower bounds. Deterministic completely multiplicative perturbations preserve every logarithmic saving and approximate every prescribed finite normalized Abel jet, yet violate the critical local-energy estimate. Explicit bounds quantify this instability. The Liouville-specific upper estimate equivalent to the Riemann hypothesis remains unproved.
+Signed Liouville energies characterize zero-free half-planes for the zeta function. We derive exact coprime decompositions, sharp dilation norms and quantitative obstructions to Abel-based estimates. The critical upper bound equivalent to the Riemann hypothesis remains unproved.
 \end{abstract}
 \maketitle
 \tableofcontents
@@ -586,7 +586,7 @@ Here \(|\lambda(n)|=1\). On \(x/2<n<2x\), use \(|\log(x/n)|\gg |x-n|/x\), and su
 
 The accompanying exact-integer checks test the finite autocorrelation and window formulas, dyadic partitions, the Rudin--Shapiro construction, the finite-prime examples and the independent-sign variance. These checks complement the analytic proofs. The original preprint is cited as \cite{v1}. Version~2 retains its authorship, corrects the endpoint conventions and gives proofs and obstructions for the stronger statements above. Computational and AI-assisted tools were used to develop examples, check finite identities and revise the exposition. This research revision records conditional criteria separately from proved estimates; it does not prove RH or Dirichlet GRH.
 
-\paragraph{AI use declaration.} AI tools assisted the development and checking of the quantitative Euler-factor and Abel-jet arguments in Section~\ref{sec:abel-jet-stability}, the exact-constant script, and the revision of their exposition. The arguments are written out in the paper; the finite script checks only its stated constants. They have not been Lean-formalized. Responsibility for the submitted manuscript and its references remains with the human authors.
+\paragraph{AI use declaration.} AI tools assisted the development and checking of the quantitative Euler-factor and Abel-jet arguments in Section~\ref{sec:abel-jet-stability}, the primitive-correlation identities in Section~\ref{ssec:primitive-energy}, the dilation-norm arguments in Section~\ref{ssec:renewal-norm}, and the conductor calculations in Section~\ref{ssec:principal-conductor}. They also assisted the finite scripts and exposition. The arguments are written out in the paper; the scripts check only their stated finite identities and constants. Separate AI-agent reviews are computational assistance, not external human refereeing. These additions have not been Lean-formalized. Responsibility for the submitted manuscript and its references remains with the human authors.
 
 The companion file \texttt{lean/GramCore.lean} checks the finite matrix inequality in the deterministic obstruction with Lean and Mathlib 4.34.1. It constructs averaged Gram matrices from finite sign vectors and proves the trace and self-pairing bounds. Given the stated cross-pairing bound \(16B\), it derives \(m\le32B\) for \(2m\) matrices in dimension \(m\). The transfer from prefix correlations to the cross-pairing bound, scale counting, and the analytic arguments remain outside this formalization. The full research package includes the toolchain, Mathlib revision and axiom report. The TeX-only archive links to these files in the repository; it does not contain Lean sources.
 
@@ -620,6 +620,8 @@ The companion file \texttt{lean/GramCore.lean} checks the finite matrix inequali
 \bibitem{tao} T. Tao, \emph{The logarithmically averaged Chowla and Elliott conjectures for two-point correlations}, Forum Math. Pi \textbf{4} (2016), e8, \href{https://doi.org/10.1017/fmp.2016.6}{doi:10.1017/fmp.2016.6}.
 \bibitem{titchmarsh} E. C. Titchmarsh, \emph{The Theory of the Riemann Zeta-Function}, second ed., revised by D. R. Heath-Brown, Clarendon Press, Oxford, 1986.
 \bibitem{dlmf} NIST, \emph{Digital Library of Mathematical Functions}, \S18.2, General orthogonal polynomials, \url{https://dlmf.nist.gov/18.2}.
+\bibitem{dlmf-transforms} NIST, \emph{Digital Library of Mathematical Functions}, \S1.14, Integral transforms, \url{https://dlmf.nist.gov/1.14}.
+\bibitem{dlmf-primes} NIST, \emph{Digital Library of Mathematical Functions}, \S27.12, Asymptotic formulas: primes, \url{https://dlmf.nist.gov/27.12}.
 \bibitem{mr-short} K. Matom\"aki and M. Radziwi\l\l, \emph{Multiplicative functions in short intervals}, Ann. of Math. \textbf{183} (2016), 1015--1056, \href{https://doi.org/10.4007/annals.2016.183.3.6}{doi:10.4007/annals.2016.183.3.6}.
 \bibitem{dlmf-gamma} NIST, \emph{Digital Library of Mathematical Functions}, \S5.9, Integral representations of the gamma function, \url{https://dlmf.nist.gov/5.9}.
 \bibitem{caceres} P. Caceres, \emph{The Riemann hypothesis as a margin: a two-sided criterion verified to \(2\cdot10^{29}\), the fourth-moment anatomy of Mobius cancellation, and one constant seen from every side}, \href{https://hexagonmath.org/2610.00688v2}{Hexagon 2610.00688v2}, 2026. Research preprint.

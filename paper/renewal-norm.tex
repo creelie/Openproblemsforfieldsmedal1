@@ -1,0 +1,140 @@
+\subsection{The sharp norm of the signed dilation operator}
+\label{ssec:renewal-norm}
+
+The coefficients in \eqref{eq:lambda-log-renewal} can be grouped by
+prime powers. The exact identity is
+\begin{equation}\label{eq:prime-renewal-full}
+ \sum_{n\ge1}\lambda(n)\log n\,e^{-n/X}
+ =\sum_{p^k\ge2}(-1)^k\log p\,B(X/p^k).
+\end{equation}
+Indeed $\lambda\log=\lambda*(\lambda\Lambda)$, and
+$\lambda(p^k)\Lambda(p^k)=(-1)^k\log p$. Absolute convergence
+at fixed $X$ follows by comparison with
+$\sum_n n\log(2n)e^{-n/X}$.
+
+Consider a finite truncation on a weighted Hilbert space:
+\[
+ \mathcal K_\sigma=L^2((0,\infty),X^{-2\sigma}\dd X/X),\qquad
+ T_R f(X)=\sum_{p^k\le R}(-1)^k\log p\,f(X/p^k).
+\]
+The following calculation retains every signed prime-power term.
+
+\begin{theorem}[Exact dilation norm]\label{thm:sharp-dilation-norm}
+For every real $\sigma$ and finite $R\ge2$,
+\begin{equation}\label{eq:sharp-dilation-norm}
+ \|T_R\|_{\mathcal K_\sigma\to\mathcal K_\sigma}
+       =\sum_{p^k\le R}(\log p)p^{-k\sigma}.
+\end{equation}
+For each fixed $1/2<\sigma<1$, as $R\to\infty$,
+\begin{equation}\label{eq:dilation-norm-growth}
+ \|T_R\|\sim\frac{R^{1-\sigma}}{1-\sigma},\qquad
+ \frac{\|T_R\|}{\log R}\longrightarrow\infty.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The map $Uf(t)=e^{-\sigma t}f(e^t)$ is an isometry onto
+$L^2(\mathbb R)$. Under it, $f(X/d)$ becomes
+$d^{-\sigma}(Uf)(t-\log d)$. With the Fourier convention using
+$e^{-it\tau}$, the multiplier of $T_R$ is
+\[
+ m_{R,\sigma}(\tau)=\sum_{p^k\le R}
+ (-1)^k(\log p)p^{-k\sigma}e^{-ik\tau\log p}.
+\]
+Plancherel identifies the operator norm with its essential supremum;
+see \cite[\S1.14]{dlmf-transforms} for the transform conventions.
+The triangle inequality proves the upper bound in
+\eqref{eq:sharp-dilation-norm}.
+
+The logarithms of the finitely many primes at most $R$ are linearly
+independent over $\mathbb Q$, by unique factorization. Thus the
+continuous phase orbit $(e^{-i\tau\log p})_p$ is dense in the finite
+product of unit circles. Here is a direct justification. Every
+nonconstant integer Fourier character of this orbit has the form
+$e^{-i\tau\sum_p m_p\log p}$ with a nonzero frequency. Its average
+over $[-T,T]$ tends to zero. Trigonometric-polynomial approximation
+therefore gives the Haar average for each continuous function on the
+torus. A nonnegative continuous bump supported in any nonempty open
+set has positive Haar integral, so the orbit meets that set.
+
+In particular, all prime phases can approach $-1$ simultaneously.
+Then $(-1)^ke^{-ik\tau\log p}$ approaches $1$ for every term of
+the finite sum. The multiplier approaches the positive sum in
+\eqref{eq:sharp-dilation-norm}. Its continuity implies the same lower
+bound for the essential supremum, proving equality.
+
+For the asymptotic, the prime number theorem
+\cite[\S27.12]{dlmf-primes} and partial summation give
+\[
+ \sum_{p\le R}(\log p)p^{-\sigma}
+       \sim\frac{R^{1-\sigma}}{1-\sigma}.
+\]
+The higher prime powers contribute a bounded amount because
+\[
+ \sum_p\sum_{k\ge2}(\log p)p^{-k\sigma}
+ \le\frac1{1-2^{-\sigma}}
+             \sum_{n\ge2}(\log n)n^{-2\sigma}<\infty.
+\]
+This proves \eqref{eq:dilation-norm-growth}.
+\end{proof}
+
+The size in this theorem is not confined to very high logarithmic
+frequencies.
+
+\begin{proposition}[A low-frequency sign change]
+\label{prop:renewal-low-frequency}
+Fix $1/2<\sigma<1$, and put
+\[
+ P_R=\sum_{p\le R}(\log p)p^{-\sigma},\qquad
+ \tau_R=\frac\pi{\log R}.
+\]
+Then
+\begin{align}
+ m_{R,\sigma}(\tau_R)
+   &=P_R+O_\sigma\!\left(\frac{R^{1-\sigma}}{\log R}\right),
+       \label{eq:renewal-small-frequency}\\
+ m_{R,\sigma}(0)&=-P_R+O_\sigma(1).
+       \label{eq:renewal-zero-frequency}
+\end{align}
+If $\psi$ is a fixed continuous smoothing multiplier near zero with
+$\psi(0)\ne0$, then
+$|\psi(\tau_R)m_{R,\sigma}(\tau_R)|\sim|\psi(0)|P_R$.
+\end{proposition}
+\begin{proof}
+The prime part of $m_{R,\sigma}(\tau_R)$ is
+\[
+ -\sum_{p\le R}(\log p)p^{-\sigma}e^{-i\tau_R\log p}
+ =\sum_{p\le R}(\log p)p^{-\sigma}
+           e^{i\pi\log(R/p)/\log R}.
+\]
+Its difference from $P_R$ has absolute value at most
+\[
+ \frac\pi{\log R}\sum_{p\le R}
+             (\log p)p^{-\sigma}\log(R/p).
+\]
+Chebyshev's upper bound and partial summation give
+$P_u\ll_\sigma u^{1-\sigma}$. Interchanging a finite sum and an
+integral consequently gives
+\[
+ \sum_{p\le R}(\log p)p^{-\sigma}\log(R/p)
+   =\int_2^R P_u\frac{\dd u}u\ll_\sigma R^{1-\sigma}.
+\]
+The higher prime powers contribute $O_\sigma(1)$, as in the last
+proof. This proves \eqref{eq:renewal-small-frequency}, and setting
+$\tau=0$ proves \eqref{eq:renewal-zero-frequency}. Finally use
+$\tau_R\to0$, continuity of $\psi$, and the asymptotic for $P_R$.
+\end{proof}
+
+Thus this signed operator supplies neither a universal contraction
+in $\mathcal K_\sigma$ nor a uniform sign for its real Fourier
+multiplier. Even a fixed nonvanishing smoothing factor near zero
+does not remove its growing size. These are statements about a
+generic operator estimate. They do not assert that the functions
+testing its norm are Liouville sums, or that the particular $B$
+belongs to $\mathcal K_\sigma$.
+\footnote{The latter membership at every $\sigma>1/2$ is itself an
+arithmetic assertion. It cannot be inserted as an unproved premise
+in a proof of the critical energy bound.}
+Moreover, the left side of \eqref{eq:prime-renewal-full} cannot be
+replaced by $(\log X)B(X)$ without bounding their difference.
+The renewal identity remains exact; the Liouville-specific upper
+estimate remains missing.
