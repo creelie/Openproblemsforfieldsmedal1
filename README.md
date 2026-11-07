@@ -2,7 +2,7 @@
 
 The complete manuscript retains the earlier arguments and adds an exact coprime decomposition, a one-sided primitive-correlation criterion, the sharp signed dilation norm and its low-frequency behavior, and the conductor-one lifting calculation. It includes the quantitative Abel-jet obstruction and all earlier appendices. The critical upper estimate and the Riemann and generalized Riemann hypotheses remain unproved.
 
-[Complete PDF](revision-v2.7.0/RH.pdf) · [TeX ZIP](revision-v2.7.0/RHtex.zip) · [Submission package](revision-v2.7.0/RH.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.7.0) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24014164)
+[Complete PDF](revision-v2.7.0/RH.pdf) · [TeX ZIP](revision-v2.7.0/RHtex.zip) · [Submission package](revision-v2.7.0/RH.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.7.0) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24031014)
 
 <!-- integrated-round26 -->
 
