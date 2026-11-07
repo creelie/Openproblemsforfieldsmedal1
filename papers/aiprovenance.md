@@ -2,7 +2,7 @@
 
 Work: Zero-Free Criteria from Signed Liouville Energies
 
-Current release: https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.1. The version DOI is pending archival verification.
+Research release: v2.8.1, 2026-11-08. Version DOI: [10.5281/zenodo.24045618](https://doi.org/10.5281/zenodo.24045618).
 
 Human authors in manuscript order: Deep Bhattacharjee; Ushashi Bhattacharya.
 
