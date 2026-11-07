@@ -10,4 +10,6 @@ Repository https://github.com/creelie/Openproblemsforfieldsmedal1
 
 Release https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.5.0
 
-Zenodo concept DOI https://doi.org/10.5281/zenodo.24014164
+Version DOI https://doi.org/10.5281/zenodo.24028536
+
+The immutable release snapshot was archived before the version DOI was available. The reviewed PDF and TeX assets carry the subsequently verified version DOI.

@@ -2,7 +2,7 @@
 
 The complete manuscript incorporates a fixed deterministic completely multiplicative construction with all logarithmic savings and maximal Abel vanishing but an energy exponent 2 max(Theta,beta), plus rigidity of the exact Abel coefficient. RH and GRH remain open.
 
-[Complete PDF](revision-v2.5.0/RH.pdf) · [TeX ZIP](revision-v2.5.0/RHtex.zip) · [Submission package](revision-v2.5.0/RH.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.5.0) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24014164)
+[Complete PDF](revision-v2.5.0/RH.pdf) · [TeX ZIP](revision-v2.5.0/RHtex.zip) · [Submission package](revision-v2.5.0/RH.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.5.0) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24028536)
 
 <!-- integrated-round26 -->
 
