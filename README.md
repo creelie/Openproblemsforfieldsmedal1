@@ -1,8 +1,8 @@
 # Zeta Zeros and Signed Liouville Energies
 
-A multipole theorem bounds the normalized Liouville energy from below by a sum of pole contributions. A positive Fejer weight and a certified finite calculation give an unconditional limsup lower bound strictly greater than 3257/5000. RH and Dirichlet GRH remain open.
+A multipole theorem bounds the normalized Liouville energy from below by a sum of pole contributions. A positive Fejer weight and a certified finite calculation give an unconditional limsup lower bound strictly greater than 1811/2500. RH and Dirichlet GRH remain open.
 
-[PDF](revision-v2.3.0/paper.pdf) · [TeX ZIP](revision-v2.3.0/tex.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.3.0) · [Version DOI](https://doi.org/10.5281/zenodo.24025095)
+[PDF](revision-v2.4.0/paper.pdf) · [TeX ZIP](revision-v2.4.0/tex.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.4.0) · [Zenodo concept DOI](https://doi.org/10.5281/zenodo.24014164)
 
 <!-- current-2026-11-07-revision -->
 

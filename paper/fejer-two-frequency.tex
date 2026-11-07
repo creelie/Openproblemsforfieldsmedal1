@@ -1,0 +1,122 @@
+% An additional research-note subsection, outside the archived repository.
+% Requires amsmath, amssymb, hyperref, proposition, and the existing macros
+% \R and \dd. The notation Q_lambda and L is that of v2.3.0.
+\subsection{A two-frequency positive weight}
+\label{ssec:fejer-two-frequency}
+
+\begin{proposition}\label{prop:fejer-two-frequency}
+The signed Liouville Fej\'er energy satisfies the unconditional bound
+\[
+ \limsup_{N\to\infty}\frac{Q_\lambda(N)}N
+       >\frac{1811}{2500}=0.7244.
+\]
+\end{proposition}
+
+\begin{proof}
+Put \(C=\limsup_{N\to\infty}Q_\lambda(N)/N\). It suffices to
+consider \(C<\infty\). In
+\(\mathcal H=L^2((0,1);\mathbb C^2)\), put
+\[
+ U_X(u)=(L(uX),L(X)-L(uX)),\quad
+ w_s(u)=(u^s,1-u^s),\quad F(t)=e^{-t/2}U_{e^t}.
+\]
+Here \(L(X)=0\) for \(0<X<1\). For \(X=N+a\) with
+\(0\le a<1\), the prefix and suffix formula gives
+\[
+ \|U_X\|_{\mathcal H}^2
+    =\frac{NQ_\lambda(N)+a|L(N)|^2}{X},\qquad
+ |L(N)|^2\le2Q_\lambda(N).
+\]
+Consequently \(\limsup_{t\to\infty}\|F(t)\|_{\mathcal H}=\sqrt C\).
+Partial summation and the substitution \(v=uX\) give
+\[
+ \int_0^\infty F(t)e^{-(s-1/2)t}\dd t
+   =M(s)w_s,\qquad M(s)=\frac{\zeta(2s)}{s\zeta(s)}.
+\]
+The identity holds first for \(\R s>1\), and then for
+\(\R s>1/2\) by holomorphy of the integral under the bound
+on \(F\). Thus \(M(s)w_s\) has no pole in that open
+half-plane, and its poles on the boundary have order at most one.
+
+Let \(\rho_j=1/2+i\gamma_j\), \(j=1,2\), be the first two
+positive critical zeros. They are simple. Put
+\[
+ A_j=\frac{\zeta(2\rho_j)}{\rho_j\zeta'(\rho_j)},\qquad
+ a=-\frac1{\zeta(1/2)}>0,\qquad m=30.
+\]
+Choose real phases \(\theta_j\) satisfying
+\(e^{i\theta_j}A_j=-|A_j|\), and take
+\[
+ P(t)=\prod_{j=1}^{2}
+    \frac1{m+1}\left|\sum_{\ell=0}^{m}
+             e^{i\ell(\gamma_jt-\theta_j)}\right|^2.
+\]
+This is a nonnegative trigonometric polynomial. Its frequencies
+are \(n_1\gamma_1+n_2\gamma_2\), with \(-30\le n_1,n_2\le30\).
+The accompanying ball-arithmetic certificate checks that all
+\(3721\) frequency enclosures are pairwise disjoint. In
+particular only \((n_1,n_2)=(0,0)\) has zero frequency, and
+the constant coefficient of \(P\) is one. It follows that
+\[
+ \delta\int_0^\infty P(t)e^{-\delta t}\dd t\longrightarrow1.
+\]
+For every \(\varepsilon>0\), one has
+\(\|F(t)\|_{\mathcal H}\le\sqrt C+\varepsilon\) for all
+sufficiently large \(t\). The contribution of a fixed bounded
+interval vanishes after multiplication by \(\delta\).
+Nonnegativity therefore gives
+\[
+ \limsup_{\delta\downarrow0}
+   \left\|\delta\int_0^\infty
+          F(t)P(t)e^{-\delta t}\dd t\right\|_{\mathcal H}
+       \le\sqrt C.
+\]
+
+Outside the origin and the four fundamental frequencies,
+the certificate verifies
+\[
+ \zeta\bigl(1/2+i(n_1\gamma_1+n_2\gamma_2)\bigr)\ne0.
+\]
+There are \(3716\) such tests. The vector Mellin identity shows
+that their terms tend to zero in the last integral. The origin
+contributes \(-a w_{1/2}\). Each pair \(\pm\gamma_j\)
+contributes \(-c_j\R w_{\rho_j}\), where
+\(c_j=60|A_j|/31\). Indeed the coefficient of
+\(e^{i\gamma_jt}\) in \(P\) is
+\((30/31)e^{-i\theta_j}\), and its Mellin argument is
+\(1/2+\delta-i\gamma_j\). Pairing it with the negative
+frequency gives \(2(30/31)\R(e^{i\theta_j}A_jw_{\rho_j})\).
+Thus the vector limit exists and
+\[
+ C\ge\left\|a w_{1/2}
+             +c_1\R w_{\rho_1}+c_2\R w_{\rho_2}
+      \right\|_{\mathcal H}^{2}.
+\]
+The squared norm is computed using the exact identity
+\begin{align*}
+ \langle\R w_z,\R w_w\rangle_{\mathcal H}
+   ={}&1-\R\frac1{1+z}-\R\frac1{1+w}\notag\\
+      &+\R\frac1{1+z+w}
+         +\R\frac1{1+z+\overline w}.
+\end{align*}
+The certificate uses \texttt{python-flint}~0.9.0 with
+\(128\)-bit Arb/Acb arithmetic. It isolates the two simple
+zeros, verifies that both derivative enclosures exclude zero,
+proves strict separation of every frequency enclosure, and
+evaluates all \(3716\) regular zeta values over those
+enclosures. It obtains the squared-norm enclosure
+\[
+ 0.72445959780354945892543005712377997
+       \ \mathord{\pm}\ 7.55\cdot10^{-36},
+\]
+whose lower endpoint exceeds the exact rational \(1811/2500\).
+The FLINT routines return rigorous enclosures, as documented
+in the library's
+\href{https://flintlib.org/doc/acb_dirichlet/index.html\#zeros-of-the-riemann-zeta-function}%
+{zeta-zero reference}. This proves the assertion.
+\end{proof}
+
+The frequency checks concern this finite polynomial. A sequence
+of weights yielding an unbounded lower bound would require
+control of the additional integer combinations and their pole
+contributions at every stage.
