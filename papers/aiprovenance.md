@@ -2,7 +2,7 @@
 
 Work: Zero-Free Criteria from Signed Liouville Energies
 
-Research release: v2.8.0, 2026-11-08. Version DOI: [10.5281/zenodo.24044460](https://doi.org/10.5281/zenodo.24044460).
+Current release: https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.1. The version DOI is pending archival verification.
 
 Human authors in manuscript order: Deep Bhattacharjee; Ushashi Bhattacharya.
 
@@ -13,3 +13,6 @@ Adds the weighted Mellin energy certificate and a quantitative lower bound at a 
 Human-understanding declaration: no new declaration is inferred for additions made after the authors' earlier review. The submitting authors must choose the platform option that accurately describes their understanding of this complete current revision. This is not a certification that a human has already checked every new line.
 
 This file is a concise provenance summary. It contains no fabricated conversations, private reasoning traces, or benchmark claims.
+
+
+For this revision, OpenAI Codex checked bibliographic records, edited citation metadata, reviewed PDF layout, and rebuilt the submission files.

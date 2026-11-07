@@ -1,17 +1,9 @@
-# Current release
+# Zero-Free Criteria from Signed Liouville Energies
 
-Title: Zero-Free Criteria from Signed Liouville Energies
+[GitHub release v2.8.1](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.1)
 
-Repository: https://github.com/creelie/Openproblemsforfieldsmedal1
+Corrects the Matomäki–Radziwiłł–Tao and Teräväinen journal records, completes publication metadata, adds verified DOI links, and merges the duplicate Titchmarsh entry.
 
-Release: [v2.8.0](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.0)
+The PDF has **75 pages**, compared with 75 in v2.8.0. The revised bibliography contains 55 cited entries and 29 checked DOI links. See `papers/bibliography-audit.md` for individual sources. The `papers/` folder contains the current PDF, TeX ZIP and submission notes.
 
-Version DOI: [10.5281/zenodo.24044460](https://doi.org/10.5281/zenodo.24044460)
-
-Date: 2026-11-08
-
-Adds the weighted Mellin energy certificate and a quantitative lower bound at a pole.
-
-The upper bound for the critical Liouville energy, or equivalently finiteness of every weighted energy J(sigma) for sigma > 1/2, is not proved. Dirichlet GRH is not proved.
-
-Only current compiled submission files are kept in `papers/`. Earlier releases remain available through their historical tags. DOI imprint updates preserve the mathematical content of the archived tag. The current files and their hashes are attached to the release; `package-manifest.json` records each current payload file.
+Version DOI pending archival verification.

@@ -1,11 +1,13 @@
 {
-  "release": "v2.8.0",
-  "version_doi": "10.5281/zenodo.24044460",
+  "release": "v2.8.1",
+  "version_doi": null,
+  "pages": 75,
   "files": {
-    "aiprovenance.md": "85f69afa7e8a27393a62b4089843a88d36cfa435c75b195ac6dec76755c03831",
-    "next-version-submission-notes.md": "e5980b0aa340e53db5c6b25192b49f6430eb5c8343b7932d5acbb613e61d6190",
-    "release-details.md": "98ca3517c47bf7d76477a1bd037f1e09d84d8bb2b4fbf325556a9afea5ceed0e",
-    "RH.pdf": "7e8f39c39a6547dca07a08a4099ed2cdd085343ce19f20b9830a522c8d491055",
-    "RHtex.zip": "52ebede7648e27901642837b3ac72c08095ecd8cf3cb4872cddd269d02381b02"
+    "aiprovenance.md": "bd8a65b575f43b172213abf43bd342b784b45e294c8e606b4f07a3ba77261384",
+    "bibliography-audit.md": "bf83c5a799dc5c119b3edcae81c42c3f6673959667079ee3d89ce59a859aca2c",
+    "next-version-submission-notes.md": "8307dcc78208cf4acfce6241809fa58c07c2ef01d07683f1f26e12cb7d8aa95e",
+    "release-details.md": "00a7148c9784c7a64987538f7a26a93248295ec1a24153dee396701742ccf4a8",
+    "RH.pdf": "4244fe1a368a9ee7971700febbee7c079c8e9ceeac34c0e98966b36a03014472",
+    "RHtex.zip": "b59cb315f9aed2f0f2b1b08dfcf50de39fd039e1966db61db282b749b6421386"
   }
 }

@@ -1,9 +1,5 @@
-Adds the weighted Mellin energy certificate and a quantitative lower bound at a pole.
+Corrects the Matomäki–Radziwiłł–Tao and Teräväinen journal records, completes publication metadata, adds verified DOI links, and merges the duplicate Titchmarsh entry.
 
-The upper bound for the critical Liouville energy, or equivalently finiteness of every weighted energy J(sigma) for sigma > 1/2, is not proved. Dirichlet GRH is not proved.
+The PDF has **75 pages**, compared with 75 in v2.8.0. The revised bibliography contains 55 cited entries and 29 checked DOI links. See `papers/bibliography-audit.md` for individual sources. The `papers/` folder contains the current PDF, TeX ZIP and submission notes.
 
-The full earlier manuscript is retained, with a short abstract and unchanged title. `papers/` contains the current PDF, compilable TeX ZIP, submission notes and AI provenance. Superseded compiled manuscript bundles were removed from the main branch; earlier release tags retain the historical record.
-
-Version DOI: [10.5281/zenodo.24044460](https://doi.org/10.5281/zenodo.24044460).
-
-The archived source tag and the DOI-imprinted download have the same mathematical content. The imprint and submission notes were updated after archive verification.
+Version DOI pending archival verification.
