@@ -2,7 +2,7 @@
 
 The complete manuscript adds explicit Euler-factor bounds and a quantitative theorem showing that completely multiplicative functions can match any prescribed finite normalized Abel jet to arbitrary accuracy while retaining a pole beyond one half and violating the critical local-energy estimate. It supplies an exact rational example with cutoff 2^320. The required upper bound for the actual Liouville function, RH and GRH remain unproved.
 
-[Complete PDF](revision-v2.6.0/RH.pdf) · [TeX ZIP](revision-v2.6.0/RHtex.zip) · [Submission package](revision-v2.6.0/RH.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.6.0) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24014164)
+[Complete PDF](revision-v2.6.0/RH.pdf) · [TeX ZIP](revision-v2.6.0/RHtex.zip) · [Submission package](revision-v2.6.0/RH.zip) · [Release](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.6.0) · [Zenodo DOI](https://doi.org/10.5281/zenodo.24030274)
 
 <!-- integrated-round26 -->
 
