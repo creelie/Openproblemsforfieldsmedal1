@@ -2,7 +2,7 @@
   "title": "Zero-Free Criteria from Signed Liouville Energies",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "The complete manuscript retains the earlier arguments and adds an exact coprime decomposition, a one-sided primitive-correlation criterion, the sharp signed dilation norm and its low-frequency behavior, and the conductor-one lifting calculation. It includes the quantitative Abel-jet obstruction and all earlier appendices. The critical upper estimate and the Riemann and generalized Riemann hypotheses remain unproved.",
+  "description": "Signed Liouville energies characterize zero-free half-planes for the zeta function. We derive a quantitative weighted-energy certificate and its pole-order boundary cost, together with exact decomposition and Abel-obstruction results. The critical energy upper bound needed for RH and the corresponding Dirichlet GRH bounds remain unproved.",
   "creators": [
     {
       "name": "Bhattacharjee, Deep",
@@ -16,13 +16,13 @@
     }
   ],
   "license": "cc-by-4.0",
-  "publication_date": "2026-11-07",
-  "version": "2.7.0",
+  "publication_date": "2026-11-08",
+  "version": "2.8.0",
   "keywords": [
     "Riemann hypothesis",
     "Liouville function",
     "Nyman-Beurling criterion",
-    "Möbius approximation",
+    "M\u00f6bius approximation",
     "Dirichlet GRH",
     "Fejer energy"
   ],

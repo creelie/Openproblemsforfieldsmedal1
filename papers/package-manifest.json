@@ -1,0 +1,11 @@
+{
+  "release": "v2.8.0",
+  "version_doi": null,
+  "files": {
+    "aiprovenance.md": "ed21a51c62358af8212f95c691c1b76cb8bcfbf55ca7a849cc00d403e181acab",
+    "next-version-submission-notes.md": "89ad95b7a93f8708d4834f9f7a11e32ffbf8994f1e84608512f08ace4d64ce65",
+    "release-details.md": "b415173ae45f752158061c029a969e96cb9f15dcefa18f49607fac6668d0000b",
+    "RH.pdf": "090746c0fc0e5652fb7e4217d644a05bf4bd77d79bb984bcb295cb208a4711eb",
+    "RHtex.zip": "235db392c64b89d6f62c083f50bdbfa44a57b42f1830deb68d3a49843e9a793b"
+  }
+}
