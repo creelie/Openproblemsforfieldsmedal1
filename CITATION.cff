@@ -9,7 +9,6 @@ authors:
   - family-names: Bhattacharya
     given-names: Ushashi
     orcid: "https://orcid.org/0009-0002-2254-3914"
-version: "2.8.0"
+version: "2.8.1"
 repository-code: "https://github.com/creelie/Openproblemsforfieldsmedal1"
 date-released: "2026-11-08"
-doi: "10.5281/zenodo.24044460"

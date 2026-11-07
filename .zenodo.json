@@ -17,12 +17,12 @@
   ],
   "license": "cc-by-4.0",
   "publication_date": "2026-11-08",
-  "version": "2.8.0",
+  "version": "2.8.1",
   "keywords": [
     "Riemann hypothesis",
     "Liouville function",
     "Nyman-Beurling criterion",
-    "M\u00f6bius approximation",
+    "Möbius approximation",
     "Dirichlet GRH",
     "Fejer energy"
   ],
