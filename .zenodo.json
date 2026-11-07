@@ -1,8 +1,8 @@
 {
-  "title": "Zeta Zeros and the Exact Growth of Signed Liouville Energies",
+  "title": "Critical Liouville Energies and Zeta-Zero Detection",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "The complete manuscript incorporates a fixed deterministic completely multiplicative construction with all logarithmic savings and maximal Abel vanishing but an energy exponent 2 max(Theta,beta), plus rigidity of the exact Abel coefficient. RH and GRH remain open.",
+  "description": "The complete manuscript adds explicit Euler-factor bounds and a quantitative theorem showing that completely multiplicative functions can match any prescribed finite normalized Abel jet to arbitrary accuracy while retaining a pole beyond one half and violating the critical local-energy estimate. It supplies an exact rational example with cutoff 2^320. The required upper bound for the actual Liouville function, RH and GRH remain unproved.",
   "creators": [
     {
       "name": "Bhattacharjee, Deep",
@@ -17,7 +17,7 @@
   ],
   "license": "cc-by-4.0",
   "publication_date": "2026-11-07",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "keywords": [
     "Riemann hypothesis",
     "Liouville function",

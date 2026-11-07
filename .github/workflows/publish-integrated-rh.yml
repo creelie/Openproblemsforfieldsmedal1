@@ -2,7 +2,7 @@ name: Publish integrated rh manuscript
 on:
   push:
     branches: [main]
-    paths: [revision-v2.5.0/release.json]
+    paths: [revision-v2.6.0/release.json]
   workflow_dispatch:
 permissions:
   contents: write
@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Verify reviewed assets
-        working-directory: revision-v2.5.0
+        working-directory: revision-v2.6.0
         run: |
           sha256sum -c SHA256SUMS.txt
           python -m zipfile -t RHtex.zip
@@ -21,11 +21,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          folder=revision-v2.5.0
-          title='Zeta Zeros and the Exact Growth of Signed Liouville Energies'
-          if gh release view v2.5.0 >/dev/null 2>&1; then
-            gh release upload v2.5.0 "$folder/RH.pdf" "$folder/RHtex.zip" "$folder/RH.zip" "$folder/SHA256SUMS.txt" --clobber
-            gh release edit v2.5.0 --title "$title" --notes-file "$folder/RELEASE-NOTES.md"
+          folder=revision-v2.6.0
+          title='Critical Liouville Energies and Zeta-Zero Detection'
+          if gh release view v2.6.0 >/dev/null 2>&1; then
+            gh release upload v2.6.0 "$folder/RH.pdf" "$folder/RHtex.zip" "$folder/RH.zip" "$folder/SHA256SUMS.txt" --clobber
+            gh release edit v2.6.0 --title "$title" --notes-file "$folder/RELEASE-NOTES.md"
           else
-            gh release create v2.5.0 "$folder/RH.pdf" "$folder/RHtex.zip" "$folder/RH.zip" "$folder/SHA256SUMS.txt" --target "$(git rev-parse HEAD)" --title "$title" --notes-file "$folder/RELEASE-NOTES.md"
+            gh release create v2.6.0 "$folder/RH.pdf" "$folder/RHtex.zip" "$folder/RH.zip" "$folder/SHA256SUMS.txt" --target "$(git rev-parse HEAD)" --title "$title" --notes-file "$folder/RELEASE-NOTES.md"
           fi

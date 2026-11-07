@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Cite this published research revision with both authors and its confirmed version DOI."
 type: article
-title: "Zeta Zeros and the Exact Growth of Signed Liouville Energies"
+title: "Critical Liouville Energies and Zeta-Zero Detection"
 authors:
   - family-names: Bhattacharjee
     given-names: Deep
@@ -9,7 +9,7 @@ authors:
   - family-names: Bhattacharya
     given-names: Ushashi
     orcid: "https://orcid.org/0009-0002-2254-3914"
-version: "2.5.0"
-doi: "10.5281/zenodo.24028536"
+version: "2.6.0"
+doi: "10.5281/zenodo.24014164"
 repository-code: "https://github.com/creelie/Openproblemsforfieldsmedal1"
 date-released: "2026-11-07"
