@@ -1,6 +1,6 @@
 # Zero-Free Criteria from Signed Liouville Energies
 
-Current release: https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.1. The version DOI is pending archival verification.
+Current research release [v2.8.1](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.1). Version DOI: [10.5281/zenodo.24045618](https://doi.org/10.5281/zenodo.24045618).
 
 Signed Liouville energies characterize zero-free half-planes for the zeta function. We derive a quantitative weighted-energy certificate and its pole-order boundary cost, together with exact decomposition and Abel-obstruction results. The critical energy upper bound needed for RH and the corresponding Dirichlet GRH bounds remain unproved.
 
