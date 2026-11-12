@@ -1,26 +1,25 @@
-# Zero-Free Criteria from Signed Liouville Energies
+<p align="center"><img src="assets/banner.svg" alt="Liouville Energy and the Rightmost Zeta Zero" width="100%"></p>
 
-Current research release [v2.8.1](https://github.com/creelie/Openproblemsforfieldsmedal1/releases/tag/v2.8.1). Version DOI: [10.5281/zenodo.24045618](https://doi.org/10.5281/zenodo.24045618).
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.24014164"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24014164-22d3ee?style=for-the-badge" alt="DOI"></a>
+  <a href="papers/RiemannPaper.pdf"><img src="https://img.shields.io/badge/paper-PDF-f472b6?style=for-the-badge" alt="paper"></a>
+  <img src="https://img.shields.io/badge/Lean_4-21_theorems-7c5cff?style=for-the-badge" alt="Lean 4">
+  <img src="https://img.shields.io/badge/Julia-all_checks_pass-34d399?style=for-the-badge" alt="Julia">
+  <img src="https://img.shields.io/badge/license-MIT-f59e0b?style=for-the-badge" alt="MIT">
+</p>
 
-Signed Liouville energies characterize zero-free half-planes for the zeta function. We derive a quantitative weighted-energy certificate and its pole-order boundary cost, together with exact decomposition and Abel-obstruction results. The critical energy upper bound needed for RH and the corresponding Dirichlet GRH bounds remain unproved.
+**Deep Bhattacharjee** (corresponding author, head of the project), Ushashi Bhattacharya.
 
-## Current manuscript
+| Proved | Open |
+| :--- | :--- |
+| The energy has exponent exactly 2Θ, with a limit | The critical bound Q(N) ≪ N^(1+ε) |
+| Zero-one law: Q(N) > N^(2σ) for all large N when σ < Θ | Whether Q(N)/N is bounded |
+| No set of x^(1/2+o(1)) primes moves the exponent; for every β > 1/2 some set of x^β primes raises it to at least 2β | The Riemann hypothesis |
+| Endpoint Nyman–Beurling theorem; \|L(x)\| ≤ x/2641 + 8.3√x | |
 
-- [PDF](papers/RH.pdf)
-- [Compilable TeX ZIP](papers/RHtex.zip)
-- [Next-version submission notes](papers/next-version-submission-notes.md)
-- [AI provenance](papers/aiprovenance.md)
-- [Release details](papers/release-details.md)
-
-## Scope
-
-The upper bound for the critical Liouville energy, or equivalently finiteness of every weighted energy J(sigma) for sigma > 1/2, is not proved. Dirichlet GRH is not proved.
-
-## Source and checking
-
-Current source is in `paper/`. Compile `main.tex` with pdfLaTeX at least three times. Ancillary scripts in `paper/anc/` document their own finite scope. Historical verification records and independent research material are retained outside `papers/`. Earlier manuscript versions are available through release tags, rather than duplicate active PDFs and ZIPs.
-
-Adds the weighted Mellin energy certificate and a quantitative lower bound at a pole.
-
-
-[Reference audit](papers/bibliography-audit.md) · Current PDF: 75 pages.
+| Folder | Contents | Run |
+| :--- | :--- | :--- |
+| [`papers/`](papers) | the paper | |
+| [`LiouvilleEnergy/`](LiouvilleEnergy) | Lean 4 project over Mathlib | `lake exe cache get && lake build` |
+| [`scripts/`](scripts) | axiom audit | `lake env lean scripts/Axioms.lean` |
+| [`julia/`](julia) | identities, constants, certificates | `julia --project=julia julia/energy_checks.jl` |
