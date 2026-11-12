@@ -1,0 +1,51 @@
+== julia finite_identities.jl
+window energy = prefix form, 8190 sign strings, lengths 1..12         PASS
+completion identity, 2000 random prefix vectors                       PASS
+primitive correlation divisor inversions, k = 1..1024                 PASS
+principal-character lifting, seven primes, n = 1..1024                PASS
+L(x) = Σ_{d≤√x} M(x/d^2), x = 1..1024                                 PASS
+Abel-jet constants: c = 112/27, m = 114688/9, jet error < 1e-6        PASS
+Rudin-Shapiro complementary identity (m ≤ 10) and block pattern       PASS
+failures: 0
+
+== julia energy_checks.jl
+core lemma: max V/((2N+1)Q) ≤ 1                            PASS  0.4125
+core lemma: max Q/(11 V^(2/3)) ≤ 1                         PASS  0.1336
+completion: L^2/2 ≤ Q ≤ 5 max L^2 for all N                PASS  N ≤ 3000000
+max Q(N)/N for N ≤ 3000000                                 INFO  1.1038 at N = 96862
+|M(y)| ≤ √y for 1 ≤ y ≤ 3000000                            PASS  violations = 0
+|M(y)| ≤ y/4345 on [2160535, 3000000]                      PASS  max ratio 0.9995
+|L(x)| ≤ x/2641 + 8.3√x for x ≤ 3000000                    PASS  max ratio 0.1580
+ζ(2)/4345 < 1/2641                                         PASS  1/2641.44
+1 + log(2160535)/2 < 8.3                                   PASS  8.2929
+min K on grid ≥ 1 - 2/(3+2√2) = 0.65685                    PASS  0.65685
+
+B(X)/sqrt(X):
+  X = 1000      -0.5752
+  X = 10000     -0.5969
+  X = 30000     -0.6011
+  X = 60000     -0.6028
+
+N, L(N), Q(N), Q(N)/N, log Q/log N:
+  10^2        -2           26.12    0.2612  0.7085
+  10^3       -14          261.35    0.2614  0.8057
+  10^4       -94         5783.54    0.5784  0.9405
+  10^5      -288        56316.88    0.5632  0.9501
+  10^6      -530       382792.54    0.3828  0.9305
+
+flip on x^(3/4) primes: x, L(x), L_f(x), log|L_f|/log x
+  10^3       -14          52  0.575
+  10^4       -94         594  0.694
+  10^5      -288        5126  0.742
+  10^6      -530       30750  0.748
+
+failures: 0
+
+== julia pole_certificates.jl
+1000 zero boxes on Re s = 1/2, disjoint and ordered: PASS
+multiple-pole bound > 0.45769: PASS   value [0.4576979093654629306676613723110425 +/- 2.56e-35]
+99 higher harmonics of the first ordinate are zero-free: PASS
+positive-weight bound > 0.6514: PASS   value [0.65141850292189736542231365915664087 +/- 3.52e-36]
+two-frequency bound > 0.7244 (3721 frequencies, 3716 regular): PASS   value [0.72445959780354945892543005712377997 +/- 7.55e-36]
+failures: 0
+

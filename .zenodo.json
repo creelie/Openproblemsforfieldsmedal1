@@ -1,34 +1,37 @@
 {
-  "title": "Zero-Free Criteria from Signed Liouville Energies",
+  "title": "Liouville Energy and the Rightmost Zeta Zero",
   "upload_type": "publication",
-  "publication_type": "preprint",
-  "description": "Signed Liouville energies characterize zero-free half-planes for the zeta function. We derive a quantitative weighted-energy certificate and its pole-order boundary cost, together with exact decomposition and Abel-obstruction results. The critical energy upper bound needed for RH and the corresponding Dirichlet GRH bounds remain unproved.",
+  "description": "The sliding-window energy Q(N) of the Liouville function grows like N^(2Θ), where Θ is the supremum of the real parts of the zeros of the Riemann zeta function. We prove that Q(N) exceeds N^(2σ) for all large N whenever σ < Θ, so that a bound along one infinite sequence already locates Θ; that changing the Liouville function on primes of size x^β can break the exponent when β > 1/2 and cannot when β ≤ 1/2; an endpoint form of the Nyman–Beurling criterion in weighted norms; and explicit unconditional bounds, including |L(x)| ≤ x/2641 + 8.3√x. The archive contains the paper, a Lean 4 project (21 theorems) and three Julia programs. The Riemann hypothesis is not proved.",
   "creators": [
     {
       "name": "Bhattacharjee, Deep",
       "orcid": "0000-0003-0466-750X",
-      "affiliation": "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India. Formerly, University of Calcutta, Senate House, 87/1 College Street, Kolkata 700073, West Bengal, India."
+      "affiliation": "Formerly, Electro-Gravitational Space Propulsion Laboratory (EGSPL), Bhubaneswar, Odisha 751030, India; Formerly, University of Calcutta (Heramba Chandra College), 23/49 Gariahat Road, Golpark, Kolkata 700029, West Bengal, India"
     },
     {
       "name": "Bhattacharya, Ushashi",
       "orcid": "0009-0002-2254-3914",
-      "affiliation": "Formerly, National Taiwan University, Taipei 106319, Taiwan."
+      "affiliation": "Formerly, National Taiwan University, Taipei 106319, Taiwan"
     }
   ],
-  "license": "cc-by-4.0",
-  "publication_date": "2026-11-08",
-  "version": "2.8.1",
+  "license": "MIT",
   "keywords": [
-    "Riemann hypothesis",
+    "Riemann zeta function",
     "Liouville function",
-    "Nyman-Beurling criterion",
-    "Möbius approximation",
-    "Dirichlet GRH",
-    "Fejer energy"
+    "zero-free regions"
   ],
+  "access_right": "open",
+  "version": "3.0.0",
+  "publication_date": "2026-11-12",
+  "publication_type": "preprint",
   "related_identifiers": [
     {
-      "identifier": "10.20944/preprints202606.1350.v1",
+      "identifier": "https://github.com/creelie/Openproblemsforfieldsmedal1",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.24045618",
       "relation": "isNewVersionOf",
       "scheme": "doi"
     }
