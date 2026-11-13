@@ -17,4 +17,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ inputs.tag }}
         run: |
-          gh release create "$TAG" papers/RiemannPaper.pdf --target "$GITHUB_SHA" --title "Liouville Energy and the Rightmost Zeta Zero ($TAG)" --notes "Liouville Energy and the Rightmost Zeta Zero. Paper, Lean 4 project (21 theorems) and Julia programs. The Riemann hypothesis is not proved."
+          TITLE=$(jq -r .title .zenodo.json)
+          gh release create "$TAG" papers/RiemannPaper.pdf --target "$GITHUB_SHA" --title "$TITLE ($TAG)" --notes "$TITLE. Paper, Lean 4 project and Julia programs. The Riemann hypothesis is not proved."
