@@ -10,6 +10,9 @@ import LiouvilleEnergy
 #print axioms LiouvilleEnergy.zeta_two_constant
 #print axioms LiouvilleEnergy.log_threshold
 #print axioms LiouvilleEnergy.shift_correlation_le
+#print axioms LiouvilleEnergy.oscillation_constant
+#print axioms LiouvilleEnergy.ten_thirds_count
+#print axioms LiouvilleEnergy.positions_exponents
 #print axioms LiouvilleEnergy.GramCore.diagonal_sq_le_frobenius
 #print axioms LiouvilleEnergy.GramCore.trace_sq_le_dimension_mul_frobenius
 #print axioms LiouvilleEnergy.GramCore.frobenius_sum

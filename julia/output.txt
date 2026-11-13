@@ -8,14 +8,16 @@ Abel-jet constants: c = 112/27, m = 114688/9, jet error < 1e-6        PASS
 Rudin-Shapiro complementary identity (m ≤ 10) and block pattern       PASS
 failures: 0
 
-== julia energy_checks.jl
-core lemma: max V/((2N+1)Q) ≤ 1                            PASS  0.4125
+== julia energy_checks.jl 30000000
+core lemma: max V/((2N+1)Q) ≤ 1                            PASS  0.4141
 core lemma: max Q/(11 V^(2/3)) ≤ 1                         PASS  0.1336
-completion: L^2/2 ≤ Q ≤ 5 max L^2 for all N                PASS  N ≤ 3000000
-max Q(N)/N for N ≤ 3000000                                 INFO  1.1038 at N = 96862
-|M(y)| ≤ √y for 1 ≤ y ≤ 3000000                            PASS  violations = 0
-|M(y)| ≤ y/4345 on [2160535, 3000000]                      PASS  max ratio 0.9995
-|L(x)| ≤ x/2641 + 8.3√x for x ≤ 3000000                    PASS  max ratio 0.1580
+completion: L^2/2 ≤ Q ≤ 5 max L^2 for all N                PASS  N ≤ 30000000
+max Q(N)/N for N ≤ 30000000                                INFO  1.1534 at N = 12897104, L/√N = -1.3583
+log mean of Q(N)/N on [10^4, 30000000]                     INFO  0.4540
+max |L(x)|/√x for x ≤ 30000000                             INFO  1.3583 at x = 12897104
+|M(y)| ≤ √y for 1 ≤ y ≤ 30000000                           PASS  violations = 0
+|M(y)| ≤ y/4345 on [2160535, 30000000]                     PASS  max ratio 0.9995
+|L(x)| ≤ x/2641 + 8.3√x for x ≤ 30000000                   PASS  max ratio 0.1580
 ζ(2)/4345 < 1/2641                                         PASS  1/2641.44
 1 + log(2160535)/2 < 8.3                                   PASS  8.2929
 min K on grid ≥ 1 - 2/(3+2√2) = 0.65685                    PASS  0.65685
@@ -32,12 +34,14 @@ N, L(N), Q(N), Q(N)/N, log Q/log N:
   10^4       -94         5783.54    0.5784  0.9405
   10^5      -288        56316.88    0.5632  0.9501
   10^6      -530       382792.54    0.3828  0.9305
+  10^7      -842      3835484.17    0.3835  0.9405
 
 flip on x^(3/4) primes: x, L(x), L_f(x), log|L_f|/log x
   10^3       -14          52  0.575
   10^4       -94         594  0.694
   10^5      -288        5126  0.742
   10^6      -530       30750  0.748
+  10^7      -842      252510  0.772
 
 failures: 0
 

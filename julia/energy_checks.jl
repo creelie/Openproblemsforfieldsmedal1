@@ -60,7 +60,13 @@ check("completion: L^2/2 ≤ Q ≤ 5 max L^2 for all N", okc, "N ≤ $NMAX")
 
 # Largest value of Q(N)/N in the range (reported, not a pass/fail check).
 rq, iq = findmax(Q[N] / N for N in 1:NMAX)
-@printf("%-58s %s  %s\n", "max Q(N)/N for N ≤ $NMAX", "INFO", @sprintf("%.4f at N = %d", rq, iq))
+@printf("%-58s %s  %s\n", "max Q(N)/N for N ≤ $NMAX", "INFO", @sprintf("%.4f at N = %d, L/√N = %.4f", rq, iq, L[iq] / sqrt(iq)))
+# Logarithmic mean of Q(N)/N over [10^4, NMAX]: Σ (Q(N)/N)/N / Σ 1/N.
+lm = sum(Q[N] / N^2 for N in 10^4:NMAX) / sum(1 / N for N in 10^4:NMAX)
+@printf("%-58s %s  %s\n", "log mean of Q(N)/N on [10^4, $NMAX]", "INFO", @sprintf("%.4f", lm))
+# Largest |L(x)|/√x.
+rl, il = findmax(abs(L[x]) / sqrt(x) for x in 1:NMAX)
+@printf("%-58s %s  %s\n", "max |L(x)|/√x for x ≤ $NMAX", "INFO", @sprintf("%.4f at x = %d", rl, il))
 
 # Mertens function: |M(y)| ≤ √y for y ≤ NMAX, and |M(y)| ≤ y/4345 on [2160535, NMAX].
 M = cumsum(Int64.(μ))
