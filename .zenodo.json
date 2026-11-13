@@ -1,7 +1,7 @@
 {
-  "title": "Liouville Energy and the Rightmost Zeta Zero",
-  "upload_type": "publication",
-  "description": "The sliding-window energy Q(N) of the Liouville function grows like N^(2Θ), where Θ is the supremum of the real parts of the zeros of the Riemann zeta function. We prove that Q(N) exceeds N^(2σ) for all large N whenever σ < Θ, so that a bound along one infinite sequence already locates Θ; that changing the Liouville function on primes of size x^β can break the exponent when β > 1/2 and cannot when β ≤ 1/2; an endpoint form of the Nyman–Beurling criterion in weighted norms; and explicit unconditional bounds, including |L(x)| ≤ x/2641 + 8.3√x. The archive contains the paper, a Lean 4 project (21 theorems) and three Julia programs. The Riemann hypothesis is not proved.",
+  "title": "Liouville Energy Locates the Rightmost Zeta Zero",
+  "upload_type": "software",
+  "description": "The sliding-window energy Q(N) of the Liouville function λ satisfies Q(N) = N^(2Θ+o(1)), where Θ is the supremum of the real parts of the zeros of ζ, and a bound along one sequence of N already locates Θ. Unconditionally Q(N) > 2.81N infinitely often, and Q(N)/N is bounded exactly when the summatory function of λ is O(√x). Changing λ on x^β primes can break the exponent when β > 1/2 and never when β ≤ 1/2. The archive contains the paper, a Lean 4 project (24 theorems) and three Julia programs. The Riemann hypothesis is not proved.",
   "creators": [
     {
       "name": "Bhattacharjee, Deep",
@@ -21,9 +21,8 @@
     "zero-free regions"
   ],
   "access_right": "open",
-  "version": "3.0.0",
-  "publication_date": "2026-11-12",
-  "publication_type": "preprint",
+  "version": "3.1.0",
+  "publication_date": "2026-11-13",
   "related_identifiers": [
     {
       "identifier": "https://github.com/creelie/Openproblemsforfieldsmedal1",
@@ -31,7 +30,7 @@
       "scheme": "url"
     },
     {
-      "identifier": "10.5281/zenodo.24045618",
+      "identifier": "10.5281/zenodo.24150355",
       "relation": "isNewVersionOf",
       "scheme": "doi"
     }

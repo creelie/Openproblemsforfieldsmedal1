@@ -167,4 +167,20 @@ theorem shift_correlation_le (a : ℕ → ℝ) (ha : ∀ n, |a n| ≤ 1) (h Y : 
         exact mul_le_one₀ (ha n) (abs_nonneg _) (ha (n + h))
     _ = Y := by simp
 
+/-- The oscillation constant: `2.3723² / 2 > 2.8139`. -/
+theorem oscillation_constant : (2.8139 : ℝ) < (2.3723 : ℝ) ^ 2 / 2 := by
+  norm_num
+
+/-- The counting step in the upper bound for the normalised energy:
+`N(N-1) + N² + (4/3)N² ≤ (10/3)N²` for `N ≥ 0`. -/
+theorem ten_thirds_count (N : ℝ) (hN : 0 ≤ N) :
+    N * (N - 1) + N ^ 2 + 4 / 3 * N ^ 2 ≤ 10 / 3 * N ^ 2 := by
+  nlinarith
+
+/-- The exponent comparison in the almost-all-positions criterion. -/
+theorem positions_exponents (δ Θ β σ ε : ℝ)
+    (hΘ : Θ - β < δ / 4) (hε0 : 0 < ε) (hε1 : ε ≤ δ / 8) (hε2 : ε ≤ (β - σ) / 2) :
+    1 - δ + 2 * Θ + 2 * ε < 1 + 2 * β - ε ∧ 1 + 2 * σ < 1 + 2 * β - ε := by
+  constructor <;> linarith
+
 end LiouvilleEnergy
