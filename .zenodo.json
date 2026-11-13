@@ -1,7 +1,7 @@
 {
-  "title": "Liouville Energy Locates the Rightmost Zeta Zero",
+  "title": "Liouville Energy Locates the Rightmost Zeta Zero: Lean 4 and Julia code",
   "upload_type": "software",
-  "description": "The sliding-window energy Q(N) of the Liouville function λ satisfies Q(N) = N^(2Θ+o(1)), where Θ is the supremum of the real parts of the zeros of ζ, and a bound along one sequence of N already locates Θ. Unconditionally Q(N) > 2.81N infinitely often, and Q(N)/N is bounded exactly when the summatory function of λ is O(√x). Changing λ on x^β primes can break the exponent when β > 1/2 and never when β ≤ 1/2. The archive contains the paper, a Lean 4 project (24 theorems) and three Julia programs. The Riemann hypothesis is not proved.",
+  "description": "Lean 4 project (24 theorems over Mathlib, standard axioms only) and three Julia programs that check the finite identities and numerical constants of the paper \"Liouville Energy Locates the Rightmost Zeta Zero\" by D. Bhattacharjee and U. Bhattacharya: the energy identities and completion bounds for the sliding-window energy Q(N) of the Liouville function, explicit bounds for L(x) and the Mertens function, the pole-energy certificates, and the numerics for N up to 3·10^7. The archive contains code only; the paper is not included.",
   "creators": [
     {
       "name": "Bhattacharjee, Deep",
@@ -21,7 +21,7 @@
     "zero-free regions"
   ],
   "access_right": "open",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "publication_date": "2026-11-13",
   "related_identifiers": [
     {
@@ -30,7 +30,7 @@
       "scheme": "url"
     },
     {
-      "identifier": "10.5281/zenodo.24150355",
+      "identifier": "10.5281/zenodo.24197589",
       "relation": "isNewVersionOf",
       "scheme": "doi"
     }
