@@ -1,1 +1,4 @@
 .lake/
+certificate/data/
+certificate/*.pkl
+__pycache__/
