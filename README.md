@@ -1,7 +1,6 @@
 <p align="center"><img src="assets/banner.svg" alt="Liouville Energy Locates the Rightmost Zeta Zero" width="100%"></p>
 
 <p align="center">
-  <a href="https://doi.org/10.5281/zenodo.24014164"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24014164-22d3ee?style=for-the-badge" alt="DOI"></a>
   <img src="https://img.shields.io/badge/Lean_4-24_theorems-7c5cff?style=for-the-badge" alt="Lean 4">
   <img src="https://img.shields.io/badge/Julia-all_checks_pass-34d399?style=for-the-badge" alt="Julia">
   <img src="https://img.shields.io/badge/license-MIT-f59e0b?style=for-the-badge" alt="MIT">
